@@ -1,5 +1,9 @@
+
+"use client"
+
 import Link from "next/link"
 import type { ComponentProps } from "react"
+import { motion } from "motion/react"
 import { cn } from "@/lib/utils"
 
 type AngularLinkProps = ComponentProps<typeof Link> & {
@@ -17,14 +21,20 @@ export function AngularLink({
   ...props
 }: AngularLinkProps) {
   return (
-    <Link
-      className={cn(
-        // Share the clipped corner across primary actions so it reads as a deliberate part of the visual system.
-        "inline-flex shrink-0 items-center justify-center bg-primary font-medium text-primary-foreground transition-transform [clip-path:polygon(0_0,calc(100%_-_12px)_0,100%_12px,100%_100%,0_100%)] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
-        sizeClasses[size],
-        className
-      )}
-      {...props}
-    />
+    <motion.span
+      className="inline-flex"
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.15 }}
+    >
+      <Link
+        className={cn(
+          "group/angular relative group isolate inline-flex shrink-0 items-center justify-center overflow-hidden bg-primary font-medium text-primary-foreground transition-colors duration-300 hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring [clip-path:polygon(0_0,calc(100%-12px)_0,100%_12px,100%_100%,0_100%)]",
+          "before:pointer-events-none before:absolute before:inset-0 before:translate-x-[-130%] before:skew-x-[-20deg] before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-transform before:duration-500 hover:before:translate-x-[130%]",
+          sizeClasses[size],
+          className
+        )}
+        {...props}
+      />
+    </motion.span>
   )
 }

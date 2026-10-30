@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Container } from "@/components/container"
-import { ProjectCard } from "@/components/project-card"
-import { projects } from "@/data/projects"
+import { ProjectCard } from "@/features/projects/components/project-card"
+import { projects } from "@/features/projects/data/projects"
 
 export const metadata: Metadata = {
   title: "Projects",

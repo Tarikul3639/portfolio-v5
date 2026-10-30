@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { projects } from "@/data/projects"
+import { projects } from "@/features/projects/data/projects"
 
 const siteUrl = "https://tarikul-islam.me"
 

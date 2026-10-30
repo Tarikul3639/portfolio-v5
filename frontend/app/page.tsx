@@ -1,12 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Container } from "@/components/container"
 import { AngularLink } from "@/components/angular-link"
-import { ProjectCard } from "@/components/project-card"
+import { ProjectCard } from "@/features/projects/components/project-card"
 import { SectionHeading } from "@/components/section-heading"
-import { featuredProjects } from "@/data/projects"
+import { featuredProjects } from "@/features/projects/data/projects"
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -54,7 +55,8 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-5 max-[420px]:flex-col max-[420px]:items-start">
                 <AngularLink href="/projects">
-                  Explore selected work <span aria-hidden="true">↗</span>
+                  Explore selected work{" "}
+                  <ArrowUpRight aria-hidden="true" className="size-4" />
                 </AngularLink>
                 <Link
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -117,7 +119,8 @@ export default function HomePage() {
                 className="inline-flex w-fit items-center gap-3 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                 href="/projects"
               >
-                View all projects <span aria-hidden="true">↗</span>
+                View all projects{" "}
+                <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             </div>
           </Container>
@@ -175,13 +178,15 @@ export default function HomePage() {
                   className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                   href="/about"
                 >
-                  More about me <span aria-hidden="true">↗</span>
+                  More about me{" "}
+                  <ArrowUpRight aria-hidden="true" className="size-4" />
                 </Link>
                 <Link
                   className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                   href="/services"
                 >
-                  Services <span aria-hidden="true">↗</span>
+                  Services{" "}
+                  <ArrowUpRight aria-hidden="true" className="size-4" />
                 </Link>
               </div>
             </div>
@@ -199,7 +204,8 @@ export default function HomePage() {
               </h2>
             </div>
             <AngularLink href="/contact">
-              Get in touch <span aria-hidden="true">↗</span>
+              Get in touch{" "}
+              <ArrowUpRight aria-hidden="true" className="size-4" />
             </AngularLink>
           </Container>
         </section>

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react"
 import { AngularLink } from "@/components/angular-link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -15,7 +16,8 @@ export default function NotFound() {
             This page isn&apos;t here.
           </h1>
           <AngularLink href="/projects">
-            Back to selected work <span aria-hidden="true">↗</span>
+            Back to selected work{" "}
+            <ArrowUpRight aria-hidden="true" className="size-4" />
           </AngularLink>
         </div>
       </main>

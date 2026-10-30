@@ -78,4 +78,4 @@ export const CPlusPlusIcon = ({ className }: { className?: string }) => (
       <rect x="28" y="45" width="4" height="10" />
     </g>
   </svg>
-);
+)

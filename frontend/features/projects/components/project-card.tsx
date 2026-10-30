@@ -1,6 +1,8 @@
 import Link from "next/link"
-import type { PortfolioProject } from "@/data/projects"
-import { ProjectArtwork } from "@/components/project-artwork"
+import { ArrowUpRight } from "lucide-react"
+import type { PortfolioProject } from "@/features/projects/data/projects"
+import { ProjectArtwork } from "@/features/projects/components/project-artwork"
+import { MotionReveal } from "@/components/motion"
 
 export function ProjectCard({
   project,
@@ -10,7 +12,10 @@ export function ProjectCard({
   index?: number
 }) {
   return (
-    <article className={index % 2 === 0 ? "md:pt-10" : undefined}>
+    <MotionReveal
+      className={index % 2 === 0 ? "md:pt-10" : undefined}
+      delay={index * 0.04}
+    >
       <Link
         className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         href={`/projects/${project.slug}`}
@@ -48,7 +53,7 @@ export function ProjectCard({
             className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
             aria-hidden="true"
           >
-            ↗
+            <ArrowUpRight aria-hidden="true" className="size-4" />
           </span>
         </Link>
       </div>
@@ -60,6 +65,6 @@ export function ProjectCard({
           <li key={technology}>{technology}</li>
         ))}
       </ul>
-    </article>
+    </MotionReveal>
   )
 }

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ScrollProgress } from "@/components/motion"
 
 const fontSans = localFont({
   src: [
@@ -57,12 +58,8 @@ export default function RootLayout({
       className={`${fontSans.variable} ${fontMono.variable} antialiased`}
     >
       <body className="font-sans">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
+          <ScrollProgress />
           {children}
         </ThemeProvider>
       </body>

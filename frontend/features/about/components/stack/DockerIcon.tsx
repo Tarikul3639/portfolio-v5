@@ -65,21 +65,75 @@ export const DockerIcon = ({ className }: { className?: string }) => (
     <g id="docker-icon">
       <g>
         <g className="third-floor">
-          <rect className="docker" height="43.625" width="47.506" x="229.999" y="94.975" />
+          <rect
+            className="docker"
+            height="43.625"
+            width="47.506"
+            x="229.999"
+            y="94.975"
+          />
         </g>
 
         <g className="second-floor">
-          <rect className="docker" height="43.193" width="47.505" x="117.738" y="147.225" />
-          <rect className="docker" height="43.193" width="47.506" x="173.869" y="147.225" />
-          <rect className="docker" height="43.193" width="47.506" x="229.999" y="147.225" />
+          <rect
+            className="docker"
+            height="43.193"
+            width="47.505"
+            x="117.738"
+            y="147.225"
+          />
+          <rect
+            className="docker"
+            height="43.193"
+            width="47.506"
+            x="173.869"
+            y="147.225"
+          />
+          <rect
+            className="docker"
+            height="43.193"
+            width="47.506"
+            x="229.999"
+            y="147.225"
+          />
         </g>
 
         <g>
-          <rect className="docker" height="42.691" width="47.506" x="61.68" y="199.043" />
-          <rect className="docker" height="42.691" width="47.505" x="117.738" y="199.043" />
-          <rect className="docker" height="42.691" width="47.506" x="173.869" y="199.043" />
-          <rect className="docker" height="42.69" width="47.506" x="229.999" y="199.115" />
-          <rect className="docker" height="42.691" width="47.507" x="286.2" y="199.043" />
+          <rect
+            className="docker"
+            height="42.691"
+            width="47.506"
+            x="61.68"
+            y="199.043"
+          />
+          <rect
+            className="docker"
+            height="42.691"
+            width="47.505"
+            x="117.738"
+            y="199.043"
+          />
+          <rect
+            className="docker"
+            height="42.691"
+            width="47.506"
+            x="173.869"
+            y="199.043"
+          />
+          <rect
+            className="docker"
+            height="42.69"
+            width="47.506"
+            x="229.999"
+            y="199.115"
+          />
+          <rect
+            className="docker"
+            height="42.691"
+            width="47.507"
+            x="286.2"
+            y="199.043"
+          />
         </g>
       </g>
 
@@ -89,4 +143,4 @@ export const DockerIcon = ({ className }: { className?: string }) => (
       />
     </g>
   </svg>
-);
+)

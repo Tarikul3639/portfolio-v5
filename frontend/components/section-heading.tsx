@@ -8,7 +8,7 @@ export function SectionHeading({
   note?: string
 }) {
   return (
-    <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-8">
+    <MotionReveal className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-8">
       <div>
         <p className="font-mono text-[.68rem] leading-snug tracking-[.11em] text-muted-foreground uppercase">
           {eyebrow}
@@ -22,6 +22,7 @@ export function SectionHeading({
           {note}
         </p>
       )}
-    </div>
+    </MotionReveal>
   )
 }
+import { MotionReveal } from "@/components/motion"

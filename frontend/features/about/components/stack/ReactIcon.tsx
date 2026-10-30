@@ -1,12 +1,12 @@
 export const ReactIcon = ({ className }: { className?: string }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        className={className}
-        aria-hidden="true"
-    >
-        <defs>
-            <style>{`
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    className={className}
+    aria-hidden="true"
+  >
+    <defs>
+      <style>{`
         @keyframes react-ani {
           0% {
             stroke-dashoffset: -176;
@@ -42,22 +42,22 @@ export const ReactIcon = ({ className }: { className?: string }) => (
           animation-delay: 0.2s;
         }
       `}</style>
-        </defs>
+    </defs>
 
-        <ellipse className="react-ellipse" cx="50" cy="50" rx="40" ry="12" />
-        <ellipse
-            className="react-ellipse react-ellipse-2"
-            cx="50"
-            cy="50"
-            rx="40"
-            ry="12"
-        />
-        <ellipse
-            className="react-ellipse react-ellipse-3"
-            cx="50"
-            cy="50"
-            rx="40"
-            ry="12"
-        />
-    </svg>
-);
+    <ellipse className="react-ellipse" cx="50" cy="50" rx="40" ry="12" />
+    <ellipse
+      className="react-ellipse react-ellipse-2"
+      cx="50"
+      cy="50"
+      rx="40"
+      ry="12"
+    />
+    <ellipse
+      className="react-ellipse react-ellipse-3"
+      cx="50"
+      cy="50"
+      rx="40"
+      ry="12"
+    />
+  </svg>
+)

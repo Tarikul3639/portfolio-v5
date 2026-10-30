@@ -65,4 +65,4 @@ export const ReduxIcon = ({ className }: { className?: string }) => (
       <circle cx="175.4" cy="151.1" r="18" fill="#764ABC" />
     </g>
   </svg>
-);
+)

@@ -1,5 +1,6 @@
+import { ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
-import type { PortfolioProject } from "@/data/projects"
+import type { PortfolioProject } from "@/features/projects/data/projects"
 
 const tones: Record<PortfolioProject["visual"], string> = {
   classflow: "bg-[#d4dde0] text-[#16272d]",
@@ -74,7 +75,7 @@ export function ProjectArtwork({
           mask={`url(#mask-${project.slug})`}
         />
       </svg>
-      <span className="absolute top-5 left-5 font-mono text-[.59rem] tracking-[.1em] opacity-70 sm:top-6 sm:left-6">
+      <span className="absolute top-5 left-5 font-mono text-[.59rem] tracking-widest opacity-70 sm:top-6 sm:left-6">
         {detail
           ? `SELECTED PROJECT · ${project.year}`
           : `0${(index ?? 0) + 1} / PROJECT`}
@@ -90,11 +91,18 @@ export function ProjectArtwork({
       <span className="relative z-10 font-serif text-[clamp(1.8rem,4vw,3.4rem)] leading-[.95] tracking-[-.07em]">
         {project.title}
       </span>
+
       {!detail && (
-        <span className="absolute right-5 bottom-5 grid size-9 place-items-center border border-current/30 text-base transition-transform group-hover/art:translate-x-0.5 group-hover/art:-translate-y-0.5 sm:right-6 sm:bottom-6">
-          ↗
+        <span className="group/arrow absolute right-5 bottom-5 grid size-9 place-items-center overflow-hidden border border-current/30 transition-colors duration-300 group-hover/art:border-current/70 sm:right-6 sm:bottom-6 z-10">
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-current transition-transform duration-300 group-hover/arrow:scale-x-100" />
+
+          <ArrowUpRight
+            aria-hidden="true"
+            className="size-4 transition-transform duration-300 group-hover/arrow:rotate-45"
+          />
         </span>
       )}
+
     </div>
   )
 }
