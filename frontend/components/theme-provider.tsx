@@ -51,6 +51,7 @@ function ThemeHotkey() {
         return
       }
 
+      // Keep the single-letter shortcut out of text entry and browser/system shortcuts.
       if (isTypingTarget(event.target)) {
         return
       }

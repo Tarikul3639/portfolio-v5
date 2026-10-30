@@ -1,21 +1,36 @@
-# Next.js template
+# Tarikul Islam — Portfolio
 
-This is a Next.js template with shadcn/ui.
+Personal portfolio built with the existing Next.js App Router, TypeScript, Tailwind CSS, and shadcn theme setup.
 
-## Adding components
+## Routes
 
-To add components to your app, run the following command:
+- `/` — introduction and selected work
+- `/projects` — project index
+- `/projects/[slug]` — static project pages
+- `/services` — development services grounded in the project record
+- `/about` — introduction and approach
+- `/contact` — verified public contact links
+
+Project content is maintained in `data/projects.ts`. Paired client/server repositories are represented as one project. The site does not use an API or Redux store because its current content is static.
+
+## Fonts and design tokens
+
+Noto Sans and Noto Mono are loaded locally with `next/font/local`. The editorial display role uses the system Georgia stack. Tailwind CSS 4 utilities provide normal component and layout styling; `app/globals.css` is kept to the starter's Tailwind/shadcn setup, base layer, and theme tokens. See [DESIGN.md](./DESIGN.md) for the typography scale, palette, and image source details. Noto fonts are distributed under the SIL Open Font License; the notice is included in `app/fonts/`.
+
+## Local development
+
+From this directory:
 
 ```bash
-npx shadcn@latest add button
+pnpm dev
 ```
 
-This will place the ui components in the `components` directory.
+Available checks:
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
+```bash
+pnpm typecheck
+pnpm lint
+pnpm build
 ```
+
+SEO metadata, canonical URLs, `robots.txt`, `sitemap.xml`, JSON-LD, and `public/llms.txt` use the public portfolio domain linked from Tarikul's GitHub profile.
