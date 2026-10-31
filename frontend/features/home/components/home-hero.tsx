@@ -29,15 +29,15 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-        initial: false as const,
-        whileInView: undefined,
-        animate: undefined,
-      }
+      initial: false as const,
+      whileInView: undefined,
+      animate: undefined,
+    }
     : {
-        initial: "hidden" as const,
-        whileInView: "visible" as const,
-        viewport: { once: true, amount: 0.2 },
-      }
+      initial: "hidden" as const,
+      whileInView: "visible" as const,
+      viewport: { once: true, amount: 0.2 },
+    }
 
   return (
     <section
@@ -67,16 +67,6 @@ export function HomeHero() {
             "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.15 270) 30%, var(--ring)), transparent 72%)",
         }}
       /> */}
-
-      <Image
-        aria-hidden="true"
-        className="pointer-events-none absolute top-0 right-0 z-0 h-full w-[58%] object-cover object-center opacity-20 mix-blend-multiply md:w-[48%] dark:opacity-30 dark:mix-blend-screen"
-        src="/images/profile/hero-structure.png"
-        alt=""
-        width={1024}
-        height={1536}
-        sizes="(max-width: 768px) 58vw, 48vw"
-      />
 
       <Container className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,1.25fr)_minmax(260px,.75fr)] md:gap-[clamp(2rem,6vw,6.5rem)]">
         {/* Hero content */}
@@ -179,7 +169,7 @@ export function HomeHero() {
         <motion.figure
           variants={imageReveal}
           {...animationProps}
-          className="order-1 md:order-2 relative mx-auto w-[74%] max-w-85 p-3.75 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
+          className="order-1 md:order-2 relative mx-auto w-[84%] max-w-85 p-3.75 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
         >
           <div
             aria-hidden="true"
@@ -192,6 +182,16 @@ export function HomeHero() {
           />
 
           <Image
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-[-18%] z-0 h-[136%] w-[136%] max-w-none object-cover object-center opacity-20 mix-blend-multiply dark:opacity-30 dark:mix-blend-screen"
+            src="/images/profile/hero-structure.png"
+            alt=""
+            width={1024}
+            height={1536}
+            sizes="(max-width: 768px) 100vw, 520px"
+          />
+
+          <Image
             className="relative z-10 block aspect-[.79] h-auto w-full object-cover object-[center_25%] filter-[saturate(.78)]"
             src="/images/profile/tarikul-islam.webp"
             alt="Portrait of Tarikul Islam"
@@ -201,9 +201,11 @@ export function HomeHero() {
             sizes="(max-width: 760px) 74vw, 390px"
           />
 
-          <figcaption className="absolute right-0 -bottom-4 z-20 flex gap-2 font-mono text-[.62rem] text-muted-foreground">
-            <span className="text-primary">01</span>
-            <span>A little about the person behind the code</span>
+          <figcaption className="absolute right-0 -bottom-4 z-20 flex w-full min-w-0 gap-2 font-mono text-[.62rem] text-muted-foreground">
+            <span className="shrink-0 text-primary">01</span>
+            <span className="min-w-0 truncate">
+              A little about the person behind the code
+            </span>
           </figcaption>
         </motion.figure>
       </Container>
