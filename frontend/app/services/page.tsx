@@ -66,8 +66,16 @@ export default function ServicesPage() {
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="py-[clamp(4.8rem,9vw,8rem)]">
-          <Container className="grid grid-cols-1 items-end gap-9 md:grid-cols-[1.25fr_.75fr] md:gap-16">
+        <section className="relative isolate overflow-hidden py-[clamp(4.8rem,9vw,8rem)]">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-36 -left-32 z-0 h-130 w-130 rounded-full opacity-16 blur-[115px]"
+            style={{
+              background:
+                "radial-gradient(circle, color-mix(in oklab, oklch(0.58 0.16 270) 30%, var(--primary)), transparent 72%)",
+            }}
+          />
+          <Container className="relative z-10 grid grid-cols-1 items-end gap-9 md:grid-cols-[1.25fr_.75fr] md:gap-16">
             <div>
               <p className="mb-5 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase">
                 Services · Development
@@ -87,8 +95,13 @@ export default function ServicesPage() {
               </p>
 
               <AngularLink className="mt-6" href="/contact">
-                Talk about a project
-                <ArrowUpRight aria-hidden="true" className="size-4" />
+                <span className="group inline-flex items-center gap-1.5">
+                  Talk about a project
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-110"
+                  />
+                </span>
               </AngularLink>
             </div>
           </Container>
@@ -131,10 +144,7 @@ export default function ServicesPage() {
 
                         <ul className="mt-5 grid gap-2.5 text-sm text-muted-foreground">
                           {service.scope.map((item) => (
-                            <li
-                              className="flex items-start gap-3"
-                              key={item}
-                            >
+                            <li className="flex items-start gap-3" key={item}>
                               <Check
                                 aria-hidden="true"
                                 className="mt-0.5 size-4 shrink-0 text-primary"
@@ -185,8 +195,7 @@ export default function ServicesPage() {
               </p>
 
               <h2 className="mt-3 max-w-sm font-serif text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-.06em]">
-                Clear scope, steady{" "}
-                <em className="text-primary">progress.</em>
+                Clear scope, steady <em className="text-primary">progress.</em>
               </h2>
             </div>
 
@@ -195,10 +204,7 @@ export default function ServicesPage() {
                 const Icon = step.icon
 
                 return (
-                  <li
-                    className="border-t border-border pt-4"
-                    key={step.number}
-                  >
+                  <li className="border-t border-border pt-4" key={step.number}>
                     <div className="flex items-center justify-between gap-4">
                       <p className="font-mono text-[.65rem] text-primary">
                         {step.number}

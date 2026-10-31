@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { ArrowUpRight, Mail, Phone, MapPin, Terminal } from "lucide-react"
 import { Container } from "@/components/container"
@@ -71,7 +70,7 @@ export function SiteFooter() {
                 </span>
 
                 <span className="flex flex-col gap-1">
-                  <span className="text-[.95rem] font-bold leading-none tracking-[-.035em]">
+                  <span className="text-[.95rem] leading-none font-bold tracking-[-.035em]">
                     TARIKUL
                     <span className="text-primary transition-colors duration-300 group-hover/brand:text-foreground">
                       .
@@ -112,10 +111,7 @@ export function SiteFooter() {
                       ? { target: "_blank", rel: "noreferrer" }
                       : {})}
                   >
-                    <Icon
-                      aria-hidden="true"
-                      className="size-4"
-                    />
+                    <Icon aria-hidden="true" className="size-4" />
                   </a>
                 ))}
               </div>
@@ -180,9 +176,7 @@ export function SiteFooter() {
                     aria-hidden="true"
                     className="mt-0.5 size-3.5 shrink-0"
                   />
-                  <span className="break-all">
-                    tarikulislam3639@gmail.com
-                  </span>
+                  <span className="break-all">tarikulislam3639@gmail.com</span>
                   <ArrowUpRight
                     aria-hidden="true"
                     className="mt-0.5 size-3.5 shrink-0 opacity-0 transition-all group-hover/contact:translate-x-0.5 group-hover/contact:-translate-y-0.5 group-hover/contact:opacity-100"

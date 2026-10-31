@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -28,7 +27,7 @@ export function AngularLink({
     >
       <Link
         className={cn(
-          "group/angular relative group isolate inline-flex shrink-0 items-center justify-center overflow-hidden bg-primary font-medium text-primary-foreground transition-colors duration-300 hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring [clip-path:polygon(0_0,calc(100%-12px)_0,100%_12px,100%_100%,0_100%)]",
+          "group/angular group relative isolate inline-flex shrink-0 items-center justify-center overflow-hidden bg-primary font-medium text-primary-foreground transition-colors duration-300 [clip-path:polygon(0_0,calc(100%-12px)_0,100%_12px,100%_100%,0_100%)] hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
           "before:pointer-events-none before:absolute before:inset-0 before:translate-x-[-130%] before:skew-x-[-20deg] before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-transform before:duration-500 hover:before:translate-x-[130%]",
           sizeClasses[size],
           className

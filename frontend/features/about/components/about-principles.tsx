@@ -3,7 +3,7 @@ import { principles } from "@/features/about/data/principles"
 
 export function AboutPrinciples() {
   return (
-    <section className="mt-[clamp(5.5rem,10vw,9rem)] border-t border-border py-[clamp(5rem,9vw,8rem)]">
+    <section className="mt-[clamp(10vw,9rem)] border-t border-border py-[clamp(5rem,9vw,8rem)]">
       <Container>
         <div className="mb-10">
           <p className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase">

@@ -6,7 +6,6 @@ import { AboutGithubSection } from "@/features/about/components/about-github-sec
 import { AboutHero } from "@/features/about/components/about-hero"
 import { AboutIntroduction } from "@/features/about/components/about-introduction"
 import { AboutPrinciples } from "@/features/about/components/about-principles"
-import { AboutTechStack } from "@/features/about/components/about-tech-stack"
 
 export const metadata: Metadata = {
   title: "About",
@@ -28,7 +27,6 @@ export default function AboutPage() {
       <main className="flex-1">
         <AboutHero />
         <AboutIntroduction />
-        <AboutTechStack />
         <AboutGithubSection />
         <AboutPrinciples />
       </main>

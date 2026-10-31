@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight, Check, ExternalLink } from "lucide-react"
@@ -17,9 +16,7 @@ export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const project = getProject(slug)
 
@@ -87,10 +84,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             className="mb-11 flex flex-wrap items-center gap-2.5 font-mono text-[.65rem] text-muted-foreground"
             aria-label="Breadcrumb"
           >
-            <Link
-              className="transition-colors hover:text-foreground"
-              href="/"
-            >
+            <Link className="transition-colors hover:text-foreground" href="/">
               Home
             </Link>
 
@@ -163,58 +157,58 @@ export default async function ProjectDetailPage({ params }: Props) {
                 Links
               </p>
 
-          <ul className="grid gap-2">
-  {project.repos.map((repository) => {
-    const isGitHub = /github\.com/i.test(repository.href)
-    const RepositoryIcon = isGitHub ? Github : ExternalLink
+              <ul className="grid gap-2">
+                {project.repos.map((repository) => {
+                  const isGitHub = /github\.com/i.test(repository.href)
+                  const RepositoryIcon = isGitHub ? Github : ExternalLink
 
-    return (
-      <li key={repository.href}>
-        <a
-          className="group inline-flex w-fit items-center gap-2 py-1 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
-          href={repository.href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <RepositoryIcon
-            aria-hidden="true"
-            className="size-4 shrink-0"
-          />
+                  return (
+                    <li key={repository.href}>
+                      <a
+                        className="group inline-flex w-fit items-center gap-2 py-1 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                        href={repository.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <RepositoryIcon
+                          aria-hidden="true"
+                          className="size-4 shrink-0"
+                        />
 
-          <span>{repository.label}</span>
+                        <span>{repository.label}</span>
 
-          <ArrowUpRight
-            aria-hidden="true"
-            className="size-3.5 opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
-          />
-        </a>
-      </li>
-    )
-  })}
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          className="size-3.5 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                        />
+                      </a>
+                    </li>
+                  )
+                })}
 
-  {project.demo && (
-    <li>
-      <a
-        className="group inline-flex w-fit items-center gap-2 py-1 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
-        href={project.demo}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <ExternalLink
-          aria-hidden="true"
-          className="size-4 shrink-0"
-        />
+                {project.demo && (
+                  <li>
+                    <a
+                      className="group inline-flex w-fit items-center gap-2 py-1 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <ExternalLink
+                        aria-hidden="true"
+                        className="size-4 shrink-0"
+                      />
 
-        <span>Live demo</span>
+                      <span>Live demo</span>
 
-        <ArrowUpRight
-          aria-hidden="true"
-          className="size-3.5 opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
-        />
-      </a>
-    </li>
-  )}
-</ul>
+                      <ArrowUpRight
+                        aria-hidden="true"
+                        className="size-3.5 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                      />
+                    </a>
+                  </li>
+                )}
+              </ul>
             </div>
           </aside>
 
@@ -277,11 +271,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
             <div className="grid grid-cols-1 gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-16 md:grid-cols-2">
               {relatedProjects.map((item, index) => (
-                <ProjectCard
-                  index={index}
-                  key={item.slug}
-                  project={item}
-                />
+                <ProjectCard index={index} key={item.slug} project={item} />
               ))}
             </div>
           </Container>

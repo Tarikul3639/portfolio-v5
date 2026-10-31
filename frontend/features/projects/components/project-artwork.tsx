@@ -93,7 +93,7 @@ export function ProjectArtwork({
       </span>
 
       {!detail && (
-        <span className="group/arrow absolute right-5 bottom-5 grid size-9 place-items-center overflow-hidden border border-current/30 transition-colors duration-300 group-hover/art:border-current/70 sm:right-6 sm:bottom-6 z-10">
+        <span className="group/arrow absolute right-5 bottom-5 z-10 grid size-9 place-items-center overflow-hidden border border-current/30 transition-colors duration-300 group-hover/art:border-current/70 sm:right-6 sm:bottom-6">
           <span className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-current transition-transform duration-300 group-hover/arrow:scale-x-100" />
 
           <ArrowUpRight
@@ -102,7 +102,6 @@ export function ProjectArtwork({
           />
         </span>
       )}
-
     </div>
   )
 }

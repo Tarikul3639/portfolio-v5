@@ -1,7 +1,7 @@
 import { Container } from "@/components/container"
-import { AboutTechGrid } from "@/features/about/components/about-tech-grid"
+import { HomeTechGrid } from "@/features/home/components/home-tech-grid"
 
-export function AboutTechStack() {
+export function HomeTechStack() {
   return (
     <section className="border-t border-border py-[clamp(3.5rem,6vw,5.5rem)]">
       <Container>
@@ -19,7 +19,7 @@ export function AboutTechStack() {
             currently exploring.
           </p>
         </div>
-        <AboutTechGrid />
+        <HomeTechGrid />
       </Container>
     </section>
   )

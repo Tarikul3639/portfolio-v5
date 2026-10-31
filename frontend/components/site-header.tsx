@@ -3,17 +3,12 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import {
-  ArrowUpRight,
-  Menu,
-  SunMoon,
-  X,
-  Terminal,
-} from "lucide-react"
 import { useTheme } from "next-themes"
+import { ArrowUpRight, Menu, SunMoon, X, Terminal } from "lucide-react"
 import { useRef, useState } from "react"
-import { Container } from "@/components/container"
+
 import { AngularLink } from "@/components/angular-link"
+import { Container } from "@/components/container"
 import { MobileNav } from "@/components/mobile-nav"
 
 const links = [
@@ -25,9 +20,11 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname()
   const { resolvedTheme, setTheme } = useTheme()
+
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
+  // Close the mobile menu and return focus to its toggle button.
   const closeMenu = () => {
     setMenuOpen(false)
     requestAnimationFrame(() => menuButtonRef.current?.focus())
@@ -35,15 +32,17 @@ export function SiteHeader() {
 
   return (
     <header className="group/header sticky top-0 z-50 border-b border-primary/20 bg-background/90 backdrop-blur-md">
+      {/* Subtle animated accent along the top edge. */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left bg-primary/70 shadow-[0_0_12px_var(--primary)] transition-transform duration-500 group-hover/header:scale-x-100" />
 
       <Container className="flex min-h-16 items-center justify-between gap-5 max-md:min-h-14">
+        {/* Brand */}
         <Link
           href="/"
           aria-label="Tarikul Islam, home"
           className="group/brand flex shrink-0 items-center gap-3"
         >
-          <span className="relative grid size-9 shrink-0 place-items-center border border-primary/40 transition-all duration-300 group-hover/brand:border-primary group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
+          <span className="relative grid size-8.5 shrink-0 place-items-center border-primary/40 transition-all duration-300 group-hover/brand:border-primary border-dashed border-2 group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
             <Terminal
               aria-hidden="true"
               className="size-5 text-primary transition-transform duration-300 group-hover/brand:scale-110 group-hover/brand:-rotate-3"
@@ -52,7 +51,7 @@ export function SiteHeader() {
           </span>
 
           <span className="flex flex-col gap-1">
-            <span className="text-[.95rem] font-bold leading-none tracking-[-.035em]">
+            <span className="text-[.95rem] leading-none font-bold tracking-[-.035em]">
               TARIKUL
               <span className="text-primary transition-colors duration-300 group-hover/brand:text-foreground">
                 .
@@ -61,19 +60,18 @@ export function SiteHeader() {
 
             <span className="font-mono text-[.55rem] leading-none tracking-[.12em] text-muted-foreground uppercase transition-colors duration-300 group-hover/brand:text-foreground">
               Developer / Portfolio
-              {/* Islam / Portfolio */}
             </span>
           </span>
         </Link>
 
+        {/* Desktop navigation */}
         <nav
           className="flex items-center gap-1 max-md:hidden"
           aria-label="Main navigation"
         >
           {links.map((link) => {
             const active =
-              pathname === link.href ||
-              pathname.startsWith(`${link.href}/`)
+              pathname === link.href || pathname.startsWith(`${link.href}/`)
 
             return (
               <Link
@@ -108,29 +106,30 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          {/* Theme toggle: hidden on phone-sized screens. */}
           <button
             type="button"
             aria-label="Toggle color theme"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
-            className="group/theme grid size-9 place-items-center border border-border text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            className="group/theme hidden size-9 place-items-center border border-border text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:grid"
           >
             <SunMoon
-              size={16}
+              aria-hidden="true"
+              size={18}
               strokeWidth={1.7}
               className="transition-transform duration-500 group-hover/theme:rotate-45"
             />
           </button>
 
+          {/* Contact CTA: visible on desktop and tablet. */}
           <AngularLink
             className="hidden md:inline-flex"
             size="compact"
             href="/contact"
           >
-            <span className="font-mono text-[.72rem]">
-              LET&apos;S TALK
-            </span>
+            <span className="font-mono text-[.72rem]">LET&apos;S TALK</span>
 
             <ArrowUpRight
               aria-hidden="true"
@@ -138,6 +137,7 @@ export function SiteHeader() {
             />
           </AngularLink>
 
+          {/* Mobile navigation toggle. */}
           <button
             ref={menuButtonRef}
             type="button"
@@ -151,7 +151,7 @@ export function SiteHeader() {
           >
             <span
               key={menuOpen ? "close" : "open"}
-              className="animate-in fade-in zoom-in-75 duration-200"
+              className="animate-in duration-200 zoom-in-75 fade-in"
             >
               {menuOpen ? (
                 <X size={19} strokeWidth={1.7} />
@@ -163,6 +163,7 @@ export function SiteHeader() {
         </div>
       </Container>
 
+      {/* Mobile navigation panel */}
       <div id="mobile-navigation">
         <MobileNav
           open={menuOpen}

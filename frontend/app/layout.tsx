@@ -1,3 +1,4 @@
+
 import localFont from "next/font/local"
 import type { Metadata } from "next"
 
@@ -21,7 +22,6 @@ const fontMono = localFont({
 })
 
 export const metadata: Metadata = {
-  // Use the non-www origin specified for the portfolio's canonical URLs.
   metadataBase: new URL("https://tarikul-islam.me"),
   title: {
     default: "Tarikul Islam — Full-Stack Web Developer",
@@ -29,20 +29,29 @@ export const metadata: Metadata = {
   },
   description:
     "Tarikul Islam is a Bangladesh-based full-stack web developer focused on TypeScript, Node.js, NestJS, React, and Next.js.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tarikul-islam.me/",
+    url: "/",
     siteName: "Tarikul Islam",
     title: "Tarikul Islam — Full-Stack Web Developer",
     description:
       "Selected work and notes from Tarikul Islam, a backend-focused full-stack web developer.",
+    images: [
+      {
+        url: "/images/profile/tarikul-islam.webp",
+        alt: "Tarikul Islam — Full-Stack Web Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tarikul Islam — Full-Stack Web Developer",
     description: "Selected work and notes from Tarikul Islam.",
+    images: ["/images/profile/tarikul-islam.webp"],
   },
 }
 
