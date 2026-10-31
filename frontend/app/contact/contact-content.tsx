@@ -7,7 +7,7 @@ import { ArrowUpRight, CalendarDays } from "lucide-react"
 import { Container } from "@/components/container"
 import { AngularLink } from "@/components/angular-link"
 
-const CAL_URL = "https://cal.com/YOUR_USERNAME/YOUR_EVENT"
+const CAL_URL = "https://cal.com/tarikul3639/portfolio-meeting"
 const FACEBOOK_URL = "https://www.facebook.com/tarikulislam3639"
 
 const contactOptions = [
@@ -15,6 +15,11 @@ const contactOptions = [
         label: "EMAIL",
         value: "tarikulislam3639@gmail.com",
         href: "mailto:tarikulislam3639@gmail.com",
+    },
+    {
+        label: "WHATSAPP",
+        value: "+880 1909290959",
+        href: "https://wa.me/8801909290959",
     },
     {
         label: "GITHUB",

@@ -35,7 +35,7 @@ function TechCard({
   return (
     <motion.div
       {...reveal(index * 0.07, 12, 0.4)}
-      className="group/card mr-3 flex h-24 w-28 shrink-0 cursor-crosshair flex-col items-center justify-center gap-2 rounded-3xl border-none bg-card/70 px-2 py-3 shadow-sm transition-colors duration-300 select-none sm:h-28 sm:w-32"
+      className="group/card mr-3 flex h-24 w-28 shrink-0 cursor-crosshair flex-col items-center justify-center gap-2 rounded-xl sm:rounded-3xl border-none bg-card/70 px-2 py-3 shadow-sm transition-colors duration-300 select-none sm:h-28 sm:w-32"
     >
       <div className="relative text-4xl" style={{ color: item.color }}>
         <div

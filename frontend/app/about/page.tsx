@@ -10,15 +10,29 @@ import { AboutPrinciples } from "@/features/about/components/about-principles"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Tarikul Islam, a backend-focused full-stack web developer based in Dhaka, Bangladesh.",
-  alternates: { canonical: "/about" },
+    "Learn about Tarikul Islam, a Dhaka, Bangladesh-based backend-focused full-stack web developer specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
+
+  alternates: {
+    canonical: "/about",
+  },
+
   openGraph: {
+    type: "website",
     title: "About — Tarikul Islam",
     description:
-      "A little about Tarikul Islam and how he approaches software development.",
+      "Discover Tarikul Islam's background, technical expertise, and approach to building reliable, maintainable, and scalable web applications.",
     url: "/about",
+    siteName: "Tarikul Islam",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "About — Tarikul Islam",
+    description:
+      "Learn about Tarikul Islam's background, skills, and approach to full-stack web development.",
   },
 }
+
 
 export default function AboutPage() {
   return (

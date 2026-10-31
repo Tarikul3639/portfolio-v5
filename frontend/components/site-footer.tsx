@@ -1,11 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, Mail, Phone, MapPin, Terminal } from "lucide-react"
+import { ArrowUpRight, Mail, Phone, MapPin, Terminal, History } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
+
+const OLD_PORTFOLIO_URL = "https://OLD_PORTFOLIO_URL"
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -230,8 +232,11 @@ export function SiteFooter() {
                 />
               </motion.a>
 
+
               <motion.a
-                href="tel:+8801XXXXXXXXX"
+                href="https://wa.me/8801909290959"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start gap-2 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 {...reveal(0.06, 8, 0.45)}
               >
@@ -241,6 +246,7 @@ export function SiteFooter() {
                 />
                 <span>+880 1909290959</span>
               </motion.a>
+
 
               <motion.div
                 className="flex items-start gap-2 text-sm text-muted-foreground"
@@ -256,15 +262,41 @@ export function SiteFooter() {
           </motion.div>
         </div>
 
+
+
         <motion.div
-          className="flex flex-col gap-2 border-t border-border pt-5 text-[.66rem] text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
+          className="flex flex-col gap-4 border-t border-border pt-5 text-[.66rem] text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
           {...reveal(0.08, 10, 0.5)}
         >
-          <p>© {new Date().getFullYear()} Tarikul Islam</p>
+          <div className="flex flex-col gap-1">
+            <p>© {new Date().getFullYear()} Tarikul Islam</p>
 
-          <p className="font-mono tracking-[.04em] uppercase">
-            Built with care · Bangladesh
-          </p>
+            <p className="font-mono tracking-[.04em] uppercase">
+              Built with care · Bangladesh
+            </p>
+          </div>
+
+          <div className="flex items-center">
+            <motion.a
+              {...reveal(0.2, 8, 0.45)}
+              href={OLD_PORTFOLIO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/old inline-flex w-fit items-center gap-1.5 border-b border-border pb-1 text-[.66rem] text-muted-foreground transition-colors hover:border-primary hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+            >
+              <History
+                aria-hidden="true"
+                className="size-3.5 transition-transform duration-300 group-hover/old:-rotate-12"
+              />
+
+              <span>Previous portfolio</span>
+
+              <ArrowUpRight
+                aria-hidden="true"
+                className="size-3 transition-transform duration-200 group-hover/old:translate-x-0.5 group-hover/old:-translate-y-0.5"
+              />
+            </motion.a>
+          </div>
         </motion.div>
       </Container>
     </footer>

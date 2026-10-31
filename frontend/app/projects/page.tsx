@@ -10,14 +10,36 @@ import { projects } from "@/features/projects/data/projects"
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Selected full-stack projects by Tarikul Islam, from education platforms to community software.",
-  alternates: { canonical: "/projects" },
+    "Explore full-stack web development projects by Tarikul Islam, featuring web applications, education platforms, community software, and projects built with Next.js, React, TypeScript, and Node.js.",
+
+  alternates: {
+    canonical: "/projects",
+  },
+
   openGraph: {
+    type: "website",
     title: "Projects — Tarikul Islam",
-    description: "Selected full-stack projects by Tarikul Islam.",
+    description:
+      "Explore selected web development projects by Tarikul Islam, including full-stack applications, education platforms, and community software.",
     url: "/projects",
+    siteName: "Tarikul Islam",
+    images: [
+      {
+        url: "/images/profile/tarikul-islam.webp",
+        alt: "Tarikul Islam — Full-Stack Web Developer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects — Tarikul Islam",
+    description:
+      "Selected full-stack web development projects by Tarikul Islam, built with modern web technologies.",
+    images: ["/images/profile/tarikul-islam.webp"],
   },
 }
+
 
 export default function ProjectsPage() {
   return (

@@ -8,14 +8,29 @@ import { ContactContent } from "./contact-content"
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Tarikul Islam about full-stack web development and collaboration.",
-  alternates: { canonical: "/contact" },
+    "Contact Tarikul Islam, a Bangladesh-based full-stack web developer, to discuss web development projects, Next.js applications, backend development, and collaboration opportunities.",
+
+  alternates: {
+    canonical: "/contact",
+  },
+
   openGraph: {
+    type: "website",
     title: "Contact — Tarikul Islam",
-    description: "Get in touch with Tarikul Islam.",
+    description:
+      "Get in touch with Tarikul Islam for full-stack web development, Next.js projects, backend solutions, and collaboration opportunities.",
     url: "/contact",
+    siteName: "Tarikul Islam",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Contact — Tarikul Islam",
+    description:
+      "Contact Tarikul Islam to discuss full-stack web development projects and collaboration opportunities.",
   },
 }
+
 
 export default function ContactPage() {
   return (
