@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -39,10 +38,7 @@ const MobileNavStatus = memo(function MobileNavStatus() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span
-              className="relative flex size-2"
-              aria-hidden="true"
-            >
+            <span className="relative flex size-2" aria-hidden="true">
               <span className="absolute inline-flex size-full bg-primary/50 motion-safe:animate-ping" />
               <span className="relative inline-flex size-2 bg-primary" />
             </span>
@@ -75,26 +71,36 @@ const MobileNavStatus = memo(function MobileNavStatus() {
       </p>
 
       {/* Bottom row */}
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <div className="flex gap-4">
           <div className="flex flex-col">
-            <span className="text-[8px] text-sidebar-accent uppercase font-mono">Uptime</span>
-            <span className="text-[10px] font-bold text-sidebar-foreground font-mono">99.9%</span>
+            <span className="font-mono text-[8px] text-sidebar-accent uppercase">
+              Uptime
+            </span>
+            <span className="font-mono text-[10px] font-bold text-sidebar-foreground">
+              99.9%
+            </span>
           </div>
           <div className="flex flex-col border-l border-sidebar-border pl-4">
-            <span className="text-[8px] text-sidebar-accent uppercase font-mono">Load</span>
-            <span className="text-[10px] font-bold text-sidebar-foreground font-mono">0.04ms</span>
+            <span className="font-mono text-[8px] text-sidebar-accent uppercase">
+              Load
+            </span>
+            <span className="font-mono text-[10px] font-bold text-sidebar-foreground">
+              0.04ms
+            </span>
           </div>
         </div>
 
         {/* Signal bars */}
-        <div className="h-8 w-12 flex items-end gap-0.5">
+        <div className="flex h-8 w-12 items-end gap-0.5">
           {[0.4, 0.7, 0.5, 0.9, 0.6].map((h, i) => (
             <motion.div
               key={i}
-              animate={{ height: [`${h * 100}%`, `${h * 100 - 20}%`, `${h * 100}%`] }}
+              animate={{
+                height: [`${h * 100}%`, `${h * 100 - 20}%`, `${h * 100}%`],
+              }}
               transition={{ duration: 1.5 + i * 0.2, repeat: Infinity }}
-              className="w-full bg-sidebar-primary/40 rounded-t-[1px]"
+              className="w-full rounded-t-[1px] bg-sidebar-primary/40"
             />
           ))}
         </div>
@@ -203,14 +209,12 @@ export const MobileNav = memo(function MobileNav({
                   link.href === "/"
                     ? pathname === "/"
                     : pathname === link.href ||
-                    pathname.startsWith(`${link.href}/`)
+                      pathname.startsWith(`${link.href}/`)
 
                 return (
                   <motion.div
                     key={link.href}
-                    initial={
-                      reduceMotion ? false : { opacity: 0, x: -12 }
-                    }
+                    initial={reduceMotion ? false : { opacity: 0, x: -12 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: reduceMotion ? 0 : index * 0.035,
@@ -218,25 +222,28 @@ export const MobileNav = memo(function MobileNav({
                   >
                     <Link
                       aria-current={active ? "page" : undefined}
-                      className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.8rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${active ? "text-primary" : ""
-                        }`}
+                      className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.8rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${
+                        active ? "text-primary" : ""
+                      }`}
                       href={link.href}
                       onClick={onClose}
                     >
                       <span
-                        className={`font-mono text-[.65rem] font-normal tracking-normal transition-colors ${active
-                          ? "text-primary"
-                          : "text-primary/50 group-hover:text-primary"
-                          }`}
+                        className={`font-mono text-[.65rem] font-normal tracking-normal transition-colors ${
+                          active
+                            ? "text-primary"
+                            : "text-primary/50 group-hover:text-primary"
+                        }`}
                       >
                         {`// 0${index + 1}`}
                       </span>
 
                       <span
-                        className={`flex-1 uppercase transition-colors ${active
-                          ? "text-primary"
-                          : "text-muted-foreground group-hover:text-primary"
-                          }`}
+                        className={`flex-1 uppercase transition-colors ${
+                          active
+                            ? "text-primary"
+                            : "text-muted-foreground group-hover:text-primary"
+                        }`}
                       >
                         {link.label}
                       </span>
@@ -266,9 +273,7 @@ export const MobileNav = memo(function MobileNav({
                   <Moon aria-hidden="true" className="size-4" />
                 )}
 
-                {theme === "dark"
-                  ? "Switch light mode"
-                  : "Switch dark mode"}
+                {theme === "dark" ? "Switch light mode" : "Switch dark mode"}
               </button>
             </div>
           </motion.aside>

@@ -1,4 +1,3 @@
-
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { FeaturedProjects } from "@/features/home/components/featured-projects"
@@ -11,14 +10,13 @@ import { personSchema } from "@/lib/seo/person-schema"
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-svh flex-col bg-background text-foreground">
+    <div className="relative flex min-h-svh flex-col bg-background text-foreground">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
         }}
       />
-
       <SiteHeader />
 
       <main className="flex-1">

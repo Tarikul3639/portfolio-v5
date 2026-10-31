@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
@@ -114,11 +113,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
             <div className="grid grid-cols-1 gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-16 md:grid-cols-2">
               {relatedProjects.map((item, index) => (
-                <ProjectCard
-                  index={index}
-                  key={item.slug}
-                  project={item}
-                />
+                <ProjectCard index={index} key={item.slug} project={item} />
               ))}
             </div>
           </Container>

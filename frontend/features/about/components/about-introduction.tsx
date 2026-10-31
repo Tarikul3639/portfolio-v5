@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -81,8 +80,8 @@ export function AboutIntroduction() {
 
             <motion.p {...reveal(0.18, 12, 0.55)}>
               My recent work includes tools for education, streaming, and
-              community administration. Away from the code, I&apos;m studying
-              at Bangladesh University of Business &amp; Technology.
+              community administration. Away from the code, I&apos;m studying at
+              Bangladesh University of Business &amp; Technology.
             </motion.p>
           </div>
 
@@ -122,7 +121,7 @@ export function AboutIntroduction() {
           {/* Contact link */}
           <motion.div {...reveal(0.2, 8, 0.45)}>
             <Link
-              className="mt-6 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary capitalize"
+              className="mt-6 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium capitalize transition-colors hover:border-primary hover:text-primary"
               href="/contact"
             >
               Say hello

@@ -1,11 +1,19 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, Mail, Phone, MapPin, Terminal, History } from "lucide-react"
+import {
+  ArrowUpRight,
+  Mail,
+  Phone,
+  MapPin,
+  Terminal,
+  History,
+} from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
+import { SquigglyText } from "@/components/ui/squiggly-text"
 
 const OLD_PORTFOLIO_URL = "https://OLD_PORTFOLIO_URL"
 
@@ -70,8 +78,12 @@ export function SiteFooter() {
             className="mt-4 max-w-205 font-serif text-[clamp(3.2rem,8vw,8rem)] leading-[.88] tracking-[-.085em]"
             {...reveal(0.08, 20, 0.7)}
           >
-            Let&apos;s make something{" "}
-            <em className="text-primary">useful.</em>
+            Let&apos;s{" "}
+            <SquigglyText stepDuration={90} scale={[1, 2]}>
+              make
+            </SquigglyText>{" "}
+            something{" "}
+            <SquigglyText className="text-primary">useful.</SquigglyText>
           </motion.h2>
         </div>
 
@@ -120,9 +132,7 @@ export function SiteFooter() {
               {...reveal(0.08, 12, 0.55)}
             >
               Code + Logic + Data → Digital Products.
-              <span className="block text-xs">
-                From concept to deployment.
-              </span>
+              <span className="block text-xs">From concept to deployment.</span>
             </motion.p>
 
             <motion.p
@@ -165,10 +175,7 @@ export function SiteFooter() {
               aria-label="Footer navigation"
             >
               {navigation.map((item, index) => (
-                <motion.div
-                  key={item.href}
-                  {...reveal(index * 0.05, 8, 0.4)}
-                >
+                <motion.div key={item.href} {...reveal(index * 0.05, 8, 0.4)}>
                   <Link
                     className="w-fit text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                     href={item.href}
@@ -186,15 +193,9 @@ export function SiteFooter() {
               Services
             </p>
 
-            <nav
-              className="grid gap-2.5 text-sm"
-              aria-label="Footer services"
-            >
+            <nav className="grid gap-2.5 text-sm" aria-label="Footer services">
               {services.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  {...reveal(index * 0.05, 8, 0.4)}
-                >
+                <motion.div key={item.label} {...reveal(index * 0.05, 8, 0.4)}>
                   <Link
                     className="w-fit text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                     href={item.href}
@@ -221,17 +222,13 @@ export function SiteFooter() {
                 className="group/contact flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 {...reveal(0, 8, 0.45)}
               >
-                <Mail
-                  aria-hidden="true"
-                  className="mt-0.5 size-3.5 shrink-0"
-                />
+                <Mail aria-hidden="true" className="mt-0.5 size-3.5 shrink-0" />
                 <span className="break-all">tarikulislam3639@gmail.com</span>
                 <ArrowUpRight
                   aria-hidden="true"
                   className="mt-0.5 size-3.5 shrink-0 opacity-0 transition-all group-hover/contact:translate-x-0.5 group-hover/contact:-translate-y-0.5 group-hover/contact:opacity-100"
                 />
               </motion.a>
-
 
               <motion.a
                 href="https://wa.me/8801909290959"
@@ -247,7 +244,6 @@ export function SiteFooter() {
                 <span>+880 1909290959</span>
               </motion.a>
 
-
               <motion.div
                 className="flex items-start gap-2 text-sm text-muted-foreground"
                 {...reveal(0.12, 8, 0.45)}
@@ -261,8 +257,6 @@ export function SiteFooter() {
             </div>
           </motion.div>
         </div>
-
-
 
         <motion.div
           className="flex flex-col gap-4 border-t border-border pt-5 text-[.66rem] text-muted-foreground sm:flex-row sm:items-center sm:justify-between"

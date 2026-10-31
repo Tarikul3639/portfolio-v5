@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-
 export default function AboutPage() {
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">

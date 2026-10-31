@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useEffect, useState } from "react"
@@ -8,6 +7,7 @@ import { motion, useReducedMotion } from "motion/react"
 
 import { useResponsive } from "@/hooks/use-media-query"
 import { Container } from "@/components/container"
+import { EncryptedText } from "@/components/ui/encrypted-text"
 
 const calendarTheme = {
   light: ["oklch(0.93 0.02 145)", "oklch(0.43 0.12 145)"],
@@ -45,7 +45,7 @@ export function AboutGithubSection() {
               {...reveal(0, 8, 0.45)}
               className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
             >
-              Open source activity
+              <EncryptedText text="OPEN SOURCE ACTIVITY" />
             </motion.p>
 
             <motion.h2
@@ -93,9 +93,7 @@ export function AboutGithubSection() {
           {...reveal(0.12, 8, 0.45)}
           className="mt-5 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
         >
-          <p>
-            Contribution counts and dates reflect public activity only.
-          </p>
+          <p>Contribution counts and dates reflect public activity only.</p>
 
           <a
             className="inline-flex w-fit items-center gap-2 border-b border-foreground pb-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary"

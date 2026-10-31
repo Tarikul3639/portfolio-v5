@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -7,6 +6,7 @@ import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
+import { Spotlight } from "@/components/ui/spotlight"
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
@@ -29,15 +29,15 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-      initial: false as const,
-      whileInView: undefined,
-      animate: undefined,
-    }
+        initial: false as const,
+        whileInView: undefined,
+        animate: undefined,
+      }
     : {
-      initial: "hidden" as const,
-      whileInView: "visible" as const,
-      viewport: { once: true, amount: 0.2 },
-    }
+        initial: "hidden" as const,
+        whileInView: "visible" as const,
+        viewport: { once: true, amount: 0.2 },
+      }
 
   return (
     <section className="relative isolate overflow-hidden py-[clamp(4.2rem,9vw,8.2rem)]">
@@ -49,6 +49,11 @@ export function HomeHero() {
           background:
             "radial-gradient(circle, color-mix(in oklab, oklch(0.68 0.18 255) 38%, var(--primary)), color-mix(in oklab, oklch(0.58 0.18 285) 24%, transparent) 52%, transparent 74%)",
         }}
+      />
+
+      <Spotlight
+        className="-top-40 left-0 md:-top-20 md:left-60"
+        fill="var(--primary)"
       />
 
       <span

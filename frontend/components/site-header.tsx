@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -91,8 +90,7 @@ export function SiteHeader() {
         >
           {links.map((link, index) => {
             const active =
-              pathname === link.href ||
-              pathname.startsWith(`${link.href}/`)
+              pathname === link.href || pathname.startsWith(`${link.href}/`)
 
             return (
               <motion.div
@@ -102,16 +100,18 @@ export function SiteHeader() {
                 <Link
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.72rem] transition-colors duration-200 ${active
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                    }`}
+                  className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.72rem] transition-colors duration-200 ${
+                    active
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   <span
-                    className={`text-[.58rem] transition-colors duration-200 ${active
-                      ? "text-primary"
-                      : "text-muted-foreground/50 group-hover/nav:text-primary"
-                      }`}
+                    className={`text-[.58rem] transition-colors duration-200 ${
+                      active
+                        ? "text-primary"
+                        : "text-muted-foreground/50 group-hover/nav:text-primary"
+                    }`}
                   >
                     {link.code}
                   </span>
@@ -119,10 +119,11 @@ export function SiteHeader() {
                   {link.label}
 
                   <span
-                    className={`absolute inset-x-3 bottom-0 h-px origin-left bg-primary transition-transform duration-300 ${active
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover/nav:scale-x-100"
-                      }`}
+                    className={`absolute inset-x-3 bottom-0 h-px origin-left bg-primary transition-transform duration-300 ${
+                      active
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover/nav:scale-x-100"
+                    }`}
                   />
                 </Link>
               </motion.div>
@@ -155,9 +156,7 @@ export function SiteHeader() {
             size="compact"
             href="/contact"
           >
-            <span className="font-mono text-[.72rem]">
-              LET&apos;S TALK
-            </span>
+            <span className="font-mono text-[.72rem]">LET&apos;S TALK</span>
 
             <ArrowUpRight
               aria-hidden="true"
@@ -172,9 +171,7 @@ export function SiteHeader() {
             aria-controls="mobile-navigation"
             aria-expanded={menuOpen}
             aria-label={
-              menuOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
             }
             className="grid size-9 place-items-center border border-border text-foreground transition-all duration-200 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"
             onClick={() => setMenuOpen((open) => !open)}

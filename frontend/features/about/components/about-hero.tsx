@@ -1,9 +1,10 @@
-
 "use client"
 
 import { motion, useReducedMotion } from "motion/react"
 
 import { Container } from "@/components/container"
+import { EncryptedText } from "@/components/ui/encrypted-text"
+import { FlipWords } from "@/components/ui/flip-words"
 
 export function AboutHero() {
   const reduceMotion = useReducedMotion() ?? false
@@ -44,7 +45,7 @@ export function AboutHero() {
           {...reveal(0, 8, 0.45)}
           className="mb-4 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
         >
-          About · A short introduction
+          <EncryptedText text="ABOUT · A SHORT INTRODUCTION" />
         </motion.p>
 
         <motion.h1
@@ -52,7 +53,14 @@ export function AboutHero() {
           className="max-w-222.5 font-serif text-[clamp(3rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
         >
           A developer with a{" "}
-          <em className="text-primary">systems</em> mindset.
+          <em className="inline-block min-w-[7ch] text-primary">
+            <FlipWords
+              words={["systems", "product", "backend"]}
+              duration={3800}
+              className="px-0 text-inherit!"
+            />
+          </em>{" "}
+          mindset.
         </motion.h1>
       </Container>
     </section>

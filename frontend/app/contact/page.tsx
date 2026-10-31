@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 
 import { SiteHeader } from "@/components/site-header"
@@ -30,7 +29,6 @@ export const metadata: Metadata = {
       "Contact Tarikul Islam to discuss full-stack web development projects and collaboration opportunities.",
   },
 }
-
 
 export default function ContactPage() {
   return (

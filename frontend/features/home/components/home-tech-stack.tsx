@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { HomeTechGrid } from "@/features/home/components/home-tech-grid"
+import { EncryptedText } from "@/components/ui/encrypted-text"
 
 export function HomeTechStack() {
   const reduceMotion = useReducedMotion() ?? false
@@ -27,7 +28,7 @@ export function HomeTechStack() {
               className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
               {...reveal(0, 8, 0.45)}
             >
-              Skills and tools
+              <EncryptedText text="SKILLS AND TOOLS" />
             </motion.p>
 
             <motion.h2

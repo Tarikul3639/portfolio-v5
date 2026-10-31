@@ -1,6 +1,6 @@
 "use client"
 
-import type { ComponentProps, ReactNode } from "react"
+import type { ComponentProps } from "react"
 import { motion, useReducedMotion, useScroll, useSpring } from "motion/react"
 import Link from "next/link"
 
@@ -24,13 +24,13 @@ export function ScrollProgress() {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 120,
     damping: 24,
-    restDelta: 0.001,
+    restDelta: 0,
   })
 
   return (
     <motion.div
       aria-hidden="true"
-      className="fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-primary"
+      className="fixed inset-x-0 top-0 z-100 h-0.5 origin-left bg-primary"
       style={{ scaleX: reduceMotion ? scrollYProgress : scaleX }}
     />
   )

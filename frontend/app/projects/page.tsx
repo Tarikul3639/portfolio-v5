@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -40,7 +39,6 @@ export const metadata: Metadata = {
   },
 }
 
-
 export default function ProjectsPage() {
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">
@@ -52,11 +50,7 @@ export default function ProjectsPage() {
         <Container className="pb-[clamp(6rem,10vw,9rem)]">
           <div className="grid grid-cols-1 gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-18 md:grid-cols-2">
             {projects.map((project, index) => (
-              <ProjectCard
-                index={index}
-                key={project.slug}
-                project={project}
-              />
+              <ProjectCard index={index} key={project.slug} project={project} />
             ))}
           </div>
         </Container>

@@ -1,4 +1,3 @@
-
 import localFont from "next/font/local"
 import type { Metadata } from "next"
 
@@ -20,7 +19,6 @@ const fontMono = localFont({
   variable: "--font-mono",
   display: "swap",
 })
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tarikul-islam.me"),
@@ -107,7 +105,6 @@ export const metadata: Metadata = {
     images: ["/images/profile/tarikul-islam.webp"],
   },
 }
-
 
 export default function RootLayout({
   children,

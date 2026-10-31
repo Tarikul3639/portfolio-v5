@@ -20,102 +20,102 @@ import { MongoDBIcon } from "@/components/stack/MongoDBIcon"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
 
 export interface TechItem {
-    label: string
-    icon: ReactNode
-    color: string
+  label: string
+  icon: ReactNode
+  color: string
 }
 
 const ICON_CLASS = "h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10"
 
 export const TECH_STACK: TechItem[] = [
-    {
-        label: "NestJS",
-        icon: <NestJsIcon className={ICON_CLASS} />,
-        color: "#e0234e",
-    },
-    {
-        label: "Next.js",
-        icon: <NextJsIcon className={ICON_CLASS} />,
-        color: "currentColor",
-    },
-    {
-        label: "TypeScript",
-        icon: <TypeScriptIcon className={ICON_CLASS} />,
-        color: "#3178c6",
-    },
-    {
-        label: "JavaScript",
-        icon: <JSIcon className={ICON_CLASS} />,
-        color: "#f7df1e",
-    },
-    {
-        label: "Redux",
-        icon: <ReduxIcon className={ICON_CLASS} />,
-        color: "#764abc",
-    },
-    {
-        label: "Docker",
-        icon: <DockerIcon className={ICON_CLASS} />,
-        color: "#2496ed",
-    },
-    {
-        label: "Python",
-        icon: <PythonIcon className={ICON_CLASS} />,
-        color: "#3776ab",
-    },
-    {
-        label: "MySQL",
-        icon: <MySQLIcon className={ICON_CLASS} />,
-        color: "#f29111",
-    },
-    {
-        label: "Tailwind CSS",
-        icon: <TailwindIcon className={ICON_CLASS} />,
-        color: "#38bdf8",
-    },
-    {
-        label: "Framer Motion",
-        icon: <FramerIcon className={ICON_CLASS} />,
-        color: "#ec4899",
-    },
-    {
-        label: "Node.js",
-        icon: <NodeIcon className={ICON_CLASS} />,
-        color: "#339933",
-    },
-    {
-        label: "MongoDB",
-        icon: <MongoDBIcon className={ICON_CLASS} />,
-        color: "#10aa50",
-    },
-    {
-        label: "Socket.IO",
-        icon: <SocketIoIcon className={ICON_CLASS} />,
-        color: "#808080",
-    },
-    {
-        label: "C++",
-        icon: <CPlusPlusIcon className={ICON_CLASS} />,
-        color: "#00599c",
-    },
-    {
-        label: "React",
-        icon: <ReactIcon className={ICON_CLASS} />,
-        color: "#61dafb",
-    },
-    {
-        label: "Git",
-        icon: <GitIcon className={ICON_CLASS} />,
-        color: "#f05032",
-    },
-    {
-        label: "GitHub",
-        icon: <GitHubIcon className={ICON_CLASS} />,
-        color: "currentColor",
-    },
-    {
-        label: "REST API",
-        icon: <RestApiIcon className={ICON_CLASS} />,
-        color: "#43a2d8",
-    },
+  {
+    label: "NestJS",
+    icon: <NestJsIcon className={ICON_CLASS} />,
+    color: "#e0234e",
+  },
+  {
+    label: "Next.js",
+    icon: <NextJsIcon className={ICON_CLASS} />,
+    color: "currentColor",
+  },
+  {
+    label: "TypeScript",
+    icon: <TypeScriptIcon className={ICON_CLASS} />,
+    color: "#3178c6",
+  },
+  {
+    label: "JavaScript",
+    icon: <JSIcon className={ICON_CLASS} />,
+    color: "#f7df1e",
+  },
+  {
+    label: "Redux",
+    icon: <ReduxIcon className={ICON_CLASS} />,
+    color: "#764abc",
+  },
+  {
+    label: "Docker",
+    icon: <DockerIcon className={ICON_CLASS} />,
+    color: "#2496ed",
+  },
+  {
+    label: "Python",
+    icon: <PythonIcon className={ICON_CLASS} />,
+    color: "#3776ab",
+  },
+  {
+    label: "MySQL",
+    icon: <MySQLIcon className={ICON_CLASS} />,
+    color: "#f29111",
+  },
+  {
+    label: "Tailwind CSS",
+    icon: <TailwindIcon className={ICON_CLASS} />,
+    color: "#38bdf8",
+  },
+  {
+    label: "Framer Motion",
+    icon: <FramerIcon className={ICON_CLASS} />,
+    color: "#ec4899",
+  },
+  {
+    label: "Node.js",
+    icon: <NodeIcon className={ICON_CLASS} />,
+    color: "#339933",
+  },
+  {
+    label: "MongoDB",
+    icon: <MongoDBIcon className={ICON_CLASS} />,
+    color: "#10aa50",
+  },
+  {
+    label: "Socket.IO",
+    icon: <SocketIoIcon className={ICON_CLASS} />,
+    color: "#808080",
+  },
+  {
+    label: "C++",
+    icon: <CPlusPlusIcon className={ICON_CLASS} />,
+    color: "#00599c",
+  },
+  {
+    label: "React",
+    icon: <ReactIcon className={ICON_CLASS} />,
+    color: "#61dafb",
+  },
+  {
+    label: "Git",
+    icon: <GitIcon className={ICON_CLASS} />,
+    color: "#f05032",
+  },
+  {
+    label: "GitHub",
+    icon: <GitHubIcon className={ICON_CLASS} />,
+    color: "currentColor",
+  },
+  {
+    label: "REST API",
+    icon: <RestApiIcon className={ICON_CLASS} />,
+    color: "#43a2d8",
+  },
 ]

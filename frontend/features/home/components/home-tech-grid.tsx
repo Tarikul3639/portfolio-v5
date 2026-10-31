@@ -35,7 +35,7 @@ function TechCard({
   return (
     <motion.div
       {...reveal(index * 0.07, 12, 0.4)}
-      className="group/card mr-3 flex h-24 w-28 shrink-0 cursor-crosshair flex-col items-center justify-center gap-2 rounded-xl sm:rounded-3xl border-none bg-card/70 px-2 py-3 shadow-sm transition-colors duration-300 select-none sm:h-28 sm:w-32"
+      className="group/card mr-3 flex h-24 w-28 shrink-0 cursor-crosshair flex-col items-center justify-center gap-2 rounded-xl border-none bg-card/70 px-2 py-3 shadow-sm transition-colors duration-300 select-none sm:h-28 sm:w-32 sm:rounded-3xl"
     >
       <div className="relative text-4xl" style={{ color: item.color }}>
         <div
@@ -66,15 +66,15 @@ export function HomeTechGrid() {
       reduceMotion
         ? []
         : [
-          AutoScroll({
-            speed: 0.7,
-            startDelay: 0,
-            direction: "forward",
-            stopOnInteraction: false,
-            stopOnMouseEnter: true,
-            playOnInit: true,
-          }),
-        ],
+            AutoScroll({
+              speed: 0.7,
+              startDelay: 0,
+              direction: "forward",
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+              playOnInit: true,
+            }),
+          ],
     [reduceMotion]
   )
 
@@ -93,11 +93,7 @@ export function HomeTechGrid() {
         <CarouselContent className="ml-0">
           {TECH_STACK.map((item, index) => (
             <CarouselItem key={item.label} className="basis-auto pl-0">
-              <TechCard
-                item={item}
-                index={index}
-                reduceMotion={reduceMotion}
-              />
+              <TechCard item={item} index={index} reduceMotion={reduceMotion} />
             </CarouselItem>
           ))}
         </CarouselContent>
