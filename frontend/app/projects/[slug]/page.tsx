@@ -9,6 +9,7 @@ import { ProjectCard } from "@/features/projects/components/project-card"
 import { ProjectDetailHero } from "@/features/projects/components/project-detail-hero"
 import { ProjectDetailOverview } from "@/features/projects/components/project-detail-overview"
 import { projects, getProject } from "@/features/projects/data/projects"
+import { siteConfig } from "@/config/site"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -60,11 +61,11 @@ export default async function ProjectDetailPage({ params }: Props) {
     name: project.title,
     description: project.description,
     applicationCategory: project.category,
-    url: `https://tarikul-islam.me/projects/${project.slug}`,
+    url: `${siteConfig.url}/projects/${project.slug}`,
     author: {
       "@type": "Person",
       name: "Tarikul Islam",
-      url: "https://tarikul-islam.me/",
+      url: `${siteConfig.url}/`,
     },
     codeRepository: project.repos.map((repository) => repository.href),
   }

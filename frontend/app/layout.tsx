@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollProgress } from "@/components/motion"
 import { ScrollDownIndicator } from "@/components/scroll-down-indicator"
+import { siteConfig } from "@/config/site"
 
 const fontSans = localFont({
   src: [
@@ -22,7 +23,7 @@ const fontMono = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tarikul-islam.me"),
+  metadataBase: new URL(siteConfig.url),
 
   title: {
     default: "Tarikul Islam — Full-Stack Web Developer",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     icon: "/icon1.png",
     apple: "/apple-icon.png",
   },
-  authors: [{ name: "Tarikul Islam", url: "https://tarikul-islam.me" }],
+  authors: [{ name: "Tarikul Islam", url: siteConfig.url }],
   creator: "Tarikul Islam",
   publisher: "Tarikul Islam",
   category: "technology",

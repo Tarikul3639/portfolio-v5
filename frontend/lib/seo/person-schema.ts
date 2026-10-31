@@ -1,9 +1,11 @@
+import { siteConfig } from "@/config/site"
+
 export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Tarikul Islam",
-  url: "https://tarikul-islam.me/",
-  image: "https://tarikul-islam.me/images/profile/tarikul-islam.webp",
+  url: `${siteConfig.url}/`,
+  image: `${siteConfig.url}/images/profile/tarikul-islam.webp`,
   jobTitle: "Full-Stack Web Developer",
   address: {
     "@type": "PostalAddress",

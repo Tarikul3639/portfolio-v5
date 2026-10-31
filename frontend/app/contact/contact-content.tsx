@@ -5,39 +5,36 @@ import { motion, useReducedMotion } from "motion/react"
 import { ArrowUpRight, CalendarDays } from "lucide-react"
 
 import { Container } from "@/components/container"
-import { AngularLink } from "@/components/angular-link"
 import { ShootingStars } from "@/components/ui/shooting-stars"
 import { StarsBackground } from "@/components/ui/stars-background"
 import { EncryptedText } from "@/components/ui/encrypted-text"
-
-const CAL_URL = "https://cal.com/tarikul3639/portfolio-meeting"
-const FACEBOOK_URL = "https://www.facebook.com/tarikulislam3639"
+import { siteConfig } from "@/config/site"
 
 const contactOptions = [
   {
     label: "EMAIL",
-    value: "tarikulislam3639@gmail.com",
-    href: "mailto:tarikulislam3639@gmail.com",
+    value: siteConfig.contact.email,
+    href: `mailto:${siteConfig.contact.email}`,
   },
   {
     label: "WHATSAPP",
-    value: "+880 1909290959",
-    href: "https://wa.me/8801909290959",
+    value: siteConfig.contact.phone,
+    href: siteConfig.contact.whatsappUrl,
   },
   {
     label: "GITHUB",
-    value: "github.com/Tarikul3639",
-    href: "https://github.com/Tarikul3639",
+    value: siteConfig.social.github.replace(/^https?:\/\//, ""),
+    href: siteConfig.social.github,
   },
   {
     label: "LINKEDIN",
-    value: "linkedin.com/in/tarikul-islam-a439a0253",
-    href: "https://www.linkedin.com/in/tarikul-islam-a439a0253",
+    value: siteConfig.social.linkedin.replace(/^https?:\/\//, ""),
+    href: siteConfig.social.linkedin,
   },
   {
     label: "FACEBOOK",
-    value: "facebook.com/tarikulislam3639",
-    href: FACEBOOK_URL,
+    value: siteConfig.social.facebook.replace("https://www.", ""),
+    href: siteConfig.social.facebook,
   },
 ]
 
@@ -120,7 +117,7 @@ export function ContactContent() {
               </div>
 
               <Link
-                href={CAL_URL}
+                href={siteConfig.contact.calUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Schedule a meeting on Cal.com"

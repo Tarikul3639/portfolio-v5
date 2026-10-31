@@ -23,4 +23,3 @@ Tarikul Islam works with TypeScript, Node.js, NestJS, React, and Next.js. His pu
 
 - [GitHub](https://github.com/Tarikul3639)
 - [LinkedIn](https://www.linkedin.com/in/tarikul-islam-a439a0253)
-- Email: tarikulislam3639@gmail.com

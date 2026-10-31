@@ -14,8 +14,9 @@ import { Container } from "@/components/container"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
 import { SquigglyText } from "@/components/ui/squiggly-text"
+import { siteConfig } from "@/config/site"
 
-const OLD_PORTFOLIO_URL = "https://OLD_PORTFOLIO_URL"
+const OLD_PORTFOLIO_URL = "https://tarikul-islam-v4.vercel.app"
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -33,17 +34,17 @@ const services = [
 
 const socialLinks = [
   {
-    href: "https://github.com/Tarikul3639",
+    href: siteConfig.social.github,
     label: "GitHub",
     icon: GitHubIcon,
   },
   {
-    href: "https://www.linkedin.com/in/tarikul-islam-a439a0253",
+    href: siteConfig.social.linkedin,
     label: "LinkedIn",
     icon: LinkedInIcon,
   },
   {
-    href: "mailto:tarikulislam3639@gmail.com",
+    href: `mailto:${siteConfig.contact.email}`,
     label: "Email",
     icon: Mail,
   },
@@ -218,12 +219,12 @@ export function SiteFooter() {
 
             <div className="grid gap-3.5 text-sm">
               <motion.a
-                href="mailto:tarikulislam3639@gmail.com"
+                href={`mailto:${siteConfig.contact.email}`}
                 className="group/contact flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 {...reveal(0, 8, 0.45)}
               >
                 <Mail aria-hidden="true" className="mt-0.5 size-3.5 shrink-0" />
-                <span className="break-all">tarikulislam3639@gmail.com</span>
+                <span className="break-all">{siteConfig.contact.email}</span>
                 <ArrowUpRight
                   aria-hidden="true"
                   className="mt-0.5 size-3.5 shrink-0 opacity-0 transition-all group-hover/contact:translate-x-0.5 group-hover/contact:-translate-y-0.5 group-hover/contact:opacity-100"
@@ -231,7 +232,7 @@ export function SiteFooter() {
               </motion.a>
 
               <motion.a
-                href="https://wa.me/8801909290959"
+                href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-2 text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
@@ -241,7 +242,7 @@ export function SiteFooter() {
                   aria-hidden="true"
                   className="mt-0.5 size-3.5 shrink-0"
                 />
-                <span>+880 1909290959</span>
+                <span>{siteConfig.contact.phone}</span>
               </motion.a>
 
               <motion.div

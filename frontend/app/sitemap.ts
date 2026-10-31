@@ -1,21 +1,36 @@
 import type { MetadataRoute } from "next"
 import { projects } from "@/features/projects/data/projects"
-
-const siteUrl = "https://tarikul-islam.me"
+import { siteConfig } from "@/config/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: siteUrl, changeFrequency: "monthly", priority: 1 },
-    { url: `${siteUrl}/projects`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${siteUrl}/services`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${siteUrl}/about`, changeFrequency: "yearly", priority: 0.7 },
-    { url: `${siteUrl}/contact`, changeFrequency: "yearly", priority: 0.6 },
+    { url: siteConfig.url, changeFrequency: "monthly", priority: 1 },
+    {
+      url: `${siteConfig.url}/projects`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteConfig.url}/services`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteConfig.url}/about`,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteConfig.url}/contact`,
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
   ]
 
   return [
     ...staticRoutes,
     ...projects.map((project) => ({
-      url: `${siteUrl}/projects/${project.slug}`,
+      url: `${siteConfig.url}/projects/${project.slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
