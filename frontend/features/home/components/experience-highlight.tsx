@@ -21,6 +21,7 @@ export function ExperienceHighlight() {
 
   return (
     <section
+      id="experience-highlight"
       className="border-y border-border py-[clamp(3.5rem,7vw,6rem)]"
       aria-labelledby="experience-highlight-title"
     >

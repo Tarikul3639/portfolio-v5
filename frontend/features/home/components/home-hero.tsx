@@ -40,29 +40,42 @@ export function HomeHero() {
       }
 
   return (
-    <section className="relative isolate overflow-hidden py-[clamp(4.2rem,9vw,8.2rem)]">
+    <section
+      id="home-hero"
+      className="relative isolate overflow-hidden pt-[clamp(4.2rem,9vw,8.2rem)] pb-[clamp(5.5rem,11vw,9rem)]"
+    >
       {/* Ambient background */}
-      <span
+      {/* <span
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -right-28 z-0 h-145 w-145 rounded-full opacity-25 blur-[110px] sm:right-[8%]"
         style={{
           background:
             "radial-gradient(circle, color-mix(in oklab, oklch(0.68 0.18 255) 38%, var(--primary)), color-mix(in oklab, oklch(0.58 0.18 285) 24%, transparent) 52%, transparent 74%)",
         }}
-      />
+      /> */}
 
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="var(--primary)"
       />
 
-      <span
+      {/* <span
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-28 -left-32 z-0 h-85 w-85 rounded-full opacity-15 blur-[100px]"
         style={{
           background:
             "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.15 270) 30%, var(--ring)), transparent 72%)",
         }}
+      /> */}
+
+      <Image
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 right-0 z-0 h-full w-[58%] object-cover object-center opacity-20 mix-blend-multiply md:w-[48%] dark:opacity-30 dark:mix-blend-screen"
+        src="/images/profile/hero-structure.png"
+        alt=""
+        width={1024}
+        height={1536}
+        sizes="(max-width: 768px) 58vw, 48vw"
       />
 
       <Container className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,1.25fr)_minmax(260px,.75fr)] md:gap-[clamp(2rem,6vw,6.5rem)]">
@@ -97,7 +110,7 @@ export function HomeHero() {
               },
             }}
             {...animationProps}
-            className="max-w-197.5 text-[clamp(3.4rem,7vw,6.8rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
+            className="max-w-197.5 text-[clamp(3.4rem,7vw,6rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
           >
             I build the <em className="font-serif text-primary">systems</em>
             <br />

@@ -1,0 +1,23 @@
+{
+  "name": "Tarikul Islam — Full-Stack Web Developer",
+  "short_name": "Tarikul Islam",
+  "description": "The personal portfolio of Tarikul Islam, a Bangladesh-based full-stack web developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#1d211e",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollProgress } from "@/components/motion"
+import { ScrollDownIndicator } from "@/components/scroll-down-indicator"
 
 const fontSans = localFont({
   src: [
@@ -32,6 +33,11 @@ export const metadata: Metadata = {
     "Tarikul Islam is a Bangladesh-based full-stack web developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience.",
 
   applicationName: "Tarikul Islam Portfolio",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   authors: [{ name: "Tarikul Islam", url: "https://tarikul-islam.me" }],
   creator: "Tarikul Islam",
   publisher: "Tarikul Islam",
@@ -120,6 +126,7 @@ export default function RootLayout({
       <body className="font-sans">
         <ThemeProvider>
           <ScrollProgress />
+          <ScrollDownIndicator />
           {children}
         </ThemeProvider>
       </body>
