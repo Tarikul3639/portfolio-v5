@@ -80,7 +80,7 @@ export function HomeHero() {
 
       <Container className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,1.25fr)_minmax(260px,.75fr)] md:gap-[clamp(2rem,6vw,6.5rem)]">
         {/* Hero content */}
-        <div className="relative z-10">
+        <div className="order-2 md:order-1 relative z-10">
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 10 },
@@ -179,7 +179,7 @@ export function HomeHero() {
         <motion.figure
           variants={imageReveal}
           {...animationProps}
-          className="relative mx-auto w-[74%] max-w-85 p-3.75 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
+          className="order-1 md:order-2 relative mx-auto w-[74%] max-w-85 p-3.75 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
         >
           <div
             aria-hidden="true"

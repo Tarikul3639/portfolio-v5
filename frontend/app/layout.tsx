@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   applicationName: "Tarikul Islam Portfolio",
   manifest: "/manifest.json",
   icons: {
-    icon: "/icon.png",
+    icon: "/icon1.png",
     apple: "/apple-icon.png",
   },
   authors: [{ name: "Tarikul Islam", url: "https://tarikul-islam.me" }],
