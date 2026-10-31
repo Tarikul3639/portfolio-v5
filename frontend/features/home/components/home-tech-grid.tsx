@@ -10,10 +10,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 
-import {
-  TECH_STACK,
-  type TechItem,
-} from "@/features/home/data/tech-stack"
+import { TECH_STACK, type TechItem } from "@/features/home/data/tech-stack"
 
 function TechCard({
   item,
@@ -24,12 +21,20 @@ function TechCard({
   index: number
   reduceMotion: boolean
 }) {
+  const reveal = (delay = 1, y = 14, duration = 0.6) => ({
+    initial: reduceMotion ? false : { opacity: 0, y },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { amount: 0.15 },
+    transition: {
+      duration: reduceMotion ? 0 : duration,
+      delay: reduceMotion ? 0 : delay,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  })
+
   return (
     <motion.div
-      initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ delay: index * 0.07, duration: 0.4 }}
+      {...reveal(index * 0.07, 12, 0.4)}
       className="group/card mr-3 flex h-24 w-28 shrink-0 cursor-crosshair flex-col items-center justify-center gap-2 rounded-3xl border-none bg-card/70 px-2 py-3 shadow-sm transition-colors duration-300 select-none sm:h-28 sm:w-32"
     >
       <div className="relative text-4xl" style={{ color: item.color }}>
@@ -61,16 +66,16 @@ export function HomeTechGrid() {
       reduceMotion
         ? []
         : [
-            AutoScroll({
-              speed: 0.7,
-              startDelay: 0,
-              direction: "forward",
-              stopOnInteraction: false,
-              stopOnMouseEnter: true,
-              playOnInit: true,
-            }),
-          ],
-    [reduceMotion],
+          AutoScroll({
+            speed: 0.7,
+            startDelay: 0,
+            direction: "forward",
+            stopOnInteraction: false,
+            stopOnMouseEnter: true,
+            playOnInit: true,
+          }),
+        ],
+    [reduceMotion]
   )
 
   return (
@@ -99,14 +104,14 @@ export function HomeTechGrid() {
       </Carousel>
 
       {/* Left fade */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent backdrop sm:w-16 md:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent backdrop sm:w-16 md:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent backdrop sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-linear-to-r from-background to-transparent sm:w-16 md:w-28" />
 
       {/* Right fade */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent backdrop sm:w-16 md:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent backdrop sm:w-16 md:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent backdrop sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent sm:w-16 md:w-28" />
+      <div className="backdrop pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-linear-to-l from-background to-transparent sm:w-16 md:w-28" />
     </div>
   )
 }
