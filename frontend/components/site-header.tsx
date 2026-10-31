@@ -1,11 +1,10 @@
-
 "use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { ArrowUpRight, Menu, SunMoon, X, Terminal } from "lucide-react"
-import { useRef, useState } from "react"
+import { useCallback, useRef, useState } from "react"
 
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
@@ -25,10 +24,14 @@ export function SiteHeader() {
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   // Close the mobile menu and return focus to its toggle button.
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setMenuOpen(false)
     requestAnimationFrame(() => menuButtonRef.current?.focus())
-  }
+  }, [])
+
+  const toggleTheme = useCallback(() => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+  }, [resolvedTheme, setTheme])
 
   return (
     <header className="group/header sticky top-0 z-50 border-b border-primary/20 bg-background/90 backdrop-blur-md">
@@ -42,7 +45,7 @@ export function SiteHeader() {
           aria-label="Tarikul Islam, home"
           className="group/brand flex shrink-0 items-center gap-3"
         >
-          <span className="relative grid size-8.5 shrink-0 place-items-center border-primary/40 transition-all duration-300 group-hover/brand:border-primary border-dashed border-2 group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
+          <span className="relative grid size-8.5 shrink-0 place-items-center border-2 border-dashed border-primary/40 transition-all duration-300 group-hover/brand:border-primary group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
             <Terminal
               aria-hidden="true"
               className="size-5 text-primary transition-transform duration-300 group-hover/brand:scale-110 group-hover/brand:-rotate-3"
@@ -78,16 +81,18 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.72rem] transition-colors duration-200 ${active
+                className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.72rem] transition-colors duration-200 ${
+                  active
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
-                  }`}
+                }`}
               >
                 <span
-                  className={`text-[.58rem] transition-colors duration-200 ${active
+                  className={`text-[.58rem] transition-colors duration-200 ${
+                    active
                       ? "text-primary"
                       : "text-muted-foreground/50 group-hover/nav:text-primary"
-                    }`}
+                  }`}
                 >
                   {link.code}
                 </span>
@@ -95,10 +100,11 @@ export function SiteHeader() {
                 {link.label}
 
                 <span
-                  className={`absolute inset-x-3 bottom-0 h-px origin-left bg-primary transition-transform duration-300 ${active
+                  className={`absolute inset-x-3 bottom-0 h-px origin-left bg-primary transition-transform duration-300 ${
+                    active
                       ? "scale-x-100"
                       : "scale-x-0 group-hover/nav:scale-x-100"
-                    }`}
+                  }`}
                 />
               </Link>
             )
@@ -110,9 +116,7 @@ export function SiteHeader() {
           <button
             type="button"
             aria-label="Toggle color theme"
-            onClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
-            }
+            onClick={toggleTheme}
             className="group/theme hidden size-9 place-items-center border border-border text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:grid"
           >
             <SunMoon
@@ -169,6 +173,8 @@ export function SiteHeader() {
           open={menuOpen}
           onClose={closeMenu}
           pathname={pathname}
+          theme={resolvedTheme}
+          onToggleTheme={toggleTheme}
         />
       </div>
     </header>
