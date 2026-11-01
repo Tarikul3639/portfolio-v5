@@ -33,20 +33,20 @@ export function BusinessCard() {
       <Container className="max-w-6xl">
         <BusinessCardHero />
 
-        <article aria-label={t("cardTitle")} className="mx-auto w-full">
+        <article aria-label={t("cardTitle")} className="mx-auto w-full min-w-0">
           <BusinessCardControls />
 
-          <div className="grid min-w-0 grid-cols-1 justify-items-center gap-10 min-[1200px]:grid-cols-2 min-[1200px]:gap-8">
+          <div className="mx-auto grid w-full min-w-0 grid-cols-1 justify-items-center gap-8 sm:gap-10 min-[1200px]:grid-cols-2 min-[1200px]:gap-6">
             <motion.div
               {...cardAnimation(0)}
-              className="w-fit max-w-full overflow-hidden rounded-sm drop-shadow-[0_12px_24px_rgba(0,0,0,0.24)]"
+              className="w-full min-w-0 rounded-sm drop-shadow-[0_12px_24px_rgba(0,0,0,0.24)]"
             >
               <BusinessCardFront />
             </motion.div>
 
             <motion.div
               {...cardAnimation(0.12)}
-              className="w-fit max-w-full overflow-hidden drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]"
+              className="w-full min-w-0 drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]"
             >
               <BusinessCardBack />
             </motion.div>

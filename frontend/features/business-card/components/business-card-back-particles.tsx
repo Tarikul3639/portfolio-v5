@@ -5,7 +5,7 @@ export function BusinessCardBackParticles() {
             viewBox="0 0 700 400"
             fill="none"
             preserveAspectRatio="xMidYMid slice"
-            className="pointer-events-none absolute inset-0 z-0 h-full w-full translate-y- text-foreground"
+            className="pointer-events-none absolute inset-0 z-0 size-full text-foreground"
         >
             <defs>
                 <pattern
@@ -31,7 +31,6 @@ export function BusinessCardBackParticles() {
 
             <rect width="700" height="400" fill="url(#card-particle-grid)" />
 
-            {/* Glow shifted toward the center */}
             <ellipse
                 cx="380"
                 cy="185"
@@ -40,14 +39,12 @@ export function BusinessCardBackParticles() {
                 fill="url(#card-particle-glow)"
             />
 
-            {/* Connection lines */}
             <g stroke="currentColor" strokeWidth="0.8" opacity="0.16">
                 <path d="M275 92L342 130L400 105" />
                 <path d="M342 130L365 194L428 225" />
                 <path d="M365 194L300 250L325 305" />
             </g>
 
-            {/* Neutral particles */}
             <g fill="currentColor">
                 <circle cx="275" cy="92" r="2" opacity="0.45" />
                 <circle cx="400" cy="105" r="1.5" opacity="0.35" />
@@ -56,14 +53,12 @@ export function BusinessCardBackParticles() {
                 <circle cx="325" cy="305" r="2" opacity="0.3" />
             </g>
 
-            {/* Primary accents */}
             <g fill="var(--primary)">
                 <circle cx="342" cy="130" r="2.5" />
                 <circle cx="365" cy="194" r="2" />
                 <circle cx="325" cy="305" r="1.8" />
             </g>
 
-            {/* Technical markers */}
             <g
                 stroke="var(--primary)"
                 strokeWidth="1.2"
