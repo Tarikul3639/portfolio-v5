@@ -56,31 +56,36 @@ export function ContactContent() {
 
   return (
     <>
-      <span
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -right-32 z-0 h-110 w-110 rounded-full opacity-15 blur-[105px]"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.14 155) 32%, var(--primary)), transparent 72%)",
-        }}
-      />
+        className="pointer-events-none absolute inset-0 z-0"
+      >
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-32 z-0 h-110 w-110 rounded-full opacity-15 blur-[105px]"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.14 155) 32%, var(--primary)), transparent 72%)",
+          }}
+        />
 
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 -left-40 z-0 h-100 w-100 rounded-full opacity-12 blur-[95px]"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.13 178) 28%, var(--ring)), transparent 70%)",
-        }}
-      />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/2 -left-40 z-0 h-100 w-100 rounded-full opacity-12 blur-[95px]"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in oklab, oklch(0.62 0.13 178) 28%, var(--ring)), transparent 70%)",
+          }}
+        />
 
-      {/* Top transparent gradient */}
-      <span className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-linear-to-b from-background to-transparent" />
+        {/* Top transparent gradient */}
+        <span className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-linear-to-b from-background to-transparent" />
 
-      {/* Bottom transparent gradient */}
-      <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-linear-to-t from-background to-transparent" />
-      <StarsBackground />
-      <ShootingStars />
+        {/* Bottom transparent gradient */}
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-linear-to-t from-background to-transparent" />
+        <StarsBackground />
+        <ShootingStars />
+      </div>
 
       <Container className="pt-[clamp(4.8rem,9vw,8rem)] pb-12">
         <motion.p
@@ -137,6 +142,14 @@ export function ContactContent() {
             <p className="mt-3 text-sm text-muted-foreground">
               {t("calendarHint")}
             </p>
+
+            <Link
+              href="/business-card"
+              className="mt-5 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium capitalize transition-colors hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+            >
+              {t("businessCardLink")}
+              <ArrowUpRight aria-hidden="true" className="size-4" />
+            </Link>
           </motion.div>
         </div>
 

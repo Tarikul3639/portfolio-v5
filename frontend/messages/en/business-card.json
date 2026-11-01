@@ -1,0 +1,35 @@
+{
+  "businessCard": {
+    "hero": {
+      "eyebrow": "A digital introduction",
+      "title": "A simple way to stay connected.",
+      "description": "View or save my contact card with the links and details I share most often."
+    },
+    "front": "Front",
+    "back": "Back",
+    "cardSide": "Card side",
+    "cardTitle": "Tarikul Islam business card",
+    "location": "Dhaka, Bangladesh",
+    "printCard": "Print both sides",
+    "downloadCard": "Download card",
+    "downloadPng": "PNG",
+    "downloadJpg": "JPG",
+    "downloadPdf": "PDF",
+    "downloadPngAction": "Download PNG",
+    "downloadPdfAction": "Download PDF",
+    "preparingDownload": "Preparing your card download.",
+    "downloadError": "The card could not be downloaded. Please try again.",
+    "specialtiesLine": ["Web Development", "Web Design", "API Integration"],
+    "qrForWebsite": "Scan to visit website",
+    "eyebrow": "DIGITAL BUSINESS CARD",
+    "role": "Web Developer",
+    "website": "WEBSITE",
+    "email": "EMAIL",
+    "phone": "PHONE",
+    "socialLinks": "Social links",
+    "metadata": {
+      "title": "Digital Business Card",
+      "description": "Contact details and professional links for Tarikul Islam, a backend-focused full-stack developer."
+    }
+  }
+}

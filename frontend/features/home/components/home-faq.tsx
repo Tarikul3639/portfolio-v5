@@ -51,7 +51,7 @@ export function HomeFaq() {
 
           <motion.h2
             id={`${id}-title`}
-            className="mt-3 font-serif text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-[-.055em]"
+            className="mt-3 truncate font-serif text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-[-.055em]"
             {...reveal(0.08, 18, 0.65)}
           >
             <EncryptedText text={t("title")} />
@@ -82,9 +82,7 @@ export function HomeFaq() {
                     type="button"
                     aria-expanded={expanded}
                     aria-controls={panelId}
-                    onClick={() =>
-                      setOpenItem(expanded ? null : item)
-                    }
+                    onClick={() => setOpenItem(expanded ? null : item)}
                     className="group flex w-full items-center justify-between gap-5 py-5 text-left text-base font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring sm:py-6 sm:text-lg"
                   >
                     <span>{t(`items.${item}.question`)}</span>

@@ -4,8 +4,8 @@ Personal portfolio built with the existing Next.js App Router, TypeScript, Tailw
 
 ## Routes
 
-- English is the default locale and uses unprefixed routes: `/`, `/projects`, `/projects/[slug]`, `/services`, `/about`, and `/contact`.
-- Bengali routes use the `/bn` prefix, for example `/bn` and `/bn/projects`.
+- English is the default locale and uses unprefixed routes: `/`, `/projects`, `/projects/[slug]`, `/services`, `/about`, `/contact`, and `/business-card`.
+- Bengali routes use the `/bn` prefix, for example `/bn`, `/bn/projects`, and `/bn/business-card`.
 - The language switcher preserves the equivalent route when available.
 
 Project content is maintained in `data/projects.ts`. Paired client/server repositories are represented as one project. The site does not use an API or Redux store because its current content is static.
