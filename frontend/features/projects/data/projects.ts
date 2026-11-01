@@ -9,12 +9,78 @@ export type PortfolioProject = {
   role: string
   highlights: string[]
   repos: { label: string; href: string }[]
-  demo?: string
+  live?: string
   monogram: string
-  visual: "classflow" | "deenseries" | "mosque" | "academy"
+  theme: {
+    background: string
+    foreground: string
+  }
+  image?: string
 }
 
 export const projects: PortfolioProject[] = [
+  {
+    slug: "tarikul-open-mcp",
+    title: "Tarikul Open MCP",
+    category: "Developer tool",
+    year: "2026",
+    summary:
+      "A remote MCP server that connects Google Calendar to compatible clients.",
+    description:
+      "Tarikul Open MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
+    stack: ["Next.js", "TypeScript", "MCP", "Google Calendar"],
+    role: "Full-stack development",
+    highlights: [
+      "Connect a personal Google Calendar account through one dashboard",
+      "Read, create, update, and delete calendar events",
+      "One remote endpoint for MCP-compatible clients",
+      "Works with MCP Inspector and Streamable HTTP clients",
+    ],
+    repos: [
+      {
+        label: "Source code",
+        href: "https://github.com/Tarikul3639/tarikul-open-mcp",
+      },
+    ],
+    live: "https://tarikul-open-mcp.vercel.app",
+    monogram: "MCP",
+    theme: {
+      background: "bg-[#161616]",
+      foreground: "text-[#f4c900]",
+    },
+    image: "/images/projects/tarikul-open-mcp-server.png",
+  },
+  {
+    slug: "portfolio",
+    title: "Portfolio",
+    category: "Personal portfolio",
+    year: "2026",
+    summary:
+      "A personal portfolio for presenting full-stack work, experience, and technical interests.",
+    description:
+      "This portfolio brings together selected projects, development experience, technical interests, and contact details in a responsive editorial interface.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+    role: "Design and full-stack development",
+    highlights: [
+      "Responsive portfolio experience across desktop and mobile",
+      "Project pages with repository and live demo links",
+      "Accessible dark and light theme support",
+      "Subtle motion and editorial visual system",
+    ],
+    repos: [
+      {
+        label: "Source code",
+        href: "https://github.com/Tarikul3639/Portfolio",
+      },
+    ],
+    live: "https://tarikul-islam-v4.vercel.app",
+    monogram: "P",
+    theme: {
+      background: "bg-[#071716]",
+      foreground: "text-[#51e6c4]",
+    },
+    image: "/images/projects/portfolio-v4.png",
+  },
   {
     slug: "classflow-prime",
     title: "ClassFlow Prime",
@@ -37,9 +103,13 @@ export const projects: PortfolioProject[] = [
         href: "https://github.com/Tarikul3639/classflow-prime",
       },
     ],
-    demo: "https://classflow-prime.vercel.app",
+    live: "https://classflow-prime.vercel.app",
     monogram: "CF",
-    visual: "classflow",
+    theme: {
+      background: "bg-[#eaf3ff]",
+      foreground: "text-[#1677d2]",
+    },
+    image: "/images/projects/classflow-prime.png",
   },
   {
     slug: "deenseries",
@@ -63,9 +133,13 @@ export const projects: PortfolioProject[] = [
         href: "https://github.com/Tarikul3639/DeenSeries",
       },
     ],
-    demo: "https://deenseries.vercel.app",
+    live: "https://deenseries.vercel.app",
     monogram: "DS",
-    visual: "deenseries",
+    theme: {
+      background: "bg-[#fff7fa]",
+      foreground: "text-[#ec1455]",
+    },
+    image: "/images/projects/deenseries.png",
   },
   {
     slug: "mosque-management-system",
@@ -93,9 +167,13 @@ export const projects: PortfolioProject[] = [
         href: "https://github.com/Tarikul3639/mosque-management-backend",
       },
     ],
-    demo: "https://mosque-management-systems.vercel.app/",
+    live: "https://mosque-management-systems.vercel.app/",
     monogram: "MM",
-    visual: "mosque",
+    theme: {
+      background: "bg-[#e8f5f2]",
+      foreground: "text-[#006b4f]",
+    },
+    image: "/images/projects/mosque-management-system.png",
   },
   {
     slug: "bishuddho-academy",
@@ -124,12 +202,17 @@ export const projects: PortfolioProject[] = [
         href: "https://github.com/Tarikul3639/bishuddho-academy-server",
       },
     ],
-    demo: "https://bishuddho-academy.vercel.app/",
+    live: "https://bishuddho-academy.vercel.app/",
     monogram: "BA",
-    visual: "academy",
+    theme: {
+      background: "bg-[#f4f8ff]",
+      foreground: "text-[#1755d1]",
+    },
+    image: "/images/projects/bishuddho-academy.png",
   },
 ]
 
 export const featuredProjects = projects.slice(0, 3)
+
 export const getProject = (slug: string) =>
   projects.find((project) => project.slug === slug)

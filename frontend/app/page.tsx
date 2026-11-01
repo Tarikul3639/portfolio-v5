@@ -1,3 +1,4 @@
+
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { FeaturedProjects } from "@/features/home/components/featured-projects"
@@ -7,6 +8,7 @@ import { ExperienceHighlight } from "@/features/home/components/experience-highl
 import { HomeTechStack } from "@/features/home/components/home-tech-stack"
 import { WorkApproach } from "@/features/home/components/work-approach"
 import { personSchema } from "@/lib/seo/person-schema"
+import { websiteSchema } from "@/lib/seo/website-schema"
 
 export default function HomePage() {
   return (
@@ -14,9 +16,17 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
         }}
       />
+
       <SiteHeader />
 
       <main className="flex-1">

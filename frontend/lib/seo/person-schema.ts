@@ -4,7 +4,7 @@ export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Tarikul Islam",
-  url: `${siteConfig.url}/`,
+  url: siteConfig.url,
   image: `${siteConfig.url}/images/profile/tarikul-islam.webp`,
   jobTitle: "Full-Stack Web Developer",
   address: {

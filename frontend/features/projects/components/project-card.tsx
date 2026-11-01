@@ -18,7 +18,7 @@ export function ProjectCard({
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
     initial: reduceMotion ? false : { opacity: 0, y },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { amount: 0.2 },
+    viewport: { amount: 0.2, once: true },
     transition: {
       duration: reduceMotion ? 0 : duration,
       delay: reduceMotion ? 0 : delay,
@@ -73,10 +73,10 @@ export function ProjectCard({
 
         <motion.div {...reveal(0.18, 8, 0.5)}>
           <Link
-            className="group/link inline-flex w-fit shrink-0 items-center gap-2 border-b border-foreground pb-1 text-xs transition-colors hover:border-primary hover:text-primary"
+            className="group/link inline-flex w-fit shrink-0 items-center gap-2 border-b border-foreground pb-1 text-xs transition-colors hover:border-primary hover:text-primary min-w-24"
             href={`/projects/${project.slug}`}
           >
-            View project{" "}
+            View project
             <span
               className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
               aria-hidden="true"

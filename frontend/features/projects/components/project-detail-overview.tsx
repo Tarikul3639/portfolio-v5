@@ -101,11 +101,11 @@ export function ProjectDetailOverview({ project }: Props) {
               )
             })}
 
-            {project.demo && (
+            {project.live && (
               <li>
                 <a
                   className="group inline-flex w-fit items-center gap-2 py-1 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
-                  href={project.demo}
+                  href={project.live}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -114,7 +114,7 @@ export function ProjectDetailOverview({ project }: Props) {
                     className="size-4 shrink-0"
                   />
 
-                  <span>Live demo</span>
+                  <span>Live website</span>
 
                   <ArrowUpRight
                     aria-hidden="true"
