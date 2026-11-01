@@ -95,9 +95,9 @@ export function SiteFooter() {
               <Link
                 href="/"
                 aria-label="Tarikul Islam, home"
-                className="group/brand flex w-fit shrink-0 items-center gap-3"
+                className="group/brand flex shrink-0 items-center gap-3"
               >
-                <span className="relative grid size-9 shrink-0 place-items-center border border-primary/40 transition-all duration-300 group-hover/brand:border-primary group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
+                <span className="relative grid size-8.5 shrink-0 place-items-center border-2 border-dashed border-primary/40 transition-all duration-300 group-hover/brand:border-primary group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
                   <Terminal
                     aria-hidden="true"
                     className="size-5 text-primary transition-transform duration-300 group-hover/brand:scale-110 group-hover/brand:-rotate-3"

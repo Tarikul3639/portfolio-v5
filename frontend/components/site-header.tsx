@@ -52,7 +52,7 @@ export function SiteHeader() {
       {/* Subtle animated accent */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left bg-primary/70 shadow-[0_0_12px_var(--primary)] transition-transform duration-500 group-hover/header:scale-x-100" />
 
-      <Container className="flex min-h-16 items-center justify-between gap-5 max-md:min-h-14">
+      <Container className="flex min-h-16 items-center justify-between gap-5">
         {/* Brand */}
         <motion.div {...reveal(0, 6, 0.4)}>
           <Link
