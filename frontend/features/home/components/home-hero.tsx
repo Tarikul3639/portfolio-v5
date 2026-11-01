@@ -32,15 +32,15 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-      initial: false as const,
-      whileInView: undefined,
-      animate: undefined,
-    }
+        initial: false as const,
+        whileInView: undefined,
+        animate: undefined,
+      }
     : {
-      initial: "hidden" as const,
-      whileInView: "visible" as const,
-      viewport: { once: true, amount: 0.2 },
-    }
+        initial: "hidden" as const,
+        whileInView: "visible" as const,
+        viewport: { once: true, amount: 0.2 },
+      }
 
   return (
     <section

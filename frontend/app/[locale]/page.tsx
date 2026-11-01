@@ -9,6 +9,7 @@ import { HomeHero } from "@/features/home/components/home-hero"
 import { ExperienceHighlight } from "@/features/home/components/experience-highlight"
 import { HomeTechStack } from "@/features/home/components/home-tech-stack"
 import { WorkApproach } from "@/features/home/components/work-approach"
+import { HomeFaq } from "@/features/home/components/home-faq"
 import { personSchema } from "@/lib/seo/person-schema"
 import { websiteSchema } from "@/lib/seo/website-schema"
 
@@ -98,6 +99,7 @@ export default async function HomeRoute({
         <HomeTechStack />
         <FeaturedProjects />
         <WorkApproach />
+        <HomeFaq />
         <HomeCta />
       </main>
 

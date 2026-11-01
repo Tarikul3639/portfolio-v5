@@ -65,6 +65,37 @@
       "about": "More about me",
       "services": "Services"
     },
+    "faq": {
+      "eyebrow": "A few useful answers",
+      "title": "Frequently asked questions.",
+      "description": "A little more about my work, the technologies I use, and how we can get started.",
+      "items": {
+        "expertise": {
+          "question": "What does backend-focused full-stack development mean?",
+          "answer": "I work closely with server-side systems, APIs, data, and authentication, while also building the React and Next.js interfaces people use to access them."
+        },
+        "technology": {
+          "question": "Which technologies do you work with?",
+          "answer": "My work includes TypeScript, Node.js, NestJS, React, Next.js, REST APIs, MongoDB, PostgreSQL, Prisma, and Mongoose. The right tools depend on the product and its needs."
+        },
+        "projects": {
+          "question": "What kinds of projects have you built?",
+          "answer": "My portfolio includes full-stack education and streaming platforms, a mosque management system, this portfolio, and Tarikul Open MCP, a remote server that connects Google Calendar to compatible clients."
+        },
+        "services": {
+          "question": "What can you help build?",
+          "answer": "I work on full-stack web applications, backend services and REST APIs, and responsive frontend interfaces. The services page describes these areas and shows related projects."
+        },
+        "collaboration": {
+          "question": "How do you approach a collaboration?",
+          "answer": "I start by understanding the users, workflow, and constraints, then agree on a useful first scope. I build connected pieces, review the result, and refine it based on feedback."
+        },
+        "contact": {
+          "question": "How can I discuss a project with you?",
+          "answer": "Use the contact page to reach me through the listed contact options or schedule a conversation. Sharing the problem, intended users, and any constraints is a helpful place to start."
+        }
+      }
+    },
     "cta": {
       "eyebrow": "Have something in mind?",
       "headline": "Let's make it",
