@@ -19,14 +19,14 @@ export function BusinessCard() {
     reduceMotion
       ? {}
       : {
-        initial: { opacity: 0, y: 14 },
-        animate: { opacity: 1, y: 0 },
-        transition: {
-          duration: 0.55,
-          delay,
-          ease: easeOut,
-        },
-      }
+          initial: { opacity: 0, y: 14 },
+          animate: { opacity: 1, y: 0 },
+          transition: {
+            duration: 0.55,
+            delay,
+            ease: easeOut,
+          },
+        }
 
   return (
     <section className="flex flex-1 items-center bg-background py-[clamp(2.5rem,5vw,4rem)]">
@@ -36,7 +36,7 @@ export function BusinessCard() {
         <article aria-label={t("cardTitle")} className="mx-auto w-full min-w-0">
           <BusinessCardControls />
 
-          <div className="mx-auto grid w-full min-w-0 grid-cols-1 justify-items-center gap-8 sm:gap-10 min-[1200px]:grid-cols-2 min-[1200px]:gap-6">
+          <div className="mx-auto grid w-full min-w-0 grid-cols-1 justify-items-center gap-8 min-[1200px]:grid-cols-2 min-[1200px]:gap-6 sm:gap-10">
             <motion.div
               {...cardAnimation(0)}
               className="w-full min-w-0 rounded-sm drop-shadow-[0_12px_24px_rgba(0,0,0,0.24)]"
