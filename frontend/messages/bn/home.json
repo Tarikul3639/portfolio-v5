@@ -3,7 +3,7 @@
     "hero": {
       "eyebrow": "ফুল-স্ট্যাক ডেভেলপার · ঢাকা, বাংলাদেশ",
       "headlineOne": "আমি তৈরি করি",
-      "headlineAccent": "সিস্টেম",
+      "headlineAccent": ["সিস্টেম", "সমাধান", "অভিজ্ঞতা"],
       "headlineTwo": "যা গড়ে তোলে",
       "headlineThree": "উপযোগী ডিজিটাল পণ্য।",
       "description": "আমি তারিকুল ইসলাম, ব্যাকএন্ডে বিশেষজ্ঞ একজন ফুল-স্ট্যাক ডেভেলপার। TypeScript, Node.js, NestJS, React এবং Next.js নিয়ে কাজ করি।",

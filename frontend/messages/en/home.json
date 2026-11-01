@@ -3,7 +3,7 @@
     "hero": {
       "eyebrow": "Full-stack developer · Dhaka, Bangladesh",
       "headlineOne": "I build the",
-      "headlineAccent": "systems",
+      "headlineAccent": ["systems", "solutions", "experiences"],
       "headlineTwo": "behind useful",
       "headlineThree": "digital products.",
       "description": "I'm Tarikul Islam, a backend-focused full-stack developer working across TypeScript, Node.js, NestJS, React, and Next.js.",

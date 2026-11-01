@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl"
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
 import { Spotlight } from "@/components/ui/spotlight"
+import { FlipWords } from "@/components/ui/flip-words"
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
@@ -31,20 +32,21 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-        initial: false as const,
-        whileInView: undefined,
-        animate: undefined,
-      }
+      initial: false as const,
+      whileInView: undefined,
+      animate: undefined,
+    }
     : {
-        initial: "hidden" as const,
-        whileInView: "visible" as const,
-        viewport: { once: true, amount: 0.2 },
-      }
+      initial: "hidden" as const,
+      whileInView: "visible" as const,
+      viewport: { once: true, amount: 0.2 },
+    }
 
   return (
     <section
       id="home-hero"
       className="relative isolate overflow-hidden pt-[clamp(4.2rem,9vw,8.2rem)] pb-[clamp(5.5rem,11vw,9rem)]"
+      style={{ overflowAnchor: "none" }}
     >
       {/* Ambient background */}
       {/* <span
@@ -105,7 +107,13 @@ export function HomeHero() {
             className="max-w-197.5 text-[clamp(3.4rem,7vw,6rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
           >
             {t("headlineOne")}{" "}
-            <em className="font-serif text-primary">{t("headlineAccent")}</em>
+            <em className="inline-block min-w-[7ch] font-serif text-primary not-italic">
+              <FlipWords
+                words={t.raw("headlineAccent") as string[]}
+                duration={3800}
+                className="px-0 text-inherit!"
+              />
+            </em>{" "}
             <br />
             {t("headlineTwo")}
             <br />
