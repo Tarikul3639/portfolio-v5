@@ -130,7 +130,7 @@ const MobileNavStatus = memo(function MobileNavStatus({
                 height: [`${h * 100}%`, `${h * 100 - 20}%`, `${h * 100}%`],
               }}
               transition={{ duration: 1.5 + i * 0.2, repeat: Infinity }}
-              className="w-full rounded-t-[1px] bg-sidebar-primary/40"
+              className="w-full rounded-t-[1px] bg-sidebar-primary/80"
             />
           ))}
         </div>
@@ -256,7 +256,7 @@ export const MobileNav = memo(function MobileNav({
                   >
                     <Link
                       aria-current={active ? "page" : undefined}
-                      className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.8rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${
+                      className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.6rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${
                         active ? "text-primary" : ""
                       }`}
                       href={link.href}

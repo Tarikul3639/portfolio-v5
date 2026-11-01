@@ -13,7 +13,7 @@ export function BusinessCardHero() {
   const reveal = (delay = 0, y = 12, duration = 0.55) => ({
     initial: reduceMotion ? false : { opacity: 0, y },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.2 },
+    viewport: { amount: 0.2 },
     transition: {
       duration: reduceMotion ? 0 : duration,
       delay: reduceMotion ? 0 : delay,

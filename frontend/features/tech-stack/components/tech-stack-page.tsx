@@ -22,17 +22,35 @@ const techSections = [
       "Framer Motion",
     ],
   },
-  { key: "databases", technologies: ["MongoDB", "MySQL"] },
+  {
+    key: "databases",
+    technologies: ["MongoDB", "MySQL"],
+  },
   {
     key: "languages",
     technologies: ["TypeScript", "JavaScript", "Python", "C++"],
   },
-  { key: "tools", technologies: ["Docker", "Git", "GitHub"] },
+  {
+    key: "tools",
+    technologies: ["Docker", "Git", "GitHub"],
+  },
 ] as const
 
 export function TechStackPage() {
   const t = useTranslations("techStack")
   const reduceMotion = useReducedMotion() ?? false
+
+  const reveal = (delay = 0, y = 14, duration = 0.6) => ({
+    initial: reduceMotion ? false : { opacity: 0, y },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: false, amount: 0.2 },
+    transition: {
+      duration: reduceMotion ? 0 : duration,
+      delay: reduceMotion ? 0 : delay,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  })
+
   const descriptions: Record<string, string> = {
     NestJS: t("descriptions.nestjs"),
     "Node.js": t("descriptions.nodejs"),
@@ -53,6 +71,7 @@ export function TechStackPage() {
     Git: t("descriptions.git"),
     GitHub: t("descriptions.gitHub"),
   }
+
   const groups = {
     backend: t("groups.backend"),
     frontend: t("groups.frontend"),
@@ -60,6 +79,7 @@ export function TechStackPage() {
     languages: t("groups.languages"),
     tools: t("groups.tools"),
   }
+
   const technologies = new Map(TECH_STACK.map((item) => [item.label, item]))
 
   return (
@@ -76,21 +96,16 @@ export function TechStackPage() {
 
         <Container className="relative z-10 pt-[clamp(4.8rem,9vw,8rem)] pb-10">
           <motion.p
-            initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+            {...reveal(0, 8, 0.45)}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.45 }}
             className="mb-4 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
             <EncryptedText text={t("hero.eyebrow")} />
           </motion.p>
 
           <motion.h1
-            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+            {...reveal(0.08, 20, 0.65)}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: reduceMotion ? 0 : 0.65,
-              delay: reduceMotion ? 0 : 0.08,
-            }}
             className="max-w-222.5 font-serif text-[clamp(3rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
           >
             {t("hero.title")}{" "}
@@ -98,12 +113,8 @@ export function TechStackPage() {
           </motion.h1>
 
           <motion.p
-            initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+            {...reveal(0.16, 14, 0.55)}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: reduceMotion ? 0 : 0.55,
-              delay: reduceMotion ? 0 : 0.16,
-            }}
             className="mt-6 max-w-2xl text-base leading-[1.8] text-muted-foreground"
           >
             {t("hero.description")}
@@ -113,10 +124,7 @@ export function TechStackPage() {
 
       <Container className="pb-[clamp(6rem,10vw,9rem)]">
         <motion.p
-          initial={reduceMotion ? false : { opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: reduceMotion ? 0 : 0.45 }}
+          {...reveal(0, 0, 0.45)}
           className="mb-8 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
         >
           {t("count")} · {TECH_STACK.length.toString().padStart(2, "0")}
@@ -126,14 +134,7 @@ export function TechStackPage() {
           {techSections.map((section, sectionIndex) => (
             <motion.section
               key={section.key}
-              initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.08 }}
-              transition={{
-                duration: reduceMotion ? 0 : 0.5,
-                delay: reduceMotion ? 0 : Math.min(sectionIndex * 0.04, 0.16),
-                ease: [0.22, 1, 0.36, 1],
-              }}
+              {...reveal(Math.min(sectionIndex * 0.04, 0.16), 14, 0.5)}
             >
               <h2 className="mb-4 border-t border-border pt-4 font-mono text-[.7rem] tracking-[.11em] text-muted-foreground uppercase sm:mb-5">
                 {groups[section.key]}
@@ -145,19 +146,13 @@ export function TechStackPage() {
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {section.technologies.map((label, itemIndex) => {
                   const item = technologies.get(label)
+
                   if (!item) return null
 
                   return (
                     <motion.article
                       key={item.label}
-                      initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{
-                        duration: reduceMotion ? 0 : 0.38,
-                        delay: reduceMotion ? 0 : itemIndex * 0.045,
-                        ease: [0.22, 1, 0.36, 1],
-                      }}
+                      {...reveal(itemIndex * 0.045, 10, 0.38)}
                       className="group min-h-36 border border-border bg-card/25 p-4 transition-colors duration-300 hover:border-primary/35 hover:bg-card/50 sm:min-h-40 sm:p-5"
                     >
                       <motion.span
@@ -165,14 +160,20 @@ export function TechStackPage() {
                         whileHover={
                           reduceMotion ? undefined : { y: -2, scale: 1.06 }
                         }
+                        transition={{
+                          duration: reduceMotion ? 0 : 0.2,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
                         className="mb-4 block w-fit"
                         style={{ color: item.color }}
                       >
                         {item.icon}
                       </motion.span>
+
                       <h3 className="text-sm font-medium tracking-[-.01em] text-foreground">
                         {item.label}
                       </h3>
+
                       <p className="mt-1.5 max-w-68 text-xs leading-[1.7] text-muted-foreground">
                         {descriptions[item.label]}
                       </p>

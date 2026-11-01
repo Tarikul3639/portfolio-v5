@@ -19,14 +19,18 @@ export function BusinessCard() {
     reduceMotion
       ? {}
       : {
-          initial: { opacity: 0, y: 14 },
-          animate: { opacity: 1, y: 0 },
-          transition: {
-            duration: 0.55,
-            delay,
-            ease: easeOut,
-          },
-        }
+        initial: { opacity: 0, y: 16 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: {
+          once: false,
+          amount: 0.2,
+        },
+        transition: {
+          duration: 0.55,
+          delay,
+          ease: easeOut,
+        },
+      }
 
   return (
     <section className="flex flex-1 items-center bg-background py-[clamp(2.5rem,5vw,4rem)]">
