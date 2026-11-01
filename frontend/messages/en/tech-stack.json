@@ -1,0 +1,42 @@
+{
+  "techStack": {
+    "metadata": {
+      "title": "Technology Stack",
+      "description": "Explore the technologies Tarikul Islam uses across backend systems, APIs, and full-stack web applications."
+    },
+    "hero": {
+      "eyebrow": "TOOLS AND TECHNOLOGIES",
+      "title": "The tools behind",
+      "accent": "the work.",
+      "description": "A closer look at the technologies I use to build backend systems and complete web experiences."
+    },
+    "count": "Technologies I work with",
+    "groups": {
+      "backend": "Backend & APIs",
+      "frontend": "Frontend & UI",
+      "databases": "Databases",
+      "languages": "Programming languages",
+      "tools": "Tools & infrastructure"
+    },
+    "descriptions": {
+      "nestjs": "A structured framework for building server-side applications.",
+      "nodejs": "A JavaScript runtime for server-side applications.",
+      "restApi": "HTTP endpoints that connect applications and services.",
+      "socketIo": "Event-based, two-way communication for real-time features.",
+      "react": "A component-based library for building user interfaces.",
+      "nextjs": "A React framework for full-stack web applications.",
+      "redux": "State management for predictable application data flows.",
+      "tailwindCss": "Utility classes for building responsive interfaces.",
+      "framerMotion": "Motion tools for interactive React interfaces.",
+      "mongoDb": "A document database for flexible application data.",
+      "mySql": "A relational database for structured application data.",
+      "typeScript": "JavaScript with static types for clearer, safer code.",
+      "javaScript": "A core language for web applications and services.",
+      "python": "A general-purpose language for scripting and applications.",
+      "cpp": "A general-purpose language with control over system resources.",
+      "docker": "Containers for packaging and running applications consistently.",
+      "git": "Version control for tracking and managing code changes.",
+      "gitHub": "A platform for hosting code and collaborating on projects."
+    }
+  }
+}

@@ -14,17 +14,20 @@ import { Container } from "@/components/container"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
 import { SquigglyText } from "@/components/ui/squiggly-text"
+import { AngularLink } from "@/components/angular-link"
 import { siteConfig } from "@/config/site"
 import { useTranslations } from "next-intl"
 
 const OLD_PORTFOLIO_URL = "https://tarikul-islam-v4.vercel.app"
 
 const navigation = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-]
+  { href: "/", label: "home" },
+  { href: "/projects", label: "work" },
+  { href: "/about", label: "about" },
+  { href: "/contact", label: "contact" },
+  { href: "/business-card", label: "businessCard" },
+  { href: "/tech-stack", label: "techStack" },
+] as const
 
 const services = [
   { href: "/services", label: "Web Development" },
@@ -54,6 +57,7 @@ const socialLinks = [
 export function SiteFooter() {
   const f = useTranslations("common.footer")
   const n = useTranslations("common.navigation")
+  const t = useTranslations("home.cta")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -70,26 +74,40 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border">
       <Container className="py-[clamp(4rem,8vw,7rem)]">
-        <div className="border-b border-border pb-[clamp(3rem,7vw,6rem)]">
-          <motion.p
-            className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
-            {...reveal(0, 8, 0.45)}
-          >
-            {f("prompt")}
-          </motion.p>
+        <div className="grid grid-cols-1 gap-10 border-b border-border pb-[clamp(3rem,7vw,6rem)] md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-12">
+          <div>
+            <motion.p
+              className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
+              {...reveal(0, 8, 0.45)}
+            >
+              {f("prompt")}
+            </motion.p>
 
-          <motion.h2
-            className="mt-4 max-w-205 font-serif text-[clamp(3.2rem,8vw,8rem)] leading-[.88] tracking-[-.085em]"
-            {...reveal(0.08, 20, 0.7)}
-          >
-            {f("headlineStart")}{" "}
-            <SquigglyText stepDuration={90} scale={[1, 2]}>
-              {f("headlineMiddle")}
-            </SquigglyText>{" "}
-            <SquigglyText className="text-primary">
-              {f("headlineEnd")}
-            </SquigglyText>
-          </motion.h2>
+            <motion.h2
+              className="mt-4 max-w-205 font-serif text-[clamp(3.2rem,4vw,8rem)] leading-[.88] tracking-[-.085em]"
+              {...reveal(0.08, 20, 0.7)}
+            >
+              {f("headlineStart")}{" "}
+              <SquigglyText stepDuration={90} scale={[1, 2]}>
+                {f("headlineMiddle")}
+              </SquigglyText>{" "}
+              <SquigglyText className="text-primary">
+                {f("headlineEnd")}
+              </SquigglyText>
+            </motion.h2>
+          </div>
+
+          <motion.div className="justify-self-end" {...reveal(0.16, 10, 0.5)}>
+            <AngularLink href="/contact">
+              <span className="group inline-flex items-center gap-1.5">
+                {t("button")}
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </span>
+            </AngularLink>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-10 sm:grid-cols-3 lg:grid-cols-[1.2fr_.8fr_1fr_1.2fr] lg:gap-8">
@@ -140,7 +158,7 @@ export function SiteFooter() {
             </motion.p>
 
             <motion.p
-              className="sr-only mt-5 font-mono text-[.62rem] tracking-[.08em] text-muted-foreground uppercase"
+              className="group/social-title relative mt-5 mb-3 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
               {...reveal(0.1, 8, 0.45)}
             >
               {f("social")}
@@ -170,27 +188,19 @@ export function SiteFooter() {
 
           {/* Navigate */}
           <motion.div {...reveal(0.08, 16, 0.6)}>
-            <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("navigate")}
             </p>
 
             <nav className="grid gap-2.5 text-sm" aria-label={n("mobile")}>
               {navigation.map((item, index) => {
-                const label =
-                  item.href === "/"
-                    ? f("home")
-                    : item.href === "/projects"
-                      ? f("work")
-                      : item.href === "/about"
-                        ? f("about")
-                        : f("contact")
                 return (
                   <motion.div key={item.href} {...reveal(index * 0.05, 8, 0.4)}>
                     <Link
                       className="w-fit text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                       href={item.href}
                     >
-                      {label}
+                      {f(item.label)}
                     </Link>
                   </motion.div>
                 )
@@ -200,7 +210,7 @@ export function SiteFooter() {
 
           {/* Services */}
           <motion.div {...reveal(0.14, 16, 0.6)}>
-            <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("servicesTitle")}
             </p>
 
@@ -237,7 +247,7 @@ export function SiteFooter() {
             className="col-span-2 sm:col-span-1"
             {...reveal(0.2, 16, 0.6)}
           >
-            <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("contactInfo")}
             </p>
 

@@ -5,6 +5,7 @@ import projects from "./projects.json"
 import services from "./services.json"
 import contact from "./contact.json"
 import businessCard from "./business-card.json"
+import techStack from "./tech-stack.json"
 
 const messages = {
   ...common,
@@ -19,6 +20,7 @@ const messages = {
   ...services,
   ...contact,
   ...businessCard,
+  ...techStack,
 }
 
 export default messages

@@ -30,6 +30,13 @@
     "metadata": {
       "title": "Digital Business Card",
       "description": "Contact details and professional links for Tarikul Islam, a backend-focused full-stack developer."
+    },
+    "cta": {
+      "eyebrow": "A quick way to connect",
+      "title": "Keep my details",
+      "words": ["close.", "handy.", "within reach."],
+      "description": "View my contact information and professional links in one place.",
+      "button": "View business card"
     }
   }
 }
