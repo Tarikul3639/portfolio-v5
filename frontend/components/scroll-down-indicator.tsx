@@ -1,13 +1,15 @@
 "use client"
 
 import { motion, useReducedMotion } from "motion/react"
-import { usePathname } from "next/navigation"
+import { useTranslations } from "next-intl"
+import { usePathname } from "@/i18n/navigation"
 import type { MouseEvent } from "react"
 import { useEffect, useState } from "react"
 
 const TARGET_ID = "experience-highlight"
 
 export function ScrollDownIndicator() {
+  const t = useTranslations("common")
   const reduceMotion = useReducedMotion() ?? false
   const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(false)
@@ -41,7 +43,7 @@ export function ScrollDownIndicator() {
   return (
     <motion.a
       href={`#${TARGET_ID}`}
-      aria-label="Scroll to the experience section"
+      aria-label={t("scroll")}
       onClick={handleClick}
       className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground transition-colors duration-300 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
       animate={reduceMotion ? undefined : { y: [0, 3, 0] }}
@@ -68,7 +70,7 @@ export function ScrollDownIndicator() {
         />
       </span>
       <span className="font-mono text-[.52rem] tracking-[.14em] uppercase sm:text-[.58rem] sm:tracking-[.16em]">
-        SCROLL TO EXPLORE
+        {t("scrollLabel")}
       </span>
     </motion.a>
   )

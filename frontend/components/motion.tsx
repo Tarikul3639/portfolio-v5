@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react"
 import { motion, useReducedMotion, useScroll, useSpring } from "motion/react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function MotionLink({
   children,

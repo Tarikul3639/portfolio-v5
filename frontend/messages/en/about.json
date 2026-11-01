@@ -1,0 +1,94 @@
+{
+  "about": {
+    "hero": {
+      "eyebrow": "ABOUT · A SHORT INTRODUCTION",
+      "prefix": "A developer with a",
+      "words": [
+        "systems",
+        "product",
+        "backend"
+      ],
+      "suffix": "mindset."
+    },
+    "intro": {
+      "alt": "Tarikul Islam, full-stack web developer",
+      "caption": "DHAKA, BANGLADESH",
+      "eyebrow": "A little about me",
+      "p1": "I’m |||, a full-stack web developer from Dhaka, Bangladesh. I focus on backend development with Node.js, NestJS, and TypeScript, and build product interfaces with React and Next.js.",
+      "p2": "I like working on applications where the details connect: designing a data model, shaping an API, and making the interface feel straightforward for the person using it.",
+      "p3": "My recent work includes tools for education, streaming, and community administration. Away from the code, I’m studying at Bangladesh University of Business & Technology.",
+      "based": "Based in",
+      "location": "Dhaka, Bangladesh",
+      "focus": "Focus",
+      "focusValue": "Backend-focused full stack",
+      "tools": "Core tools",
+      "toolsValue": "TypeScript · Node.js · NestJS",
+      "studying": "Currently studying",
+      "school": "Bangladesh University of Business & Technology",
+      "contact": "Say hello",
+      "name": "Tarikul Islam"
+    },
+    "github": {
+      "eyebrow": "OPEN SOURCE ACTIVITY",
+      "titleStart": "A year of",
+      "titleEnd": "building.",
+      "description": "A live view of my public GitHub contributions. The calendar is loaded directly from GitHub’s public contribution data.",
+      "unavailable": "GitHub activity is unavailable right now.",
+      "publicOnly": "Contribution counts and dates reflect public activity only.",
+      "profile": "View GitHub profile",
+      "calendar": {
+        "months": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "weekdays": [
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "totalCount": "'{{count}}' contributions in '{{year}}'",
+        "legendLess": "Less",
+        "legendMore": "More"
+      }
+    },
+    "principles": {
+      "eyebrow": "What matters to me",
+      "title": "How I approach building.",
+      "items": {
+        "structure": {
+          "title": "Make complexity legible.",
+          "text": "Good boundaries and a clear data model make a product easier to build on and easier to trust.",
+          "number": "01 / STRUCTURE"
+        },
+        "usefulness": {
+          "title": "Start with the workflow.",
+          "text": "Features should help people complete real tasks, with fewer confusing steps and fewer loose ends.",
+          "number": "02 / USEFULNESS"
+        },
+        "craft": {
+          "title": "Care about the details.",
+          "text": "Thoughtful copy, steady interactions, and responsive layouts make technical work feel complete.",
+          "number": "03 / CRAFT"
+        }
+      }
+    },
+    "metadata": {
+      "title": "About",
+      "description": "Learn about Tarikul Islam, his background, technical expertise, and approach to building reliable, maintainable web applications."
+    }
+  }
+}

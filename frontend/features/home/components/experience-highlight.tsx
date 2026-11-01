@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -35,7 +35,7 @@ export function ExperienceHighlight() {
           >
             <p
               className="font-serif text-[clamp(4.5rem,10vw,8rem)] leading-none tracking-[-.09em] text-primary"
-              aria-label="More than two years"
+              aria-label={t("yearsAria")}
             >
               2+
             </p>
@@ -57,7 +57,8 @@ export function ExperienceHighlight() {
               className="mt-3 max-w-140 font-serif text-[clamp(2rem,4vw,3.4rem)] leading-[1.02] tracking-[-.06em]"
               {...reveal(0.08, 20, 0.7)}
             >
-              {t("headline")} <em className="text-primary">{t("accent")}</em> {t("tail")}
+              {t("headline")} <em className="text-primary">{t("accent")}</em>{" "}
+              {t("tail")}
             </motion.h2>
 
             <motion.p

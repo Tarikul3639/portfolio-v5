@@ -6,8 +6,10 @@ import { Container } from "@/components/container"
 import { AngularLink } from "@/components/angular-link"
 import { EncryptedText } from "@/components/ui/encrypted-text"
 import { FlipWords } from "@/components/ui/flip-words"
+import { useTranslations } from "next-intl"
 
 export function ServicesHero() {
+  const t = useTranslations("services.hero")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -38,21 +40,17 @@ export function ServicesHero() {
             {...reveal(0, 8, 0.45)}
             className="mb-5 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
-            <EncryptedText text="SERVICES · DEVELOPMENT" />
+            <EncryptedText text={t("eyebrow")} />
           </motion.p>
 
           <motion.h1
             {...reveal(0.08, 20, 0.7)}
             className="max-w-205 font-serif text-[clamp(3rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
           >
-            Thoughtful software,{" "}
+            {t("prefix")}{" "}
             <em className="inline-block min-w-[12ch] text-primary">
               <FlipWords
-                words={[
-                  "built end to end.",
-                  "shaped around people.",
-                  "made to grow.",
-                ]}
+                words={t.raw("words") as string[]}
                 duration={4200}
                 className="px-0 text-inherit!"
               />
@@ -65,15 +63,13 @@ export function ServicesHero() {
             {...reveal(0.16, 12, 0.55)}
             className="text-base leading-[1.8] text-muted-foreground"
           >
-            I work across the frontend and backend to turn a clear problem into
-            a focused web product, from responsive interfaces to the APIs and
-            data workflows behind them.
+            {t("description")}
           </motion.p>
 
           <motion.div {...reveal(0.24, 10, 0.5)}>
             <AngularLink className="mt-6" href="/contact">
               <span className="group inline-flex items-center gap-1.5">
-                Talk about a project
+                {t("cta")}
                 <ArrowUpRight
                   aria-hidden="true"
                   className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-110"

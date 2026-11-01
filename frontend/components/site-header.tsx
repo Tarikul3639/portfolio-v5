@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { Link, usePathname } from "@/i18n/navigation"
+import { useLocale, useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 import { ArrowUpRight, Menu, SunMoon, X, Terminal } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
@@ -17,38 +17,33 @@ const links = [
   { href: "/about", label: "About", code: "03" },
 ]
 
-type HomeNavigationCopy = {
-  home: string
-  projects: string
-  services: string
-  about: string
-  contact: string
-  letsTalk: string
-  language: string
-  main: string
-  mobile: string
-  brandHome: string
-  toggleTheme: string
-  openMenu: string
-  closeMenu: string
-  systemMenu: string
-  portfolioActive: string
-  systemOnline: string
-  globalNode: string
-  uptime: string
-  load: string
-  description: string
-  lightMode: string
-  darkMode: string
-}
-
-export function SiteHeader({
-  homeLocale,
-  homeNavigation,
-}: {
-  homeLocale?: "en" | "bn"
-  homeNavigation?: HomeNavigationCopy
-} = {}) {
+export function SiteHeader() {
+  const locale = useLocale() as "en" | "bn"
+  const n = useTranslations("common.navigation")
+  const homeNavigation = {
+    home: n("home"),
+    projects: n("projects"),
+    services: n("services"),
+    about: n("about"),
+    contact: n("contact"),
+    letsTalk: n("letsTalk"),
+    language: n("language"),
+    main: n("main"),
+    mobile: n("mobile"),
+    brandHome: n("brandHome"),
+    toggleTheme: n("toggleTheme"),
+    openMenu: n("openMenu"),
+    closeMenu: n("closeMenu"),
+    systemMenu: n("systemMenu"),
+    portfolioActive: n("portfolioActive"),
+    systemOnline: n("systemOnline"),
+    globalNode: n("globalNode"),
+    uptime: n("uptime"),
+    load: n("load"),
+    description: n("description"),
+    lightMode: n("lightMode"),
+    darkMode: n("darkMode"),
+  }
   const pathname = usePathname()
   const { resolvedTheme, setTheme } = useTheme()
   const reduceMotion = useReducedMotion() ?? false
@@ -87,7 +82,7 @@ export function SiteHeader({
         {/* Brand */}
         <motion.div {...reveal(0, 6, 0.4)}>
           <Link
-            href={homeLocale === "bn" ? "/bn" : "/"}
+            href="/"
             aria-label={homeNavigation?.brandHome ?? "Tarikul Islam, home"}
             className="group/brand flex shrink-0 items-center gap-3"
           >
@@ -108,7 +103,7 @@ export function SiteHeader({
               </span>
 
               <span className="font-mono text-[.55rem] leading-none tracking-[.12em] text-muted-foreground uppercase transition-colors duration-300 group-hover/brand:text-foreground">
-                Developer / Portfolio
+                {n("tagline")}
               </span>
             </span>
           </Link>
@@ -174,32 +169,32 @@ export function SiteHeader({
           {...reveal(0.2, 6, 0.4)}
           className="flex shrink-0 items-center gap-2"
         >
-          {homeLocale && homeNavigation && (
-            <nav
-              aria-label={homeNavigation.language}
-              className="mr-1 flex items-center gap-1 font-mono text-[.67rem]"
+          <nav
+            aria-label={homeNavigation.language}
+            className="mr-1 flex items-center gap-1 font-mono text-[.67rem]"
+          >
+            <Link
+              href={pathname}
+              locale="en"
+              lang="en"
+              aria-current={locale === "en" ? "page" : undefined}
+              className={`transition-colors hover:text-primary ${locale === "en" ? "text-foreground" : "text-muted-foreground"}`}
             >
-              <Link
-                href="/"
-                lang="en"
-                aria-current={homeLocale === "en" ? "page" : undefined}
-                className={`transition-colors hover:text-primary ${homeLocale === "en" ? "text-foreground" : "text-muted-foreground"}`}
-              >
-                EN
-              </Link>
-              <span aria-hidden="true" className="text-muted-foreground/50">
-                /
-              </span>
-              <Link
-                href="/bn"
-                lang="bn"
-                aria-current={homeLocale === "bn" ? "page" : undefined}
-                className={`transition-colors hover:text-primary ${homeLocale === "bn" ? "text-foreground" : "text-muted-foreground"}`}
-              >
-                বাংলা
-              </Link>
-            </nav>
-          )}
+              EN
+            </Link>
+            <span aria-hidden="true" className="text-muted-foreground/50">
+              /
+            </span>
+            <Link
+              href={pathname}
+              locale="bn"
+              lang="bn"
+              aria-current={locale === "bn" ? "page" : undefined}
+              className={`transition-colors hover:text-primary ${locale === "bn" ? "text-foreground" : "text-muted-foreground"}`}
+            >
+              বাংলা
+            </Link>
+          </nav>
           {/* Theme toggle */}
           <button
             type="button"
@@ -239,8 +234,8 @@ export function SiteHeader({
             aria-expanded={menuOpen}
             aria-label={
               menuOpen
-                ? homeNavigation?.closeMenu ?? "Close navigation menu"
-                : homeNavigation?.openMenu ?? "Open navigation menu"
+                ? (homeNavigation?.closeMenu ?? "Close navigation menu")
+                : (homeNavigation?.openMenu ?? "Open navigation menu")
             }
             className="grid size-9 place-items-center border border-border text-foreground transition-all duration-200 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"
             onClick={() => setMenuOpen((open) => !open)}
@@ -267,7 +262,6 @@ export function SiteHeader({
           pathname={pathname}
           theme={resolvedTheme}
           onToggleTheme={toggleTheme}
-          homeLocale={homeLocale}
           homeNavigation={homeNavigation}
         />
       </div>

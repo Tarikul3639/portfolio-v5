@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
@@ -36,14 +36,13 @@ export function WorkApproach() {
             className="mt-4 max-w-88 font-serif text-[clamp(2.1rem,4vw,3.6rem)] leading-[1.04] tracking-[-.06em]"
             {...reveal(0.08, 20, 0.7)}
           >
-            {t("headlineOne")} <em className="text-primary">{t("accent")}</em> {t("headlineTwo")}
+            {t("headlineOne")} <em className="text-primary">{t("accent")}</em>{" "}
+            {t("headlineTwo")}
           </motion.h2>
         </div>
 
         <div className="max-w-172 text-base leading-[1.85] text-muted-foreground">
-          <motion.p {...reveal(0.12, 14, 0.6)}>
-            {t("paragraphOne")}
-          </motion.p>
+          <motion.p {...reveal(0.12, 14, 0.6)}>{t("paragraphOne")}</motion.p>
 
           <motion.p className="mt-4" {...reveal(0.2, 14, 0.6)}>
             {t("paragraphTwo")}

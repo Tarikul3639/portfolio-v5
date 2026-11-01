@@ -3,36 +3,35 @@ import { projects } from "@/features/projects/data/projects"
 import { siteConfig } from "@/config/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: siteConfig.url, changeFrequency: "monthly", priority: 1 },
-    {
-      url: `${siteConfig.url}/projects`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteConfig.url}/services`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteConfig.url}/about`,
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteConfig.url}/contact`,
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
-  ]
-
-  return [
-    ...staticRoutes,
+  const routes = [
+    { path: "", changeFrequency: "monthly" as const, priority: 1 },
+    { path: "/projects", changeFrequency: "monthly" as const, priority: 0.9 },
+    { path: "/services", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/about", changeFrequency: "yearly" as const, priority: 0.7 },
+    { path: "/contact", changeFrequency: "yearly" as const, priority: 0.6 },
     ...projects.map((project) => ({
-      url: `${siteConfig.url}/projects/${project.slug}`,
+      path: `/projects/${project.slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
   ]
+
+  return routes.flatMap(({ path, changeFrequency, priority }) => {
+    const en = `${siteConfig.url}${path}`
+    const bn = `${siteConfig.url}/bn${path}`
+    return [
+      {
+        url: en,
+        alternates: { languages: { en, bn, "x-default": en } },
+        changeFrequency,
+        priority,
+      },
+      {
+        url: bn,
+        alternates: { languages: { en, bn, "x-default": en } },
+        changeFrequency,
+        priority,
+      },
+    ]
+  })
 }

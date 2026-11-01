@@ -107,7 +107,7 @@ export function ProjectArtwork({
       </span>
 
       {!project.image && (
-        <span className="relative z-10 font-serif font-black text-[clamp(1.8rem,4vw,3.4rem)] leading-[.95] tracking-[-.07em]">
+        <span className="relative z-10 font-serif text-[clamp(1.8rem,4vw,3.4rem)] leading-[.95] font-black tracking-[-.07em]">
           {project.title}
         </span>
       )}

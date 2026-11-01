@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "motion/react"
 import { ArrowUpRight, Check, ExternalLink } from "lucide-react"
 import { GitHubIcon as Github } from "@/components/icons/GitHubIcon"
 import { getProject } from "@/features/projects/data/projects"
+import { useTranslations } from "next-intl"
 
 type Project = NonNullable<ReturnType<typeof getProject>>
 
@@ -12,6 +13,8 @@ type Props = {
 }
 
 export function ProjectDetailOverview({ project }: Props) {
+  const t = useTranslations("common.project")
+  const projectT = useTranslations("projects.items")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -27,18 +30,21 @@ export function ProjectDetailOverview({ project }: Props) {
 
   return (
     <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-[.55fr_1.45fr] md:gap-[clamp(3rem,10vw,10rem)] md:pb-32">
-      <aside
-        className="grid content-start gap-7"
-        aria-label="Project information"
-      >
+      <aside className="grid content-start gap-7" aria-label={t("information")}>
         <motion.dl
           {...reveal(0, 12, 0.55)}
           className="border-t border-border pt-3"
         >
           <dt className="mb-3 font-mono text-[.61rem] tracking-[.09em] text-muted-foreground uppercase">
-            Role
+            {t("role")}
           </dt>
-          <dd className="text-sm leading-[1.75]">{project.role}</dd>
+          <dd className="text-sm leading-[1.75]">
+            {
+              (projectT.raw as (key: string) => unknown)(
+                `${project.slug}.role`
+              ) as string
+            }
+          </dd>
         </motion.dl>
 
         <motion.dl
@@ -46,7 +52,7 @@ export function ProjectDetailOverview({ project }: Props) {
           className="border-t border-border pt-3"
         >
           <dt className="mb-3 font-mono text-[.61rem] tracking-[.09em] text-muted-foreground uppercase">
-            Stack
+            {t("stack")}
           </dt>
 
           <dd>
@@ -69,13 +75,21 @@ export function ProjectDetailOverview({ project }: Props) {
           className="border-t border-border pt-3"
         >
           <p className="mb-3 font-mono text-[.61rem] tracking-[.09em] text-muted-foreground uppercase">
-            Links
+            {t("links")}
           </p>
 
           <ul className="grid gap-2">
             {project.repos.map((repository) => {
               const isGitHub = /github\.com/i.test(repository.href)
               const RepositoryIcon = isGitHub ? Github : ExternalLink
+              const repositoryLabel =
+                repository.label === "Source code"
+                  ? t("sourceCode")
+                  : repository.label === "Frontend"
+                    ? t("frontend")
+                    : repository.label === "Backend"
+                      ? t("backend")
+                      : repository.label
 
               return (
                 <li key={repository.href}>
@@ -90,7 +104,7 @@ export function ProjectDetailOverview({ project }: Props) {
                       className="size-4 shrink-0"
                     />
 
-                    <span>{repository.label}</span>
+                    <span>{repositoryLabel}</span>
 
                     <ArrowUpRight
                       aria-hidden="true"
@@ -114,7 +128,7 @@ export function ProjectDetailOverview({ project }: Props) {
                     className="size-4 shrink-0"
                   />
 
-                  <span>Live website</span>
+                  <span>{t("liveWebsite")}</span>
 
                   <ArrowUpRight
                     aria-hidden="true"
@@ -132,34 +146,38 @@ export function ProjectDetailOverview({ project }: Props) {
           {...reveal(0.04, 8, 0.45)}
           className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
         >
-          Overview
+          {t("overview")}
         </motion.p>
 
         <motion.h2
           {...reveal(0.1, 18, 0.65)}
           className="mt-2 mb-4 font-serif text-[clamp(2rem,4vw,3.1rem)] tracking-[-.055em]"
         >
-          Designed around the way people work.
+          {t("overviewTitle")}
         </motion.h2>
 
         <motion.p
           {...reveal(0.17, 12, 0.55)}
           className="max-w-188 text-base leading-[1.85] text-muted-foreground"
         >
-          {project.description}
+          {
+            (projectT.raw as (key: string) => unknown)(
+              `${project.slug}.description`
+            ) as string
+          }
         </motion.p>
 
         <motion.h3
           {...reveal(0.08, 14, 0.55)}
           className="mt-11 mb-4 font-serif text-2xl tracking-[-.04em]"
         >
-          What it brings together
+          {t("highlights")}
         </motion.h3>
 
         <ul className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-          {project.highlights.map((highlight, index) => (
+          {project.highlights.map((_, index) => (
             <motion.li
-              key={highlight}
+              key={`${project.slug}-highlight-${index}`}
               {...reveal(0.12 + index * 0.06, 10, 0.45)}
               className="flex items-baseline gap-3 text-sm leading-[1.7] text-muted-foreground"
             >
@@ -167,7 +185,11 @@ export function ProjectDetailOverview({ project }: Props) {
                 aria-hidden="true"
                 className="relative top-0.5 size-3.5 shrink-0 text-primary"
               />
-              {highlight}
+              {
+                (projectT.raw as (key: string) => unknown)(
+                  `${project.slug}.highlights.${index}`
+                ) as string
+              }
             </motion.li>
           ))}
         </ul>

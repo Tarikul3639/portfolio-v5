@@ -4,8 +4,11 @@ import { motion, useReducedMotion } from "motion/react"
 
 import { Container } from "@/components/container"
 import { principles } from "@/features/about/data/principles"
+import { useTranslations } from "next-intl"
 
 export function AboutPrinciples() {
+  const t = useTranslations("about.principles")
+  const keys = ["structure", "usefulness", "craft"] as const
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -27,14 +30,14 @@ export function AboutPrinciples() {
             {...reveal(0, 8, 0.45)}
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
-            What matters to me
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h2
             {...reveal(0.08, 16, 0.65)}
             className="mt-3 font-serif text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-.055em]"
           >
-            How I approach building.
+            {t("title")}
           </motion.h2>
         </div>
 
@@ -46,15 +49,15 @@ export function AboutPrinciples() {
               className="border-t border-border pt-4"
             >
               <span className="font-mono text-[.68rem] text-primary">
-                {principle.number}
+                {t(`items.${keys[index]}.number`)}
               </span>
 
               <h3 className="mt-5 font-serif text-[1.7rem] tracking-[-.04em]">
-                {principle.title}
+                {t(`items.${keys[index]}.title`)}
               </h3>
 
               <p className="mt-2 max-w-xs text-sm leading-[1.75] text-muted-foreground">
-                {principle.text}
+                {t(`items.${keys[index]}.text`)}
               </p>
             </motion.article>
           ))}

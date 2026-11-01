@@ -1,10 +1,11 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { ProjectArtwork } from "@/features/projects/components/project-artwork"
 import { getProject } from "@/features/projects/data/projects"
+import { useTranslations } from "next-intl"
 
 type Project = NonNullable<ReturnType<typeof getProject>>
 
@@ -13,6 +14,9 @@ type Props = {
 }
 
 export function ProjectDetailHero({ project }: Props) {
+  const n = useTranslations("common.navigation")
+  const t = useTranslations("common.project")
+  const projectT = useTranslations("projects.items")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -31,10 +35,10 @@ export function ProjectDetailHero({ project }: Props) {
       <motion.nav
         {...reveal(0, 8, 0.45)}
         className="mb-11 flex flex-wrap items-center gap-2.5 font-mono text-[.65rem] text-muted-foreground"
-        aria-label="Breadcrumb"
+        aria-label={t("breadcrumb")}
       >
         <Link className="transition-colors hover:text-foreground" href="/">
-          Home
+          {n("home")}
         </Link>
 
         <span aria-hidden="true">/</span>
@@ -43,7 +47,7 @@ export function ProjectDetailHero({ project }: Props) {
           className="transition-colors hover:text-foreground"
           href="/projects"
         >
-          Projects
+          {n("projects")}
         </Link>
 
         <span aria-hidden="true">/</span>
@@ -57,7 +61,11 @@ export function ProjectDetailHero({ project }: Props) {
             {...reveal(0.04, 8, 0.45)}
             className="mb-3 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
-            {project.category}
+            {
+              (projectT.raw as (key: string) => unknown)(
+                `${project.slug}.category`
+              ) as string
+            }
           </motion.p>
 
           <motion.h1
@@ -74,7 +82,13 @@ export function ProjectDetailHero({ project }: Props) {
         >
           <span>{project.year}</span>
           <span aria-hidden="true">/</span>
-          <span>{project.role}</span>
+          <span>
+            {
+              (projectT.raw as (key: string) => unknown)(
+                `${project.slug}.role`
+              ) as string
+            }
+          </span>
         </motion.p>
       </div>
 

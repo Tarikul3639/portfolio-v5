@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion, useReducedMotion } from "motion/react"
 import { ArrowUpRight, CalendarDays } from "lucide-react"
 
@@ -9,36 +9,39 @@ import { ShootingStars } from "@/components/ui/shooting-stars"
 import { StarsBackground } from "@/components/ui/stars-background"
 import { EncryptedText } from "@/components/ui/encrypted-text"
 import { siteConfig } from "@/config/site"
+import { useTranslations } from "next-intl"
 
 const contactOptions = [
   {
-    label: "EMAIL",
+    key: "email",
     value: siteConfig.contact.email,
     href: `mailto:${siteConfig.contact.email}`,
   },
   {
-    label: "WHATSAPP",
+    key: "whatsapp",
     value: siteConfig.contact.phone,
     href: siteConfig.contact.whatsappUrl,
   },
   {
-    label: "GITHUB",
+    key: "github",
     value: siteConfig.social.github.replace(/^https?:\/\//, ""),
     href: siteConfig.social.github,
   },
   {
-    label: "LINKEDIN",
+    key: "linkedin",
     value: siteConfig.social.linkedin.replace(/^https?:\/\//, ""),
     href: siteConfig.social.linkedin,
   },
   {
-    label: "FACEBOOK",
+    key: "facebook",
     value: siteConfig.social.facebook.replace("https://www.", ""),
     href: siteConfig.social.facebook,
   },
-]
+] as const
 
 export function ContactContent() {
+  const t = useTranslations("contact.hero")
+  const labels = useTranslations("common.contact")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 8, duration = 0.45) => ({
@@ -84,7 +87,7 @@ export function ContactContent() {
           {...reveal(0, 8, 0.45)}
           className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
         >
-          <EncryptedText text="CONTACT · DHAKA, BANGLADESH" />
+          <EncryptedText text={t("eyebrow")} />
         </motion.p>
       </Container>
 
@@ -94,16 +97,14 @@ export function ContactContent() {
             {...reveal(0.08, 18, 0.65)}
             className="font-serif text-[clamp(3.2rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
           >
-            Have a good problem to <em className="text-primary">solve?</em>
+            {t("titleStart")} <em className="text-primary">{t("titleEnd")}</em>
           </motion.h1>
 
           <motion.p
             {...reveal(0.16, 12, 0.55)}
             className="mt-6 max-w-148 text-base leading-[1.8] text-muted-foreground"
           >
-            I&apos;m open to thoughtful conversations about web development,
-            useful products, and potential collaborations. Choose whichever
-            channel works for you.
+            {t("description")}
           </motion.p>
 
           <motion.div {...reveal(0.24, 10, 0.5)} className="mt-8">
@@ -120,12 +121,12 @@ export function ContactContent() {
                 href={siteConfig.contact.calUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Schedule a meeting on Cal.com"
+                aria-label={t("scheduleAria")}
 
                 className="group relative z-10 inline-flex items-center gap-2 border border-primary bg-primary px-5 py-3 text-sm text-primary-foreground transition-colors duration-300 [clip-path:polygon(1rem_0,100%_0,100%_calc(100%-1rem),calc(100%-1rem)_100%,0_100%,0_1rem)] group-hover:bg-black group-hover:text-white hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               >
                 <CalendarDays aria-hidden="true" className="size-4" />
-                Schedule a meeting
+                {t("schedule")}
                 <ArrowUpRight
                   aria-hidden="true"
                   className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -134,26 +135,26 @@ export function ContactContent() {
             </div>
 
             <p className="mt-3 text-sm text-muted-foreground">
-              Choose a convenient time on my calendar.
+              {t("calendarHint")}
             </p>
           </motion.div>
         </div>
 
-        <nav className="mt-1 grid content-start" aria-label="Contact options">
+        <nav className="z-10 mt-1 grid content-start" aria-label={t("options")}>
           {contactOptions.map((option, index) => (
             <a
               className="border-t border-border last:border-b"
               href={option.href}
-              key={option.label}
-              target={option.label === "EMAIL" ? undefined : "_blank"}
-              rel={option.label === "EMAIL" ? undefined : "noopener noreferrer"}
+              key={option.key}
+              target={option.key === "email" ? undefined : "_blank"}
+              rel={option.key === "email" ? undefined : "noopener noreferrer"}
             >
               <motion.div
                 {...reveal(0.12 + index * 0.07, 10, 0.5)}
                 className="flex justify-between gap-4 py-4"
               >
                 <span className="font-mono text-[.67rem] text-muted-foreground">
-                  {option.label}
+                  {labels(option.key)}
                 </span>
 
                 <span className="group inline-flex items-center gap-1.5 text-right text-[.88rem] transition-colors hover:text-primary">

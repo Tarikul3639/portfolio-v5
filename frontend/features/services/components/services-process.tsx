@@ -4,6 +4,7 @@ import { Code2, Layers, RefreshCw, Workflow } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 
 import { Container } from "@/components/container"
+import { useTranslations } from "next-intl"
 
 const processSteps = [
   {
@@ -37,6 +38,9 @@ const processSteps = [
 ]
 
 export function ServicesProcess() {
+  const t = useTranslations("services.process")
+  const stepText = (key: string) =>
+    (t.raw as (messageKey: string) => unknown)(key) as string
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -58,14 +62,15 @@ export function ServicesProcess() {
             {...reveal(0, 8, 0.45)}
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
-            A practical starting point
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h2
             {...reveal(0.08, 18, 0.65)}
             className="mt-3 max-w-sm font-serif text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-.06em]"
           >
-            Clear scope, steady <em className="text-primary">progress.</em>
+            {t("titlePrefix")}{" "}
+            <em className="text-primary">{t("titleAccent")}</em>
           </motion.h2>
         </div>
 
@@ -92,11 +97,11 @@ export function ServicesProcess() {
                   </div>
 
                   <h3 className="mt-3 font-serif text-xl tracking-[-.03em]">
-                    {step.title}
+                    {stepText(`steps.${index}.title`)}
                   </h3>
 
                   <p className="mt-2 max-w-92 text-sm leading-[1.7] text-muted-foreground">
-                    {step.description}
+                    {stepText(`steps.${index}.description`)}
                   </p>
                 </motion.div>
               </li>

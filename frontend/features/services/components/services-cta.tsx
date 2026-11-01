@@ -4,8 +4,10 @@ import { motion, useReducedMotion } from "motion/react"
 import { ArrowUpRight } from "lucide-react"
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
+import { useTranslations } from "next-intl"
 
 export function ServicesCta() {
+  const t = useTranslations("services.cta")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -27,21 +29,20 @@ export function ServicesCta() {
             {...reveal(0, 8, 0.45)}
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
           >
-            Have a project in mind?
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h2
             {...reveal(0.08, 18, 0.65)}
             className="mt-3 max-w-162.5 font-serif text-[clamp(2.2rem,5vw,4.5rem)] leading-[.98] tracking-[-.065em]"
           >
-            Let&apos;s talk about{" "}
-            <em className="text-primary">what you need.</em>
+            {t("titleStart")} <em className="text-primary">{t("titleEnd")}</em>
           </motion.h2>
         </div>
 
         <motion.div {...reveal(0.16, 12, 0.55)}>
           <AngularLink href="/contact">
-            Get in touch
+            {t("button")}
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </AngularLink>
         </motion.div>

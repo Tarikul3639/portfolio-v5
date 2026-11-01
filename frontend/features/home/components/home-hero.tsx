@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { useTranslations } from "next-intl"
@@ -31,15 +31,15 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-      initial: false as const,
-      whileInView: undefined,
-      animate: undefined,
-    }
+        initial: false as const,
+        whileInView: undefined,
+        animate: undefined,
+      }
     : {
-      initial: "hidden" as const,
-      whileInView: "visible" as const,
-      viewport: { once: true, amount: 0.2 },
-    }
+        initial: "hidden" as const,
+        whileInView: "visible" as const,
+        viewport: { once: true, amount: 0.2 },
+      }
 
   return (
     <section
@@ -72,7 +72,7 @@ export function HomeHero() {
 
       <Container className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,1.25fr)_minmax(260px,.75fr)] md:gap-[clamp(2rem,6vw,6.5rem)]">
         {/* Hero content */}
-        <div className="order-2 md:order-1 relative z-10">
+        <div className="relative z-10 order-2 md:order-1">
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 10 },
@@ -104,7 +104,8 @@ export function HomeHero() {
             {...animationProps}
             className="max-w-197.5 text-[clamp(3.4rem,7vw,6rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
           >
-            {t("headlineOne")} <em className="font-serif text-primary">{t("headlineAccent")}</em>
+            {t("headlineOne")}{" "}
+            <em className="font-serif text-primary">{t("headlineAccent")}</em>
             <br />
             {t("headlineTwo")}
             <br />
@@ -170,7 +171,7 @@ export function HomeHero() {
         <motion.figure
           variants={imageReveal}
           {...animationProps}
-          className="order-1 md:order-2 relative mx-auto w-[84%] max-w-85 p-3.75 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
+          className="relative order-1 mx-auto w-[84%] max-w-85 p-3.75 md:order-2 md:mx-0 md:ml-auto md:w-full md:max-w-97.5"
         >
           <div
             aria-hidden="true"
@@ -204,9 +205,7 @@ export function HomeHero() {
 
           <figcaption className="absolute right-0 -bottom-4 z-20 flex w-full min-w-0 gap-2 font-mono text-[.62rem] text-muted-foreground">
             <span className="shrink-0 text-primary">01</span>
-            <span className="min-w-0 truncate">
-              {t("caption")}
-            </span>
+            <span className="min-w-0 truncate">{t("caption")}</span>
           </figcaption>
         </motion.figure>
       </Container>

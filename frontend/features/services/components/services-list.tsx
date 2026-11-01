@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight, Check } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 
@@ -8,8 +8,13 @@ import { Container } from "@/components/container"
 import { SectionHeading } from "@/components/section-heading"
 import { getProject } from "@/features/projects/data/projects"
 import { services } from "@/features/services/data/services"
+import { useTranslations } from "next-intl"
 
 export function ServicesList() {
+  const t = useTranslations("services.list")
+  const itemT = useTranslations("services.items")
+  const itemText = (key: string) =>
+    (itemT.raw as (messageKey: string) => unknown)(key) as string
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -27,9 +32,9 @@ export function ServicesList() {
     <section className="border-t border-border py-[clamp(5rem,9vw,8rem)]">
       <Container>
         <SectionHeading
-          eyebrow="What I can help build"
-          title="A few connected disciplines."
-          note="The areas below reflect the kinds of work represented in my public projects. The right scope depends on what you are trying to make."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          note={t("note")}
         />
 
         <div className="divide-y divide-border border-y border-border">
@@ -50,18 +55,18 @@ export function ServicesList() {
                   </span>
 
                   <h2 className="max-w-xs font-serif text-[clamp(1.75rem,3.1vw,2.65rem)] leading-[1.05] tracking-tighter">
-                    {service.title}
+                    {itemText(`${index}.title`)}
                   </h2>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_.9fr] lg:gap-10">
                   <div>
                     <p className="max-w-152 text-[.96rem] leading-[1.8] text-muted-foreground">
-                      {service.summary}
+                      {itemText(`${index}.summary`)}
                     </p>
 
                     <ul className="mt-5 grid gap-2.5 text-sm text-muted-foreground">
-                      {service.scope.map((item, itemIndex) => (
+                      {service.scope.map((_, itemIndex) => (
                         <li
                           key={`service-${service.number}-scope-${itemIndex}`}
                         >
@@ -74,7 +79,9 @@ export function ServicesList() {
                               className="mt-0.5 size-4 shrink-0 text-primary"
                               strokeWidth={1.7}
                             />
-                            <span>{item}</span>
+                            <span>
+                              {itemText(`${index}.scope.${itemIndex}`)}
+                            </span>
                           </motion.div>
                         </li>
                       ))}
@@ -83,7 +90,7 @@ export function ServicesList() {
 
                   <div className="border-t border-border pt-4 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-6">
                     <p className="mb-3 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
-                      Related work
+                      {t("related")}
                     </p>
 
                     <ul className="grid gap-2.5">

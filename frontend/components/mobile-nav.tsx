@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { ArrowUpRight, Moon, Sun, X } from "lucide-react"
 import { memo, useEffect, useRef, useState } from "react"
@@ -96,7 +96,8 @@ const MobileNavStatus = memo(function MobileNavStatus({
       <div className="mt-4 h-px bg-border" />
 
       <p className="sr-only mt-3 text-xs leading-relaxed text-muted-foreground">
-        {copy?.description ?? "Full-stack development for focused, useful web products."}
+        {copy?.description ??
+          "Full-stack development for focused, useful web products."}
       </p>
 
       {/* Bottom row */}
@@ -144,7 +145,6 @@ export const MobileNav = memo(function MobileNav({
   pathname,
   theme,
   onToggleTheme,
-  homeLocale,
   homeNavigation,
 }: {
   open: boolean
@@ -152,7 +152,6 @@ export const MobileNav = memo(function MobileNav({
   pathname: string
   theme?: string
   onToggleTheme: () => void
-  homeLocale?: "en" | "bn"
   homeNavigation?: HomeNavigationCopy
 }) {
   const reduceMotion = useReducedMotion()
@@ -223,7 +222,9 @@ export const MobileNav = memo(function MobileNav({
 
               <button
                 ref={closeRef}
-                aria-label={homeNavigation?.closeMenu ?? "Close navigation menu"}
+                aria-label={
+                  homeNavigation?.closeMenu ?? "Close navigation menu"
+                }
                 className="grid size-10 place-items-center border border-border transition-colors hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-ring"
                 onClick={onClose}
                 type="button"
@@ -240,7 +241,7 @@ export const MobileNav = memo(function MobileNav({
               {links.map((link, index) => {
                 const active =
                   link.href === "/"
-                    ? pathname === "/" || pathname === "/bn"
+                    ? pathname === "/"
                     : pathname === link.href ||
                       pathname.startsWith(`${link.href}/`)
 
@@ -258,11 +259,7 @@ export const MobileNav = memo(function MobileNav({
                       className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.8rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${
                         active ? "text-primary" : ""
                       }`}
-                      href={
-                        link.href === "/" && homeLocale === "bn"
-                          ? "/bn"
-                          : link.href
-                      }
+                      href={link.href}
                       onClick={onClose}
                     >
                       <span
@@ -282,13 +279,17 @@ export const MobileNav = memo(function MobileNav({
                             : "text-muted-foreground group-hover:text-primary"
                         }`}
                       >
-                      {homeNavigation
-                        ? homeNavigation[
-                            link.href === "/"
-                              ? "home"
-                              : link.href.slice(1) as "projects" | "services" | "about" | "contact"
-                          ]
-                        : link.label}
+                        {homeNavigation
+                          ? homeNavigation[
+                              link.href === "/"
+                                ? "home"
+                                : (link.href.slice(1) as
+                                    | "projects"
+                                    | "services"
+                                    | "about"
+                                    | "contact")
+                            ]
+                          : link.label}
                       </span>
 
                       <ArrowUpRight
@@ -317,8 +318,8 @@ export const MobileNav = memo(function MobileNav({
                 )}
 
                 {theme === "dark"
-                  ? homeNavigation?.lightMode ?? "Switch light mode"
-                  : homeNavigation?.darkMode ?? "Switch dark mode"}
+                  ? (homeNavigation?.lightMode ?? "Switch light mode")
+                  : (homeNavigation?.darkMode ?? "Switch dark mode")}
               </button>
             </div>
           </motion.aside>

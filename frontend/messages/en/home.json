@@ -1,29 +1,5 @@
 {
   "home": {
-    "navigation": {
-      "home": "Home",
-      "projects": "Projects",
-      "services": "Services",
-      "about": "About",
-      "contact": "Contact",
-      "letsTalk": "LET'S TALK",
-      "language": "Language",
-      "main": "Main navigation",
-      "mobile": "Mobile navigation",
-      "brandHome": "Tarikul Islam, home",
-      "toggleTheme": "Toggle color theme",
-      "openMenu": "Open navigation menu",
-      "closeMenu": "Close navigation menu",
-      "systemMenu": "System menu",
-      "portfolioActive": "Portfolio / Active",
-      "systemOnline": "System online",
-      "globalNode": "Global access node",
-      "uptime": "Uptime",
-      "load": "Load",
-      "description": "Full-stack development for focused, useful web products.",
-      "lightMode": "Switch light mode",
-      "darkMode": "Switch dark mode"
-    },
     "hero": {
       "eyebrow": "Full-stack developer · Dhaka, Bangladesh",
       "headlineOne": "I build the",
@@ -44,7 +20,8 @@
       "accent": "full view",
       "tail": "of the work.",
       "description": "I bring more than two years of hands-on experience across backend systems, product interfaces, and the details that connect them.",
-      "link": "More about my approach"
+      "link": "More about my approach",
+      "yearsAria": "More than two years"
     },
     "skills": {
       "eyebrow": "SKILLS AND TOOLS",
@@ -93,31 +70,6 @@
       "headline": "Let's make it",
       "accent": "work well.",
       "button": "Get in touch"
-    },
-    "footer": {
-      "prompt": "Have something in mind?",
-      "headlineStart": "Let's",
-      "headlineMiddle": "make",
-      "headlineEnd": "something useful.",
-      "tagline": "Developer / Portfolio",
-      "description": "Full-stack web development for focused products, thoughtful interfaces, and the systems behind them.",
-      "codeLine": "Code + Logic + Data → Digital Products.",
-      "conceptLine": "From concept to deployment.",
-      "social": "Social media",
-      "navigate": "Navigate",
-      "servicesTitle": "Services",
-      "webDevelopment": "Web Development",
-      "frontendDevelopment": "Frontend Development",
-      "backendDevelopment": "Backend Development",
-      "workflowAutomation": "Workflow Automation",
-      "contactInfo": "Contact Info",
-      "location": "Dhaka, Bangladesh",
-      "built": "Built with care · Bangladesh",
-      "home": "Home",
-      "work": "Work",
-      "about": "About",
-      "contact": "Contact",
-      "previous": "Previous portfolio"
     },
     "metadata": {
       "title": "Tarikul Islam — Full-Stack Web Developer",

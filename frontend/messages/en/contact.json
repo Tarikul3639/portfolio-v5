@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "hero": {
+      "eyebrow": "CONTACT · DHAKA, BANGLADESH",
+      "titleStart": "Have a good problem to",
+      "titleEnd": "solve?",
+      "description": "I’m open to thoughtful conversations about web development, useful products, and potential collaborations. Choose whichever channel works for you.",
+      "schedule": "Schedule a meeting",
+      "scheduleAria": "Schedule a meeting on Cal.com",
+      "calendarHint": "Choose a convenient time on my calendar.",
+      "options": "Contact options"
+    },
+    "metadata": {
+      "title": "Contact",
+      "description": "Contact Tarikul Islam to discuss full-stack web development projects and collaboration opportunities."
+    }
+  }
+}

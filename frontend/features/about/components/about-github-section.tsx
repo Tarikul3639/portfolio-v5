@@ -8,6 +8,7 @@ import { motion, useReducedMotion } from "motion/react"
 import { useResponsive } from "@/hooks/use-media-query"
 import { Container } from "@/components/container"
 import { EncryptedText } from "@/components/ui/encrypted-text"
+import { useTranslations } from "next-intl"
 
 const calendarTheme = {
   light: ["oklch(0.93 0.02 145)", "oklch(0.43 0.12 145)"],
@@ -15,6 +16,7 @@ const calendarTheme = {
 }
 
 export function AboutGithubSection() {
+  const t = useTranslations("about.github")
   const { isPhone, isTablet } = useResponsive()
   const [mounted, setMounted] = useState(false)
   const reduceMotion = useReducedMotion() ?? false
@@ -45,14 +47,15 @@ export function AboutGithubSection() {
               {...reveal(0, 8, 0.45)}
               className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
             >
-              <EncryptedText text="OPEN SOURCE ACTIVITY" />
+              <EncryptedText text={t("eyebrow")} />
             </motion.p>
 
             <motion.h2
               {...reveal(0.08, 16, 0.65)}
               className="mt-3 font-serif text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-.055em]"
             >
-              A year of <em className="text-primary">building.</em>
+              {t("titleStart")}{" "}
+              <em className="text-primary">{t("titleEnd")}</em>
             </motion.h2>
           </div>
 
@@ -60,8 +63,7 @@ export function AboutGithubSection() {
             {...reveal(0.14, 12, 0.55)}
             className="max-w-120 text-base leading-[1.8] text-muted-foreground"
           >
-            A live view of my public GitHub contributions. The calendar is
-            loaded directly from GitHub&apos;s public contribution data.
+            {t("description")}
           </motion.p>
         </div>
 
@@ -78,11 +80,20 @@ export function AboutGithubSection() {
                 username="Tarikul3639"
                 year="last"
                 theme={calendarTheme}
+                labels={{
+                  months: t.raw("calendar.months") as string[],
+                  weekdays: t.raw("calendar.weekdays") as string[],
+                  totalCount: t("calendar.totalCount"),
+                  legend: {
+                    less: t("calendar.legendLess"),
+                    more: t("calendar.legendMore"),
+                  },
+                }}
                 blockSize={isPhone ? 10 : isTablet ? 12 : 14}
                 blockMargin={isPhone ? 3 : 4}
                 fontSize={isPhone ? 9 : 12}
                 showWeekdayLabels={["mon", "wed", "fri"]}
-                errorMessage="GitHub activity is unavailable right now."
+                errorMessage={t("unavailable")}
                 className="mx-auto"
               />
             )}
@@ -93,7 +104,7 @@ export function AboutGithubSection() {
           {...reveal(0.12, 8, 0.45)}
           className="mt-5 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
         >
-          <p>Contribution counts and dates reflect public activity only.</p>
+          <p>{t("publicOnly")}</p>
 
           <a
             className="inline-flex w-fit items-center gap-2 border-b border-foreground pb-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
@@ -101,7 +112,7 @@ export function AboutGithubSection() {
             target="_blank"
             rel="noreferrer"
           >
-            View GitHub profile
+            {t("profile")}
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </a>
         </motion.div>

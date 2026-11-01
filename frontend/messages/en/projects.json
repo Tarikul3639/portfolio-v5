@@ -1,0 +1,92 @@
+{
+  "projects": {
+    "hero": {
+      "eyebrow": "SELECTED WORK · 2026",
+      "words": [
+        "purpose.",
+        "workflow.",
+        "direction."
+      ],
+      "description": "A collection of products I’ve worked on, from class coordination and online learning to media and community platforms.",
+      "prefix": "Projects with a"
+    },
+    "items": {
+      "tarikul-open-mcp": {
+        "category": "Developer tool",
+        "summary": "A remote MCP server that connects Google Calendar to compatible clients.",
+        "description": "Tarikul Open MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
+        "role": "Full-stack development",
+        "highlights": [
+          "Connect a personal Google Calendar account through one dashboard",
+          "Read, create, update, and delete calendar events",
+          "One remote endpoint for MCP-compatible clients",
+          "Works with MCP Inspector and Streamable HTTP clients"
+        ]
+      },
+      "portfolio": {
+        "category": "Personal portfolio",
+        "summary": "A personal portfolio for presenting full-stack work, experience, and technical interests.",
+        "description": "This portfolio brings together selected projects, development experience, technical interests, and contact details in a responsive editorial interface.",
+        "role": "Design and full-stack development",
+        "highlights": [
+          "Responsive portfolio experience across desktop and mobile",
+          "Project pages with repository and live demo links",
+          "Accessible dark and light theme support",
+          "Subtle motion and editorial visual system"
+        ]
+      },
+      "classflow-prime": {
+        "category": "Education platform",
+        "summary": "A shared workspace for the details that keep a class moving.",
+        "description": "ClassFlow Prime brings academic schedules, class updates, exams, member coordination, and group work into one organized space for students and class representatives.",
+        "role": "Full-stack development",
+        "highlights": [
+          "Class updates, pinned materials, and read status",
+          "Routine, exam, and viva schedules in one class workspace",
+          "Role-based member management and class groups",
+          "JWT authentication, email verification, and browser push notifications"
+        ]
+      },
+      "deenseries": {
+        "category": "Streaming platform",
+        "summary": "A considered home for Islamic films and episodic stories.",
+        "description": "DeenSeries is a full-stack streaming platform for browsing Islamic movies and series. Its public catalogue is paired with an administration area for managing titles, episodes, and published content.",
+        "role": "Full-stack development",
+        "highlights": [
+          "Browse movies, series, and episode-based content",
+          "Admin tools to create, edit, and publish media",
+          "JWT authentication with HTTP-only cookies",
+          "Cloudinary media handling and route-level SEO metadata"
+        ]
+      },
+      "mosque-management-system": {
+        "category": "Community platform",
+        "summary": "Practical tools for the daily work of a mosque community.",
+        "description": "A full-stack platform that brings family registration, monthly contributions, payments, donations, expenses, committee work, and development projects into one administrative system, alongside a public information site.",
+        "role": "Full-stack development",
+        "highlights": [
+          "Family and monthly contribution records",
+          "Payment, donation, and expense tracking",
+          "Committee and development project management",
+          "Public pages for prayer times, mosque information, and updates"
+        ]
+      },
+      "bishuddho-academy": {
+        "category": "Education platform",
+        "summary": "Course operations and learner tools for an educational institute.",
+        "description": "Bishuddho Academy connects course discovery and enrollment with student and administration workflows. The client and server are maintained as related repositories for one EdTech application.",
+        "role": "Full-stack development",
+        "highlights": [
+          "Course management and student enrollment",
+          "Admin and student dashboards",
+          "Role-based authentication and REST API integration",
+          "Teacher profiles, assessments, and course progress features"
+        ]
+      }
+    },
+    "metadata": {
+      "title": "Projects",
+      "description": "Explore selected full-stack web development projects by Tarikul Islam, including applications, education platforms, and community software."
+    }
+  }
+}

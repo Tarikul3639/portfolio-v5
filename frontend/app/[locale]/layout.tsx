@@ -1,16 +1,21 @@
 import localFont from "next/font/local"
 import type { Metadata, Viewport } from "next"
 
-import "./globals.css"
+import "../globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollProgress } from "@/components/motion"
 import { ScrollDownIndicator } from "@/components/scroll-down-indicator"
 import { siteConfig } from "@/config/site"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, setRequestLocale } from "next-intl/server"
+import { hasLocale } from "next-intl"
+import { notFound } from "next/navigation"
+import { routing } from "@/i18n/routing"
 
 const fontBengali = localFont({
   src: [
-    { path: "./fonts/NotoSansBengali-Regular.ttf", weight: "400" },
-    { path: "./fonts/NotoSansBengali-Bold.ttf", weight: "700" },
+    { path: "../fonts/NotoSansBengali-Regular.ttf", weight: "400" },
+    { path: "../fonts/NotoSansBengali-Bold.ttf", weight: "700" },
   ],
   variable: "--font-bengali",
   display: "swap",
@@ -18,15 +23,15 @@ const fontBengali = localFont({
 
 const fontSans = localFont({
   src: [
-    { path: "./fonts/NotoSans-Regular.ttf", weight: "400" },
-    { path: "./fonts/NotoSans-Bold.ttf", weight: "700" },
+    { path: "../fonts/NotoSans-Regular.ttf", weight: "400" },
+    { path: "../fonts/NotoSans-Bold.ttf", weight: "700" },
   ],
   variable: "--font-sans",
   display: "swap",
 })
 
 const fontMono = localFont({
-  src: "./fonts/NotoMono-Regular.ttf",
+  src: "../fonts/NotoMono-Regular.ttf",
   variable: "--font-mono",
   display: "swap",
 })
@@ -88,10 +93,6 @@ export const metadata: Metadata = {
     "Frontend and Backend Developer",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   robots: {
     index: true,
     follow: true,
@@ -129,23 +130,36 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) notFound()
+  setRequestLocale(locale)
+  const messages = await getMessages()
+
   return (
     <html
-      lang="en"
+      lang={locale}
       suppressHydrationWarning
       className={`${fontSans.variable} ${fontMono.variable} ${fontBengali.variable} antialiased`}
     >
-      <body className="font-sans">
-        <ThemeProvider>
-          <ScrollProgress />
-          <ScrollDownIndicator />
-          {children}
-        </ThemeProvider>
+      <body className={`font-sans ${locale === "bn" ? "font-bengali" : ""}`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider>
+            <ScrollProgress />
+            <ScrollDownIndicator />
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

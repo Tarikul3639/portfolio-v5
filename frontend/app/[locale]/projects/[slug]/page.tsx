@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight } from "lucide-react"
 import { notFound } from "next/navigation"
 import { SiteHeader } from "@/components/site-header"
@@ -10,9 +10,10 @@ import { ProjectDetailHero } from "@/features/projects/components/project-detail
 import { ProjectDetailOverview } from "@/features/projects/components/project-detail-overview"
 import { projects, getProject } from "@/features/projects/data/projects"
 import { siteConfig } from "@/config/site"
+import { getTranslations } from "next-intl/server"
 
 type Props = {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: "en" | "bn" }>
 }
 
 export function generateStaticParams() {
@@ -20,7 +21,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale } = await params
   const project = getProject(slug)
 
   if (!project) {
@@ -30,23 +31,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
+  const t = await getTranslations({ locale, namespace: "projects.items" })
+  const description = (t.raw as (key: string) => unknown)(
+    `${slug}.summary`
+  ) as string
+  const canonical = `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects/${project.slug}`
   return {
     title: project.title,
-    description: project.summary,
+    description,
     alternates: {
-      canonical: `/projects/${project.slug}`,
+      canonical,
+      languages: {
+        en: `${siteConfig.url}/projects/${project.slug}`,
+        bn: `${siteConfig.url}/bn/projects/${project.slug}`,
+        "x-default": `${siteConfig.url}/projects/${project.slug}`,
+      },
     },
     openGraph: {
       type: "article",
+      locale: locale === "bn" ? "bn_BD" : "en_US",
       title: `${project.title} — Tarikul Islam`,
-      description: project.summary,
-      url: `/projects/${project.slug}`,
+      description,
+      url: canonical,
     },
   }
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const { slug } = await params
+  const { slug, locale } = await params
   const project = getProject(slug)
 
   if (!project) notFound()
@@ -61,7 +73,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     name: project.title,
     description: project.description,
     applicationCategory: project.category,
-    url: `${siteConfig.url}/projects/${project.slug}`,
+    url: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects/${project.slug}`,
     author: {
       "@type": "Person",
       name: "Tarikul Islam",
@@ -69,6 +81,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     },
     codeRepository: project.repos.map((repository) => repository.href),
   }
+  const t = await getTranslations({ locale, namespace: "common.project" })
 
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">
@@ -95,11 +108,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase">
-                  Keep exploring
+                  {t("keepExploring")}
                 </p>
 
                 <h2 className="mt-3 font-serif text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-.055em]">
-                  More selected work.
+                  {t("moreWork")}
                 </h2>
               </div>
 
@@ -107,7 +120,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 className="inline-flex w-fit items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                 href="/projects"
               >
-                All projects
+                {t("allProjects")}
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
@@ -43,8 +43,16 @@ export function FeaturedProjects() {
                 index={index}
                 project={project}
                 viewLabel={t("viewProject")}
-                category={t(`${project.slug}.category`)}
-                summary={t(`${project.slug}.summary`)}
+                category={
+                  (t.raw as (key: string) => unknown)(
+                    `${project.slug}.category`
+                  ) as string
+                }
+                summary={
+                  (t.raw as (key: string) => unknown)(
+                    `${project.slug}.summary`
+                  ) as string
+                }
               />
             </motion.div>
           ))}
@@ -58,7 +66,7 @@ export function FeaturedProjects() {
             className="inline-flex w-fit items-center gap-3 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
             href="/projects"
           >
-            {t("viewAll")} {" "}
+            {t("viewAll")}{" "}
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </Link>
         </motion.div>

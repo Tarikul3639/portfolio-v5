@@ -1,0 +1,83 @@
+{
+  "services": {
+    "hero": {
+      "eyebrow": "SERVICES · DEVELOPMENT",
+      "words": [
+        "built end to end.",
+        "shaped around people.",
+        "made to grow."
+      ],
+      "description": "I work across the frontend and backend to turn a clear problem into a focused web product, from responsive interfaces to the APIs and data workflows behind them.",
+      "cta": "Talk about a project",
+      "prefix": "Thoughtful software,"
+    },
+    "list": {
+      "eyebrow": "What I can help build",
+      "title": "A few connected disciplines.",
+      "note": "The areas below reflect the kinds of work represented in my public projects. The right scope depends on what you are trying to make.",
+      "related": "Related work"
+    },
+    "items": {
+      "0": {
+        "title": "Full-stack web applications",
+        "summary": "I can work across the browser and server to build a web application around a clear set of user workflows.",
+        "scope": [
+          "Application structure and feature flows",
+          "Frontend, APIs, and data layer",
+          "Authentication and role-based access where needed"
+        ]
+      },
+      "1": {
+        "title": "Backend development & APIs",
+        "summary": "I build the server-side pieces that keep product features connected, from API routes and data models to access rules.",
+        "scope": [
+          "NestJS and Node.js application services",
+          "REST API design and frontend integration",
+          "MongoDB or PostgreSQL data workflows"
+        ]
+      },
+      "2": {
+        "title": "Frontend & responsive interfaces",
+        "summary": "I implement clear, responsive product interfaces for public pages, dashboards, and feature-heavy workflows.",
+        "scope": [
+          "React and Next.js interface development",
+          "Responsive layouts and reusable components",
+          "API-connected forms, catalogues, and dashboards"
+        ]
+      }
+    },
+    "process": {
+      "eyebrow": "A practical starting point",
+      "steps": {
+        "0": {
+          "title": "Understand the workflow",
+          "description": "Start with the people, tasks, and constraints the product needs to support."
+        },
+        "1": {
+          "title": "Agree on the shape",
+          "description": "Clarify the first useful scope, the main interfaces, and the system boundaries."
+        },
+        "2": {
+          "title": "Build in slices",
+          "description": "Work through connected pieces so interface and backend decisions stay aligned."
+        },
+        "3": {
+          "title": "Review and refine",
+          "description": "Walk through the result, gather feedback, and identify the next useful improvement."
+        }
+      },
+      "titlePrefix": "Clear scope, steady",
+      "titleAccent": "progress."
+    },
+    "cta": {
+      "eyebrow": "Have a project in mind?",
+      "titleStart": "Let's talk about",
+      "titleEnd": "what you need.",
+      "button": "Get in touch"
+    },
+    "metadata": {
+      "title": "Services",
+      "description": "Web application, backend API, and responsive frontend development from Tarikul Islam, a backend-focused full-stack developer."
+    }
+  }
+}

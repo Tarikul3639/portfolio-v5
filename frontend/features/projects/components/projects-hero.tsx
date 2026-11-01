@@ -4,8 +4,10 @@ import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { EncryptedText } from "@/components/ui/encrypted-text"
 import { FlipWords } from "@/components/ui/flip-words"
+import { useTranslations } from "next-intl"
 
 export function ProjectsHero() {
+  const t = useTranslations("projects.hero")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 0, y = 14, duration = 0.6) => ({
@@ -35,17 +37,17 @@ export function ProjectsHero() {
           {...reveal(0, 8, 0.45)}
           className="mb-4 font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
         >
-          <EncryptedText text="SELECTED WORK · 2026" />
+          <EncryptedText text={t("eyebrow")} />
         </motion.p>
 
         <motion.h1
           {...reveal(0.08, 20, 0.7)}
           className="max-w-222.5 font-serif text-[clamp(3rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
         >
-          Projects with a{" "}
+          {t("prefix")}{" "}
           <em className="inline-block min-w-[8ch] text-primary">
             <FlipWords
-              words={["purpose.", "workflow.", "direction."]}
+              words={t.raw("words") as string[]}
               duration={4000}
               className="px-0 text-inherit!"
             />
@@ -56,8 +58,7 @@ export function ProjectsHero() {
           {...reveal(0.16, 14, 0.6)}
           className="mt-6 max-w-2xl text-base leading-[1.8] text-muted-foreground"
         >
-          A collection of products I&apos;ve worked on, from class coordination
-          and online learning to media and community platforms.
+          {t("description")}
         </motion.p>
       </Container>
     </section>
