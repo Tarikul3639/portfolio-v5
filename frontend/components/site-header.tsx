@@ -126,14 +126,14 @@ export function SiteHeader() {
                 <Link
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.72rem] transition-colors duration-200 ${
+                  className={`group/nav relative flex items-center gap-2 px-3.5 py-2.5 font-mono text-[.82rem] transition-colors duration-200 ${
                     active
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   <span
-                    className={`text-[.58rem] transition-colors duration-200 ${
+                    className={`text-[.64rem] transition-colors duration-200 ${
                       active
                         ? "text-primary"
                         : "text-muted-foreground/50 group-hover/nav:text-primary"
