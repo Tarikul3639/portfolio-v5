@@ -4,8 +4,10 @@ import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
 import { HomeTechGrid } from "@/features/home/components/home-tech-grid"
 import { EncryptedText } from "@/components/ui/encrypted-text"
+import { useTranslations } from "next-intl"
 
 export function HomeTechStack() {
+  const t = useTranslations("home.skills")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -28,14 +30,14 @@ export function HomeTechStack() {
               className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
               {...reveal(0, 8, 0.45)}
             >
-              <EncryptedText text="SKILLS AND TOOLS" />
+              <EncryptedText text={t("eyebrow")} />
             </motion.p>
 
             <motion.h2
               className="mt-2 font-serif text-[clamp(2rem,4vw,3.1rem)] leading-none tracking-[-.055em]"
               {...reveal(0.08, 18, 0.65)}
             >
-              Technologies I <em className="text-primary">work with.</em>
+              {t("headline")} <em className="text-primary">{t("accent")}</em>
             </motion.h2>
           </div>
 
@@ -43,8 +45,7 @@ export function HomeTechStack() {
             className="max-w-120 text-sm leading-[1.7] text-muted-foreground"
             {...reveal(0.16, 12, 0.55)}
           >
-            A compact overview of the tools behind my work and the topics I am
-            currently exploring.
+            {t("description")}
           </motion.p>
         </div>
 

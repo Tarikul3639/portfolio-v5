@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
+import { useTranslations } from "next-intl"
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
 import { Spotlight } from "@/components/ui/spotlight"
@@ -11,6 +12,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 const easeOut = [0.22, 1, 0.36, 1] as const
 
 export function HomeHero() {
+  const t = useTranslations("home.hero")
   const reduceMotion = useReducedMotion()
 
   const imageReveal = {
@@ -83,7 +85,7 @@ export function HomeHero() {
             {...animationProps}
             className="mb-6 flex items-center gap-3 font-mono text-[.69rem] tracking-[.04em] text-muted-foreground before:h-px before:w-7.5 before:bg-primary before:content-['']"
           >
-            Full-stack developer · Dhaka, Bangladesh
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h1
@@ -102,11 +104,11 @@ export function HomeHero() {
             {...animationProps}
             className="max-w-197.5 text-[clamp(3.4rem,7vw,6rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
           >
-            I build the <em className="font-serif text-primary">systems</em>
+            {t("headlineOne")} <em className="font-serif text-primary">{t("headlineAccent")}</em>
             <br />
-            behind useful
+            {t("headlineTwo")}
             <br />
-            digital products.
+            {t("headlineThree")}
           </motion.h1>
 
           <motion.p
@@ -125,8 +127,7 @@ export function HomeHero() {
             {...animationProps}
             className="mt-7 max-w-lg text-[clamp(1rem,1.4vw,1.12rem)] leading-[1.8] text-muted-foreground"
           >
-            I&apos;m Tarikul Islam, a backend-focused full-stack developer
-            working across TypeScript, Node.js, NestJS, React, and Next.js.
+            {t("description")}
           </motion.p>
 
           <motion.div
@@ -147,7 +148,7 @@ export function HomeHero() {
           >
             <AngularLink href="/projects">
               <span className="group inline-flex items-center gap-1.5">
-                Explore selected work
+                {t("selectedWork")}
                 <ArrowUpRight
                   aria-hidden="true"
                   className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -159,7 +160,7 @@ export function HomeHero() {
               className="group relative text-sm text-muted-foreground transition-colors duration-300 hover:text-foreground"
               href="/services"
             >
-              See how I can help
+              {t("services")}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-300 group-hover:w-full" />
             </Link>
           </motion.div>
@@ -194,7 +195,7 @@ export function HomeHero() {
           <Image
             className="relative z-10 block aspect-[.79] h-auto w-full object-cover object-[center_25%] filter-[saturate(.78)]"
             src="/images/profile/tarikul-islam.webp"
-            alt="Portrait of Tarikul Islam"
+            alt={t("portraitAlt")}
             width={1120}
             height={1488}
             priority
@@ -204,7 +205,7 @@ export function HomeHero() {
           <figcaption className="absolute right-0 -bottom-4 z-20 flex w-full min-w-0 gap-2 font-mono text-[.62rem] text-muted-foreground">
             <span className="shrink-0 text-primary">01</span>
             <span className="min-w-0 truncate">
-              A little about the person behind the code
+              {t("caption")}
             </span>
           </figcaption>
         </motion.figure>
@@ -214,7 +215,7 @@ export function HomeHero() {
         aria-hidden="true"
         className="absolute right-[5.3vw] bottom-8 hidden font-mono text-[.64rem] text-muted-foreground [writing-mode:vertical-rl] md:block"
       >
-        PORTFOLIO / 2026
+        {t("portfolio")}
       </span>
     </section>
   )

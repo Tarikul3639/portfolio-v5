@@ -7,6 +7,15 @@ import { ScrollProgress } from "@/components/motion"
 import { ScrollDownIndicator } from "@/components/scroll-down-indicator"
 import { siteConfig } from "@/config/site"
 
+const fontBengali = localFont({
+  src: [
+    { path: "./fonts/NotoSansBengali-Regular.ttf", weight: "400" },
+    { path: "./fonts/NotoSansBengali-Bold.ttf", weight: "700" },
+  ],
+  variable: "--font-bengali",
+  display: "swap",
+})
+
 const fontSans = localFont({
   src: [
     { path: "./fonts/NotoSans-Regular.ttf", weight: "400" },
@@ -129,7 +138,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${fontSans.variable} ${fontMono.variable} antialiased`}
+      className={`${fontSans.variable} ${fontMono.variable} ${fontBengali.variable} antialiased`}
     >
       <body className="font-sans">
         <ThemeProvider>

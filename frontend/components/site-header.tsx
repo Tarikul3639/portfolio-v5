@@ -17,7 +17,38 @@ const links = [
   { href: "/about", label: "About", code: "03" },
 ]
 
-export function SiteHeader() {
+type HomeNavigationCopy = {
+  home: string
+  projects: string
+  services: string
+  about: string
+  contact: string
+  letsTalk: string
+  language: string
+  main: string
+  mobile: string
+  brandHome: string
+  toggleTheme: string
+  openMenu: string
+  closeMenu: string
+  systemMenu: string
+  portfolioActive: string
+  systemOnline: string
+  globalNode: string
+  uptime: string
+  load: string
+  description: string
+  lightMode: string
+  darkMode: string
+}
+
+export function SiteHeader({
+  homeLocale,
+  homeNavigation,
+}: {
+  homeLocale?: "en" | "bn"
+  homeNavigation?: HomeNavigationCopy
+} = {}) {
   const pathname = usePathname()
   const { resolvedTheme, setTheme } = useTheme()
   const reduceMotion = useReducedMotion() ?? false
@@ -56,8 +87,8 @@ export function SiteHeader() {
         {/* Brand */}
         <motion.div {...reveal(0, 6, 0.4)}>
           <Link
-            href="/"
-            aria-label="Tarikul Islam, home"
+            href={homeLocale === "bn" ? "/bn" : "/"}
+            aria-label={homeNavigation?.brandHome ?? "Tarikul Islam, home"}
             className="group/brand flex shrink-0 items-center gap-3"
           >
             <span className="relative grid size-8.5 shrink-0 place-items-center border-2 border-dashed border-primary/40 transition-all duration-300 group-hover/brand:border-primary group-hover/brand:bg-primary/5 group-hover/brand:shadow-[0_0_15px_color-mix(in_srgb,var(--primary)_15%,transparent)]">
@@ -86,7 +117,7 @@ export function SiteHeader() {
         {/* Desktop navigation */}
         <nav
           className="flex items-center gap-1 max-md:hidden"
-          aria-label="Main navigation"
+          aria-label={homeNavigation?.main ?? "Main navigation"}
         >
           {links.map((link, index) => {
             const active =
@@ -116,7 +147,15 @@ export function SiteHeader() {
                     {link.code}
                   </span>
 
-                  {link.label}
+                  {homeNavigation
+                    ? homeNavigation[
+                        link.href === "/projects"
+                          ? "projects"
+                          : link.href === "/services"
+                            ? "services"
+                            : "about"
+                      ]
+                    : link.label}
 
                   <span
                     className={`absolute inset-x-3 bottom-0 h-px origin-left bg-primary transition-transform duration-300 ${
@@ -135,10 +174,36 @@ export function SiteHeader() {
           {...reveal(0.2, 6, 0.4)}
           className="flex shrink-0 items-center gap-2"
         >
+          {homeLocale && homeNavigation && (
+            <nav
+              aria-label={homeNavigation.language}
+              className="mr-1 flex items-center gap-1 font-mono text-[.67rem]"
+            >
+              <Link
+                href="/"
+                lang="en"
+                aria-current={homeLocale === "en" ? "page" : undefined}
+                className={`transition-colors hover:text-primary ${homeLocale === "en" ? "text-foreground" : "text-muted-foreground"}`}
+              >
+                EN
+              </Link>
+              <span aria-hidden="true" className="text-muted-foreground/50">
+                /
+              </span>
+              <Link
+                href="/bn"
+                lang="bn"
+                aria-current={homeLocale === "bn" ? "page" : undefined}
+                className={`transition-colors hover:text-primary ${homeLocale === "bn" ? "text-foreground" : "text-muted-foreground"}`}
+              >
+                বাংলা
+              </Link>
+            </nav>
+          )}
           {/* Theme toggle */}
           <button
             type="button"
-            aria-label="Toggle color theme"
+            aria-label={homeNavigation?.toggleTheme ?? "Toggle color theme"}
             onClick={toggleTheme}
             className="group/theme hidden size-9 place-items-center border border-border text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:grid"
           >
@@ -156,7 +221,9 @@ export function SiteHeader() {
             size="compact"
             href="/contact"
           >
-            <span className="font-mono text-[.72rem]">LET&apos;S TALK</span>
+            <span className="font-mono text-[.72rem]">
+              {homeNavigation?.letsTalk ?? "LET'S TALK"}
+            </span>
 
             <ArrowUpRight
               aria-hidden="true"
@@ -171,7 +238,9 @@ export function SiteHeader() {
             aria-controls="mobile-navigation"
             aria-expanded={menuOpen}
             aria-label={
-              menuOpen ? "Close navigation menu" : "Open navigation menu"
+              menuOpen
+                ? homeNavigation?.closeMenu ?? "Close navigation menu"
+                : homeNavigation?.openMenu ?? "Open navigation menu"
             }
             className="grid size-9 place-items-center border border-border text-foreground transition-all duration-200 hover:border-primary/50 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"
             onClick={() => setMenuOpen((open) => !open)}
@@ -198,6 +267,8 @@ export function SiteHeader() {
           pathname={pathname}
           theme={resolvedTheme}
           onToggleTheme={toggleTheme}
+          homeLocale={homeLocale}
+          homeNavigation={homeNavigation}
         />
       </div>
     </header>

@@ -13,7 +13,36 @@ const links = [
   { href: "/contact", label: "Contact" },
 ]
 
-const MobileNavStatus = memo(function MobileNavStatus() {
+type HomeNavigationCopy = {
+  home: string
+  projects: string
+  services: string
+  about: string
+  contact: string
+  letsTalk: string
+  language: string
+  main: string
+  mobile: string
+  brandHome: string
+  toggleTheme: string
+  openMenu: string
+  closeMenu: string
+  systemMenu: string
+  portfolioActive: string
+  systemOnline: string
+  globalNode: string
+  uptime: string
+  load: string
+  description: string
+  lightMode: string
+  darkMode: string
+}
+
+const MobileNavStatus = memo(function MobileNavStatus({
+  copy,
+}: {
+  copy?: HomeNavigationCopy
+}) {
   const [time, setTime] = useState("")
 
   useEffect(() => {
@@ -44,12 +73,12 @@ const MobileNavStatus = memo(function MobileNavStatus() {
             </span>
 
             <span className="font-mono text-[.62rem] font-bold tracking-[.16em] text-primary uppercase">
-              System online
+              {copy?.systemOnline ?? "System online"}
             </span>
           </div>
 
           <p className="mt-1 font-mono text-[.58rem] tracking-[.12em] text-muted-foreground uppercase">
-            Global access node
+            {copy?.globalNode ?? "Global access node"}
           </p>
         </div>
 
@@ -67,7 +96,7 @@ const MobileNavStatus = memo(function MobileNavStatus() {
       <div className="mt-4 h-px bg-border" />
 
       <p className="sr-only mt-3 text-xs leading-relaxed text-muted-foreground">
-        Full-stack development for focused, useful web products.
+        {copy?.description ?? "Full-stack development for focused, useful web products."}
       </p>
 
       {/* Bottom row */}
@@ -75,7 +104,7 @@ const MobileNavStatus = memo(function MobileNavStatus() {
         <div className="flex gap-4">
           <div className="flex flex-col">
             <span className="font-mono text-[8px] text-sidebar-accent uppercase">
-              Uptime
+              {copy?.uptime ?? "Uptime"}
             </span>
             <span className="font-mono text-[10px] font-bold text-sidebar-foreground">
               99.9%
@@ -83,7 +112,7 @@ const MobileNavStatus = memo(function MobileNavStatus() {
           </div>
           <div className="flex flex-col border-l border-sidebar-border pl-4">
             <span className="font-mono text-[8px] text-sidebar-accent uppercase">
-              Load
+              {copy?.load ?? "Load"}
             </span>
             <span className="font-mono text-[10px] font-bold text-sidebar-foreground">
               0.04ms
@@ -115,12 +144,16 @@ export const MobileNav = memo(function MobileNav({
   pathname,
   theme,
   onToggleTheme,
+  homeLocale,
+  homeNavigation,
 }: {
   open: boolean
   onClose: () => void
   pathname: string
   theme?: string
   onToggleTheme: () => void
+  homeLocale?: "en" | "bn"
+  homeNavigation?: HomeNavigationCopy
 }) {
   const reduceMotion = useReducedMotion()
   const closeRef = useRef<HTMLButtonElement>(null)
@@ -153,7 +186,7 @@ export const MobileNav = memo(function MobileNav({
         <>
           {/* Backdrop */}
           <motion.button
-            aria-label="Close navigation menu"
+            aria-label={homeNavigation?.closeMenu ?? "Close navigation menu"}
             className="fixed inset-0 z-30 h-dvh w-screen cursor-default border-0 bg-background/70 p-0 backdrop-blur-sm md:hidden"
             initial={reduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -165,7 +198,7 @@ export const MobileNav = memo(function MobileNav({
           {/* Left-side navigation drawer */}
           <motion.aside
             role="dialog"
-            aria-label="Mobile navigation"
+            aria-label={homeNavigation?.mobile ?? "Mobile navigation"}
             aria-modal="true"
             className="fixed inset-y-0 left-0 z-40 flex h-dvh max-h-dvh w-full max-w-sm flex-col overflow-hidden border-r border-border bg-background p-6 shadow-2xl md:hidden"
             initial={reduceMotion ? false : { x: "-100%" }}
@@ -180,17 +213,17 @@ export const MobileNav = memo(function MobileNav({
             <div className="mb-8 flex shrink-0 items-center justify-between border-b border-border pb-6">
               <div className="flex flex-col">
                 <span className="font-mono text-[.68rem] tracking-[.11em] text-primary uppercase">
-                  System menu
+                  {homeNavigation?.systemMenu ?? "System menu"}
                 </span>
 
                 <span className="font-mono text-[.58rem] tracking-[.11em] text-muted-foreground uppercase">
-                  Portfolio / Active
+                  {homeNavigation?.portfolioActive ?? "Portfolio / Active"}
                 </span>
               </div>
 
               <button
                 ref={closeRef}
-                aria-label="Close navigation menu"
+                aria-label={homeNavigation?.closeMenu ?? "Close navigation menu"}
                 className="grid size-10 place-items-center border border-border transition-colors hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-ring"
                 onClick={onClose}
                 type="button"
@@ -202,12 +235,12 @@ export const MobileNav = memo(function MobileNav({
             {/* Navigation */}
             <nav
               className="min-h-0 flex-1 overflow-y-auto overscroll-contain pr-1"
-              aria-label="Mobile navigation links"
+              aria-label={homeNavigation?.mobile ?? "Mobile navigation links"}
             >
               {links.map((link, index) => {
                 const active =
                   link.href === "/"
-                    ? pathname === "/"
+                    ? pathname === "/" || pathname === "/bn"
                     : pathname === link.href ||
                       pathname.startsWith(`${link.href}/`)
 
@@ -225,7 +258,11 @@ export const MobileNav = memo(function MobileNav({
                       className={`group relative flex items-center gap-4 border-b border-border px-3 py-5 font-serif text-[1.8rem] font-bold tracking-tighter focus-visible:outline-2 focus-visible:outline-ring ${
                         active ? "text-primary" : ""
                       }`}
-                      href={link.href}
+                      href={
+                        link.href === "/" && homeLocale === "bn"
+                          ? "/bn"
+                          : link.href
+                      }
                       onClick={onClose}
                     >
                       <span
@@ -245,7 +282,13 @@ export const MobileNav = memo(function MobileNav({
                             : "text-muted-foreground group-hover:text-primary"
                         }`}
                       >
-                        {link.label}
+                      {homeNavigation
+                        ? homeNavigation[
+                            link.href === "/"
+                              ? "home"
+                              : link.href.slice(1) as "projects" | "services" | "about" | "contact"
+                          ]
+                        : link.label}
                       </span>
 
                       <ArrowUpRight
@@ -260,7 +303,7 @@ export const MobileNav = memo(function MobileNav({
 
             {/* Footer */}
             <div className="mt-6 shrink-0 space-y-4 border-t border-border pt-6">
-              <MobileNavStatus />
+              <MobileNavStatus copy={homeNavigation} />
 
               <button
                 type="button"
@@ -273,7 +316,9 @@ export const MobileNav = memo(function MobileNav({
                   <Moon aria-hidden="true" className="size-4" />
                 )}
 
-                {theme === "dark" ? "Switch light mode" : "Switch dark mode"}
+                {theme === "dark"
+                  ? homeNavigation?.lightMode ?? "Switch light mode"
+                  : homeNavigation?.darkMode ?? "Switch dark mode"}
               </button>
             </div>
           </motion.aside>

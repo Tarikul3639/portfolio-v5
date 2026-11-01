@@ -7,8 +7,10 @@ import { Container } from "@/components/container"
 import { SectionHeading } from "@/components/section-heading"
 import { ProjectCard } from "@/features/projects/components/project-card"
 import { featuredProjects } from "@/features/projects/data/projects"
+import { useTranslations } from "next-intl"
 
 export function FeaturedProjects() {
+  const t = useTranslations("home.projects")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -26,9 +28,9 @@ export function FeaturedProjects() {
     <section className="border-t border-border py-[clamp(5.5rem,10vw,9rem)]">
       <Container>
         <SectionHeading
-          eyebrow="Selected work · 01—03"
-          title="A few things I've made."
-          note="A selection of full-stack products shaped around clear workflows and the people who use them."
+          eyebrow={t("eyebrow")}
+          title={t("headline")}
+          note={t("description")}
         />
 
         <div className="grid grid-cols-1 gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-16 md:grid-cols-2">
@@ -37,7 +39,13 @@ export function FeaturedProjects() {
               key={project.slug}
               {...reveal(0.08 + index * 0.1, 20, 0.65)}
             >
-              <ProjectCard index={index} project={project} />
+              <ProjectCard
+                index={index}
+                project={project}
+                viewLabel={t("viewProject")}
+                category={t(`${project.slug}.category`)}
+                summary={t(`${project.slug}.summary`)}
+              />
             </motion.div>
           ))}
         </div>
@@ -50,7 +58,7 @@ export function FeaturedProjects() {
             className="inline-flex w-fit items-center gap-3 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
             href="/projects"
           >
-            View all projects{" "}
+            {t("viewAll")} {" "}
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </Link>
         </motion.div>

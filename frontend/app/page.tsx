@@ -1,44 +1,33 @@
 
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
-import { FeaturedProjects } from "@/features/home/components/featured-projects"
-import { HomeCta } from "@/features/home/components/home-cta"
-import { HomeHero } from "@/features/home/components/home-hero"
-import { ExperienceHighlight } from "@/features/home/components/experience-highlight"
-import { HomeTechStack } from "@/features/home/components/home-tech-stack"
-import { WorkApproach } from "@/features/home/components/work-approach"
-import { personSchema } from "@/lib/seo/person-schema"
-import { websiteSchema } from "@/lib/seo/website-schema"
+import type { Metadata } from "next"
+import { HomePage } from "@/features/home/home-page"
+import enMessages from "@/messages/en.json"
+import { siteConfig } from "@/config/site"
 
-export default function HomePage() {
-  return (
-    <div className="relative flex min-h-svh flex-col bg-background text-foreground">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
-        }}
-      />
+export async function generateMetadata(): Promise<Metadata> {
+  const home = enMessages.home.metadata
+  return {
+    title: { absolute: home.title },
+    description: home.description,
+    alternates: {
+      canonical: siteConfig.url,
+      languages: { en: siteConfig.url, bn: `${siteConfig.url}/bn` },
+    },
+    openGraph: {
+      locale: "en_US",
+      url: siteConfig.url,
+      title: home.title,
+      description: home.description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: home.title,
+      description: home.description,
+      images: ["/images/profile/tarikul-islam.webp"],
+    },
+  }
+}
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
-        }}
-      />
-
-      <SiteHeader />
-
-      <main className="flex-1">
-        <HomeHero />
-        <ExperienceHighlight />
-        <HomeTechStack />
-        <FeaturedProjects />
-        <WorkApproach />
-        <HomeCta />
-      </main>
-
-      <SiteFooter />
-    </div>
-  )
+export default function HomeRoute() {
+  return <HomePage locale="en" />
 }

@@ -4,8 +4,10 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { Container } from "@/components/container"
+import { useTranslations } from "next-intl"
 
 export function WorkApproach() {
+  const t = useTranslations("home.approach")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -27,28 +29,24 @@ export function WorkApproach() {
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
             {...reveal(0, 8, 0.45)}
           >
-            How I think about the work
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h2
             className="mt-4 max-w-88 font-serif text-[clamp(2.1rem,4vw,3.6rem)] leading-[1.04] tracking-[-.06em]"
             {...reveal(0.08, 20, 0.7)}
           >
-            Good software has a <em className="text-primary">quiet</em> kind of
-            clarity.
+            {t("headlineOne")} <em className="text-primary">{t("accent")}</em> {t("headlineTwo")}
           </motion.h2>
         </div>
 
         <div className="max-w-172 text-base leading-[1.85] text-muted-foreground">
           <motion.p {...reveal(0.12, 14, 0.6)}>
-            I enjoy taking a workflow with a lot of moving parts and giving it a
-            dependable shape: clear boundaries, useful APIs, thoughtful
-            interfaces, and room to grow.
+            {t("paragraphOne")}
           </motion.p>
 
           <motion.p className="mt-4" {...reveal(0.2, 14, 0.6)}>
-            My work often sits close to the backend, while keeping the whole
-            product experience in view.
+            {t("paragraphTwo")}
           </motion.p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
@@ -57,10 +55,10 @@ export function WorkApproach() {
               {...reveal(0.08, 12, 0.55)}
             >
               <h3 className="mb-2 font-mono text-[.67rem] font-normal text-foreground transition-colors duration-300 group-hover/skill:text-primary">
-                BACKEND
+                {t("backend")}
               </h3>
               <p className="text-[.8rem] leading-[1.7]">
-                Node.js, NestJS, REST APIs, authentication
+                {t("backendDescription")}
               </p>
             </motion.div>
 
@@ -69,10 +67,10 @@ export function WorkApproach() {
               {...reveal(0.16, 12, 0.55)}
             >
               <h3 className="mb-2 font-mono text-[.67rem] font-normal text-foreground transition-colors duration-300 group-hover/skill:text-primary">
-                PRODUCT UI
+                {t("productUi")}
               </h3>
               <p className="text-[.8rem] leading-[1.7]">
-                React, Next.js, TypeScript, Tailwind CSS
+                {t("productUiDescription")}
               </p>
             </motion.div>
 
@@ -81,10 +79,10 @@ export function WorkApproach() {
               {...reveal(0.24, 12, 0.55)}
             >
               <h3 className="mb-2 font-mono text-[.67rem] font-normal text-foreground transition-colors duration-300 group-hover/skill:text-primary">
-                DATA
+                {t("data")}
               </h3>
               <p className="text-[.8rem] leading-[1.7]">
-                MongoDB, PostgreSQL, Prisma, Mongoose
+                {t("dataDescription")}
               </p>
             </motion.div>
           </div>
@@ -97,7 +95,7 @@ export function WorkApproach() {
               className="group/link inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors duration-300 hover:border-primary hover:text-primary"
               href="/about"
             >
-              More about me
+              {t("about")}
               <ArrowUpRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
@@ -108,7 +106,7 @@ export function WorkApproach() {
               className="group/link inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors duration-300 hover:border-primary hover:text-primary"
               href="/services"
             >
-              Services
+              {t("services")}
               <ArrowUpRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"

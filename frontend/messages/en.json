@@ -1,0 +1,127 @@
+{
+  "home": {
+    "navigation": {
+      "home": "Home",
+      "projects": "Projects",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact",
+      "letsTalk": "LET'S TALK",
+      "language": "Language",
+      "main": "Main navigation",
+      "mobile": "Mobile navigation",
+      "brandHome": "Tarikul Islam, home",
+      "toggleTheme": "Toggle color theme",
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu",
+      "systemMenu": "System menu",
+      "portfolioActive": "Portfolio / Active",
+      "systemOnline": "System online",
+      "globalNode": "Global access node",
+      "uptime": "Uptime",
+      "load": "Load",
+      "description": "Full-stack development for focused, useful web products.",
+      "lightMode": "Switch light mode",
+      "darkMode": "Switch dark mode"
+    },
+    "hero": {
+      "eyebrow": "Full-stack developer · Dhaka, Bangladesh",
+      "headlineOne": "I build the",
+      "headlineAccent": "systems",
+      "headlineTwo": "behind useful",
+      "headlineThree": "digital products.",
+      "description": "I'm Tarikul Islam, a backend-focused full-stack developer working across TypeScript, Node.js, NestJS, React, and Next.js.",
+      "selectedWork": "Explore selected work",
+      "services": "See how I can help",
+      "portraitAlt": "Portrait of Tarikul Islam",
+      "caption": "A little about the person behind the code",
+      "portfolio": "PORTFOLIO / 2026"
+    },
+    "experience": {
+      "years": "years",
+      "label": "Experience",
+      "headline": "Building dependable products with a",
+      "accent": "full view",
+      "tail": "of the work.",
+      "description": "I bring more than two years of hands-on experience across backend systems, product interfaces, and the details that connect them.",
+      "link": "More about my approach"
+    },
+    "skills": {
+      "eyebrow": "SKILLS AND TOOLS",
+      "headline": "Technologies I",
+      "accent": "work with.",
+      "description": "A compact overview of the tools behind my work and the topics I am currently exploring."
+    },
+    "projects": {
+      "eyebrow": "Selected work · 01—03",
+      "headline": "A few things I've made.",
+      "description": "A selection of full-stack products shaped around clear workflows and the people who use them.",
+      "viewAll": "View all projects",
+      "viewProject": "View project",
+      "technologies": "Technologies",
+      "tarikul-open-mcp": {
+        "category": "Developer tool",
+        "summary": "A remote MCP server that connects Google Calendar to compatible clients."
+      },
+      "portfolio": {
+        "category": "Personal portfolio",
+        "summary": "A personal portfolio for presenting full-stack work, experience, and technical interests."
+      },
+      "classflow-prime": {
+        "category": "Education platform",
+        "summary": "A shared workspace for the details that keep a class moving."
+      }
+    },
+    "approach": {
+      "eyebrow": "How I think about the work",
+      "headlineOne": "Good software has a",
+      "accent": "quiet",
+      "headlineTwo": "kind of clarity.",
+      "paragraphOne": "I enjoy taking a workflow with a lot of moving parts and giving it a dependable shape: clear boundaries, useful APIs, thoughtful interfaces, and room to grow.",
+      "paragraphTwo": "My work often sits close to the backend, while keeping the whole product experience in view.",
+      "backend": "BACKEND",
+      "backendDescription": "Node.js, NestJS, REST APIs, authentication",
+      "productUi": "PRODUCT UI",
+      "productUiDescription": "React, Next.js, TypeScript, Tailwind CSS",
+      "data": "DATA",
+      "dataDescription": "MongoDB, PostgreSQL, Prisma, Mongoose",
+      "about": "More about me",
+      "services": "Services"
+    },
+    "cta": {
+      "eyebrow": "Have something in mind?",
+      "headline": "Let's make it",
+      "accent": "work well.",
+      "button": "Get in touch"
+    },
+    "footer": {
+      "prompt": "Have something in mind?",
+      "headlineStart": "Let's",
+      "headlineMiddle": "make",
+      "headlineEnd": "something useful.",
+      "tagline": "Developer / Portfolio",
+      "description": "Full-stack web development for focused products, thoughtful interfaces, and the systems behind them.",
+      "codeLine": "Code + Logic + Data → Digital Products.",
+      "conceptLine": "From concept to deployment.",
+      "social": "Social media",
+      "navigate": "Navigate",
+      "servicesTitle": "Services",
+      "webDevelopment": "Web Development",
+      "frontendDevelopment": "Frontend Development",
+      "backendDevelopment": "Backend Development",
+      "workflowAutomation": "Workflow Automation",
+      "contactInfo": "Contact Info",
+      "location": "Dhaka, Bangladesh",
+      "built": "Built with care · Bangladesh",
+      "home": "Home",
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact",
+      "previous": "Previous portfolio"
+    },
+    "metadata": {
+      "title": "Tarikul Islam — Full-Stack Web Developer",
+      "description": "Tarikul Islam is a Bangladesh-based full-stack web developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience."
+    }
+  }
+}

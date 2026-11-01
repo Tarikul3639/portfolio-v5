@@ -50,7 +50,34 @@ const socialLinks = [
   },
 ]
 
-export function SiteFooter() {
+type HomeFooterCopy = {
+  homePath?: string
+  prompt: string
+  headlineStart: string
+  headlineMiddle: string
+  headlineEnd: string
+  tagline: string
+  description: string
+  codeLine: string
+  conceptLine: string
+  social: string
+  navigate: string
+  servicesTitle: string
+  webDevelopment: string
+  frontendDevelopment: string
+  backendDevelopment: string
+  workflowAutomation: string
+  contactInfo: string
+  location: string
+  built: string
+  home: string
+  work: string
+  about: string
+  contact: string
+  previous: string
+}
+
+export function SiteFooter({ homeFooter }: { homeFooter?: HomeFooterCopy } = {}) {
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -72,19 +99,24 @@ export function SiteFooter() {
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
             {...reveal(0, 8, 0.45)}
           >
-            Have something in mind?
+            {homeFooter?.prompt ?? "Have something in mind?"}
           </motion.p>
 
           <motion.h2
             className="mt-4 max-w-205 font-serif text-[clamp(3.2rem,8vw,8rem)] leading-[.88] tracking-[-.085em]"
             {...reveal(0.08, 20, 0.7)}
           >
-            Let&apos;s{" "}
+            {homeFooter?.headlineStart ?? "Let's"}{" "}
             <SquigglyText stepDuration={90} scale={[1, 2]}>
-              make
+              {homeFooter?.headlineMiddle ?? "make"}
             </SquigglyText>{" "}
-            something{" "}
-            <SquigglyText className="text-primary">useful.</SquigglyText>
+            {homeFooter ? (
+              <SquigglyText className="text-primary">
+                {homeFooter.headlineEnd}
+              </SquigglyText>
+            ) : (
+              <>something <SquigglyText className="text-primary">useful.</SquigglyText></>
+            )}
           </motion.h2>
         </div>
 
@@ -93,7 +125,7 @@ export function SiteFooter() {
           <div className="col-span-2 max-w-88 sm:col-span-3 lg:col-span-1">
             <motion.div {...reveal(0, 12, 0.55)}>
               <Link
-                href="/"
+                href={homeFooter?.homePath ?? "/"}
                 aria-label="Tarikul Islam, home"
                 className="group/brand flex shrink-0 items-center gap-3"
               >
@@ -114,7 +146,7 @@ export function SiteFooter() {
                   </span>
 
                   <span className="font-mono text-[.55rem] leading-none tracking-[.12em] text-muted-foreground uppercase transition-colors duration-300 group-hover/brand:text-foreground">
-                    Developer / Portfolio
+                    {homeFooter?.tagline ?? "Developer / Portfolio"}
                   </span>
                 </span>
               </Link>
@@ -124,23 +156,22 @@ export function SiteFooter() {
               className="sr-only mt-4 text-sm leading-[1.75] text-muted-foreground"
               {...reveal(0.06, 10, 0.5)}
             >
-              Full-stack web development for focused products, thoughtful
-              interfaces, and the systems behind them.
+              {homeFooter?.description ?? "Full-stack web development for focused products, thoughtful interfaces, and the systems behind them."}
             </motion.p>
 
             <motion.p
               className="mt-4 font-mono text-sm leading-[1.85] text-muted-foreground"
               {...reveal(0.08, 12, 0.55)}
             >
-              Code + Logic + Data → Digital Products.
-              <span className="block text-xs">From concept to deployment.</span>
+              {homeFooter?.codeLine ?? "Code + Logic + Data → Digital Products."}
+              <span className="block text-xs">{homeFooter?.conceptLine ?? "From concept to deployment."}</span>
             </motion.p>
 
             <motion.p
               className="sr-only mt-5 font-mono text-[.62rem] tracking-[.08em] text-muted-foreground uppercase"
               {...reveal(0.1, 8, 0.45)}
             >
-              Social media
+              {homeFooter?.social ?? "Social media"}
             </motion.p>
 
             <motion.div
@@ -168,43 +199,53 @@ export function SiteFooter() {
           {/* Navigate */}
           <motion.div {...reveal(0.08, 16, 0.6)}>
             <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
-              Navigate
+              {homeFooter?.navigate ?? "Navigate"}
             </p>
 
             <nav
               className="grid gap-2.5 text-sm"
               aria-label="Footer navigation"
             >
-              {navigation.map((item, index) => (
+              {navigation.map((item, index) => {
+                const label = homeFooter
+                  ? item.href === "/" ? homeFooter.home : item.href === "/projects" ? homeFooter.work : item.href === "/about" ? homeFooter.about : homeFooter.contact
+                  : item.label
+                return (
                 <motion.div key={item.href} {...reveal(index * 0.05, 8, 0.4)}>
                   <Link
                     className="w-fit text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-                    href={item.href}
+                    href={item.href === "/" ? homeFooter?.homePath ?? "/" : item.href}
                   >
-                    {item.label}
+                    {label}
                   </Link>
                 </motion.div>
-              ))}
+                )
+              })}
             </nav>
           </motion.div>
 
           {/* Services */}
           <motion.div {...reveal(0.14, 16, 0.6)}>
             <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
-              Services
+              {homeFooter?.servicesTitle ?? "Services"}
             </p>
 
             <nav className="grid gap-2.5 text-sm" aria-label="Footer services">
-              {services.map((item, index) => (
+              {services.map((item, index) => {
+                const labels = homeFooter
+                  ? [homeFooter.webDevelopment, homeFooter.frontendDevelopment, homeFooter.backendDevelopment, homeFooter.workflowAutomation]
+                  : services.map((service) => service.label)
+                return (
                 <motion.div key={item.label} {...reveal(index * 0.05, 8, 0.4)}>
                   <Link
                     className="w-fit text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                     href={item.href}
                   >
-                    {item.label}
+                    {labels[index]}
                   </Link>
                 </motion.div>
-              ))}
+                )
+              })}
             </nav>
           </motion.div>
 
@@ -214,7 +255,7 @@ export function SiteFooter() {
             {...reveal(0.2, 16, 0.6)}
           >
             <p className="mb-4 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase">
-              Contact Info
+              {homeFooter?.contactInfo ?? "Contact Info"}
             </p>
 
             <div className="grid gap-3.5 text-sm">
@@ -253,7 +294,7 @@ export function SiteFooter() {
                   aria-hidden="true"
                   className="mt-0.5 size-3.5 shrink-0"
                 />
-                <span>Dhaka, Bangladesh</span>
+                <span>{homeFooter?.location ?? "Dhaka, Bangladesh"}</span>
               </motion.div>
             </div>
           </motion.div>
@@ -267,7 +308,7 @@ export function SiteFooter() {
             <p>© {new Date().getFullYear()} Tarikul Islam</p>
 
             <p className="font-mono tracking-[.04em] uppercase">
-              Built with care · Bangladesh
+              {homeFooter?.built ?? "Built with care · Bangladesh"}
             </p>
           </div>
 
@@ -284,7 +325,7 @@ export function SiteFooter() {
                 className="size-3.5 transition-transform duration-300 group-hover/old:-rotate-12"
               />
 
-              <span>Previous portfolio</span>
+              <span>{homeFooter?.previous ?? "Previous portfolio"}</span>
 
               <ArrowUpRight
                 aria-hidden="true"

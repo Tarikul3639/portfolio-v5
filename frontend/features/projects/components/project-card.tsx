@@ -9,9 +9,15 @@ import { ProjectArtwork } from "@/features/projects/components/project-artwork"
 export function ProjectCard({
   project,
   index = 0,
+  viewLabel = "View project",
+  category = project.category,
+  summary = project.summary,
 }: {
   project: PortfolioProject
   index?: number
+  viewLabel?: string
+  category?: string
+  summary?: string
 }) {
   const reduceMotion = useReducedMotion() ?? false
 
@@ -48,7 +54,7 @@ export function ProjectCard({
             className="mb-2 font-mono text-[.59rem] tracking-[.11em] text-muted-foreground uppercase"
             {...reveal(0.04, 8, 0.45)}
           >
-            {project.category}
+            {category}
           </motion.p>
 
           <motion.h3
@@ -67,7 +73,7 @@ export function ProjectCard({
             className="mt-2 max-w-120 text-[.88rem] leading-[1.65] text-muted-foreground"
             {...reveal(0.14, 12, 0.55)}
           >
-            {project.summary}
+            {summary}
           </motion.p>
         </div>
 
@@ -76,7 +82,7 @@ export function ProjectCard({
             className="group/link inline-flex w-fit shrink-0 items-center gap-2 border-b border-foreground pb-1 text-xs transition-colors hover:border-primary hover:text-primary min-w-24"
             href={`/projects/${project.slug}`}
           >
-            View project
+            {viewLabel}
             <span
               className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
               aria-hidden="true"

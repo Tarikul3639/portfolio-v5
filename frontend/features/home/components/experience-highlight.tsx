@@ -3,9 +3,11 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
+import { useTranslations } from "next-intl"
 import { Container } from "@/components/container"
 
 export function ExperienceHighlight() {
+  const t = useTranslations("home.experience")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -38,7 +40,7 @@ export function ExperienceHighlight() {
               2+
             </p>
             <span className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase">
-              years
+              {t("years")}
             </span>
           </motion.div>
 
@@ -47,7 +49,7 @@ export function ExperienceHighlight() {
               className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
               {...reveal(0, 8, 0.45)}
             >
-              Experience
+              {t("label")}
             </motion.p>
 
             <motion.h2
@@ -55,16 +57,14 @@ export function ExperienceHighlight() {
               className="mt-3 max-w-140 font-serif text-[clamp(2rem,4vw,3.4rem)] leading-[1.02] tracking-[-.06em]"
               {...reveal(0.08, 20, 0.7)}
             >
-              Building dependable products with a{" "}
-              <em className="text-primary">full view</em> of the work.
+              {t("headline")} <em className="text-primary">{t("accent")}</em> {t("tail")}
             </motion.h2>
 
             <motion.p
               className="mt-4 max-w-lg text-sm leading-[1.8] text-muted-foreground sm:text-base"
               {...reveal(0.16, 14, 0.6)}
             >
-              I bring more than two years of hands-on experience across backend
-              systems, product interfaces, and the details that connect them.
+              {t("description")}
             </motion.p>
 
             <motion.div {...reveal(0.24, 8, 0.5)} className="mt-6">
@@ -72,7 +72,7 @@ export function ExperienceHighlight() {
                 className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
                 href="/about"
               >
-                More about my approach
+                {t("link")}
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             </motion.div>

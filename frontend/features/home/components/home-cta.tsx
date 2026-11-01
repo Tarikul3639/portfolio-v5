@@ -4,8 +4,10 @@ import { ArrowUpRight } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
+import { useTranslations } from "next-intl"
 
 export function HomeCta() {
+  const t = useTranslations("home.cta")
   const reduceMotion = useReducedMotion() ?? false
 
   const reveal = (delay = 1, y = 14, duration = 0.6) => ({
@@ -36,21 +38,21 @@ export function HomeCta() {
             className="font-mono text-[.68rem] tracking-[.11em] text-muted-foreground uppercase"
             {...reveal(0, 8, 0.45)}
           >
-            Have something in mind?
+            {t("eyebrow")}
           </motion.p>
 
           <motion.h2
             className="mt-3 max-w-162.5 font-serif text-[clamp(2.2rem,5vw,4.5rem)] leading-[.98] tracking-[-.065em]"
             {...reveal(0.08, 18, 0.65)}
           >
-            Let&apos;s make it <em className="text-primary">work well.</em>
+            {t("headline")} <em className="text-primary">{t("accent")}</em>
           </motion.h2>
         </div>
 
         <motion.div {...reveal(0.16, 10, 0.5)}>
           <AngularLink href="/contact">
             <span className="group inline-flex items-center gap-1.5">
-              Get in touch
+              {t("button")}
               <ArrowUpRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
