@@ -1,6 +1,6 @@
 # Portfolio v5
 
-Personal portfolio for **Tarikul Islam**, a Bangladesh-based Full-Stack Web Developer focused on useful, well-structured web products.
+Personal portfolio for **Tarikul Islam**, a Bangladesh-based **Software Engineer & Full-Stack Developer** focused on useful, well-structured web products.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.3-111111?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.1-20232a?logo=react&logoColor=61dafb)](https://react.dev/)
@@ -20,16 +20,18 @@ Portfolio v5 is a server-rendered Next.js App Router site with an editorial visu
 - Responsive portfolio homepage with hero, experience highlight, featured work, technology marquee, working approach, and contact CTA.
 - About page with biography, compact technology overview, public GitHub contribution calendar, and development principles.
 - Projects index and statically generated project detail pages for education, streaming, community, and EdTech products.
+- Technology stack page covering frontend, backend, databases, programming languages, and tools including AWS, Microsoft Azure, and MCP.
 - Services page describing full-stack applications, backend APIs, frontend interfaces, and a practical delivery process.
 - Contact page with public Email, GitHub, LinkedIn, and Facebook links plus a configurable Cal.com scheduling CTA.
 - Dark and light themes with a responsive mobile navigation drawer, keyboard-friendly controls, and reduced-motion support.
 - SEO foundations including route metadata, canonical URLs, Open Graph and Twitter cards, JSON-LD person/project data, `robots.txt`, `sitemap.xml`, and `public/llms.txt`.
-- Locally hosted Noto Sans and Noto Mono fonts with optimized profile imagery through `next/image`.
+- Locally hosted Noto Sans and Noto Mono fonts; project artwork uses responsive `next/image` sizes with quality set to 90.
 
 ## Selected work
 
 | Project | Description | Links |
 | --- | --- | --- |
+| [Tarikul Open MCP](https://tarikul-islam.me/projects/tarikul-open-mcp) | Remote MCP server connecting compatible clients to Google Calendar. | [Source](https://github.com/Tarikul3639/tarikul-open-mcp) · [Demo](https://tarikul-open-mcp.vercel.app) |
 | [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime) | Education workspace for schedules, updates, exams, and class coordination. | [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app) |
 | [DeenSeries](https://tarikul-islam.me/projects/deenseries) | Streaming platform for Islamic films and episodic stories with administration tools. | [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app) |
 | [Mosque Management System](https://tarikul-islam.me/projects/mosque-management-system) | Community administration platform for records, contributions, payments, and public information. | [Frontend](https://github.com/Tarikul3639/mosque-management-frontend) · [Backend](https://github.com/Tarikul3639/mosque-management-backend) · [Demo](https://mosque-management-systems.vercel.app/) |
@@ -75,6 +77,7 @@ A split headline and contact-link list make the scheduling CTA the primary actio
 - **Styling:** Tailwind CSS 4, shadcn/ui conventions, Radix UI primitives
 - **Motion:** Motion for React animations and reduced-motion-aware interactions
 - **Icons:** Lucide React and reusable inline SVG technology icons
+- **Cloud and protocol exploration:** AWS, Microsoft Azure, and Model Context Protocol (MCP)
 - **Integrations:** `react-github-calendar` for public GitHub contribution data
 - **Tooling:** pnpm, ESLint 9, Prettier, TypeScript
 
@@ -117,7 +120,7 @@ pnpm build
 
 ## Author
 
-**Tarikul Islam** — Full-Stack Web Developer
+**Tarikul Islam** — Software Engineer & Full-Stack Developer
 
 - **Portfolio:** [tarikul-islam.me](https://tarikul-islam.me)
 - **GitHub:** [github.com/Tarikul3639](https://github.com/Tarikul3639)
