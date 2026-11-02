@@ -128,7 +128,7 @@ export function SiteFooter() {
                 </span>
 
                 <span className="flex flex-col gap-1">
-                  <span className="text-[.95rem] leading-none font-bold tracking-[-.035em]">
+                  <span className="text-[1rem] leading-none font-sans font-bold tracking-[-.035em]">
                     TARIKUL
                     <span className="text-primary transition-colors duration-300 group-hover/brand:text-foreground">
                       .
@@ -158,7 +158,7 @@ export function SiteFooter() {
             </motion.p>
 
             <motion.p
-              className="group/social-title relative mt-5 mb-3 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
+              className="group/social-title relative mt-5 mb-3 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-accent-foreground/95 uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/50 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
               {...reveal(0.1, 8, 0.45)}
             >
               {f("social")}
@@ -188,7 +188,7 @@ export function SiteFooter() {
 
           {/* Navigate */}
           <motion.div {...reveal(0.08, 16, 0.6)}>
-            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-accent-foreground/95 uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/50 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("navigate")}
             </p>
 
@@ -210,7 +210,7 @@ export function SiteFooter() {
 
           {/* Services */}
           <motion.div {...reveal(0.14, 16, 0.6)}>
-            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-accent-foreground/95 uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/50 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("servicesTitle")}
             </p>
 
@@ -247,7 +247,7 @@ export function SiteFooter() {
             className="col-span-2 sm:col-span-1"
             {...reveal(0.2, 16, 0.6)}
           >
-            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-muted-foreground uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/35 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
+            <p className="group/footer-title relative mb-4 w-fit pb-2 font-mono text-[.62rem] tracking-widest text-accent-foreground/95 uppercase before:absolute before:right-0 before:bottom-0 before:left-0 before:h-px before:bg-muted-foreground/50 after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100">
               {f("contactInfo")}
             </p>
 

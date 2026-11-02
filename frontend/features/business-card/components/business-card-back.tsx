@@ -9,8 +9,8 @@ import { BusinessCardBackParticles } from "./business-card-back-particles"
 const contactItems = [
   {
     label: "WEBSITE",
-    value: "tarikul-islam.me",
-    href: "https://tarikul-islam.me",
+    value: siteConfig.url,
+    href: siteConfig.url,
     icon: Globe,
   },
   {
@@ -66,7 +66,7 @@ export function BusinessCardBack() {
 
             {/* 24px */}
             <h2 className="text-[--spacing(6)] leading-tight font-bold tracking-wide uppercase">
-              Tarikul Islam
+              {t("name")}
             </h2>
 
             {/* 14px / 20px */}
@@ -113,7 +113,7 @@ export function BusinessCardBack() {
             <div className="border border-primary/50 bg-background/5 p-2">
               {/* CSS size-28 (112px at base) overrides the size attr, so it scales */}
               <QRCodeSVG
-                value="https://tarikul-islam.me"
+                value={siteConfig.url}
                 size={112}
                 level="H"
                 bgColor="transparent"

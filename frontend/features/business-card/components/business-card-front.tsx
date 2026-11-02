@@ -44,8 +44,8 @@ export function BusinessCardFront() {
           </div>
 
           {/* Name: 24px */}
-          <h2 className="text-center font-sans text-[--spacing(6)] leading-tight font-semibold tracking-[0.06em] text-accent-foreground/80 uppercase">
-            Tarikul Islam
+          <h2 className="text-center font-sans text-[--spacing(6)] leading-tight font-semibold tracking-[0.06em] text-accent-foreground uppercase">
+            {t("name")}
           </h2>
 
           {/* Professional role: 16px / 24px */}
@@ -54,7 +54,7 @@ export function BusinessCardFront() {
           </p>
 
           {/* Specialties: 16px */}
-          <p className="pt-6 text-center text-[--spacing(4)] leading-relaxed text-muted-foreground">
+          <p className="pt-6 text-center text-[--spacing(3.8)] leading-relaxed text-muted-foreground">
             {t.raw("specialtiesLine").map((item: string, index: number) => (
               <span key={item}>
                 {index > 0 && (
