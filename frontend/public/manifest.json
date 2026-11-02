@@ -1,8 +1,8 @@
 {
   "version": "7.0.0",
   "name": "Tarikul Islam",
-  "short_name": "Tarikul",
-  "description": "Tarikul Islam is a Frontend Developer and UI/UX Designer based in Bangladesh. He specializes in creating visually appealing and user-friendly web applications.",
+  "short_name": "Tarikul Islam",
+  "description": "Tarikul Islam is a software engineer and full-stack developer based in Bangladesh, specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
   "start_url": "/",
   "icons": [
     {

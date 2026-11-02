@@ -11,10 +11,10 @@
       "suffix": "mindset."
     },
     "intro": {
-      "alt": "Tarikul Islam, full-stack web developer",
+      "alt": "Tarikul Islam, software engineer and full-stack developer",
       "caption": "DHAKA, BANGLADESH",
       "eyebrow": "A little about me",
-      "p1": "I’m |||, a full-stack web developer from Dhaka, Bangladesh. I focus on backend development with Node.js, NestJS, and TypeScript, and build product interfaces with React and Next.js.",
+      "p1": "I’m |||, a software engineer and full-stack developer from Dhaka, Bangladesh. I focus on backend development with Node.js, NestJS, and TypeScript, and build product interfaces with React and Next.js.",
       "p2": "I like working on applications where the details connect: designing a data model, shaping an API, and making the interface feel straightforward for the person using it.",
       "p3": "My recent work includes tools for education, streaming, and community administration. Away from the code, I’m studying at Bangladesh University of Business & Technology.",
       "based": "Based in",
@@ -88,7 +88,7 @@
     },
     "metadata": {
       "title": "About",
-      "description": "Learn about Tarikul Islam, his background, technical expertise, and approach to building reliable, maintainable web applications."
+      "description": "Learn about Tarikul Islam, a software engineer and full-stack developer from Dhaka, his technical expertise, and his approach to building reliable web applications."
     }
   }
 }

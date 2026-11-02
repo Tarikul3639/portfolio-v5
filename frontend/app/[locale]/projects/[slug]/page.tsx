@@ -50,9 +50,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article",
       locale: locale === "bn" ? "bn_BD" : "en_US",
-      title: `${project.title} — Tarikul Islam`,
+      title: `${project.title} | Tarikul Islam`,
       description,
       url: canonical,
+      siteName: "Tarikul Islam",
     },
   }
 }

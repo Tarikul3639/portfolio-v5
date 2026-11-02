@@ -37,6 +37,7 @@ export async function generateMetadata({
     openGraph: {
       locale: locale === "bn" ? "bn_BD" : "en_US",
       url: canonical,
+      siteName: "Tarikul Islam",
       title,
       description,
     },
@@ -63,7 +64,9 @@ export default async function HomeRoute({
   const localizedPersonSchema = {
     ...personSchema,
     jobTitle:
-      locale === "bn" ? "ফুল-স্ট্যাক ওয়েব ডেভেলপার" : personSchema.jobTitle,
+      locale === "bn"
+        ? "সফটওয়্যার ইঞ্জিনিয়ার ও ফুল-স্ট্যাক ডেভেলপার"
+        : personSchema.jobTitle,
   }
 
   return (

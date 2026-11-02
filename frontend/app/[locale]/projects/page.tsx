@@ -30,20 +30,20 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale === "bn" ? "bn_BD" : "en_US",
-      title: `${t("title")} — Tarikul Islam`,
+      title: `${t("title")} | Tarikul Islam`,
       description: t("description"),
       url: canonical,
       siteName: "Tarikul Islam",
       images: [
         {
           url: "/images/profile/tarikul-islam.webp",
-          alt: "Tarikul Islam — Full-Stack Web Developer",
+          alt: "Tarikul Islam | Software Engineer & Full-Stack Developer",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t("title")} — Tarikul Islam`,
+      title: `${t("title")} | Tarikul Islam`,
       description: t("description"),
       images: ["/images/profile/tarikul-islam.webp"],
     },

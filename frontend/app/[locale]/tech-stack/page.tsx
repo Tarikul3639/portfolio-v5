@@ -30,7 +30,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale === "bn" ? "bn_BD" : "en_US",
-      title: `${t("title")} — Tarikul Islam`,
+      title: `${t("title")} | Tarikul Islam`,
       description: t("description"),
       url: canonical,
       siteName: "Tarikul Islam",

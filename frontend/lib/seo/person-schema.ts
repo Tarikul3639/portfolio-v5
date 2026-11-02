@@ -6,7 +6,7 @@ export const personSchema = {
   name: "Tarikul Islam",
   url: siteConfig.url,
   image: `${siteConfig.url}/images/profile/tarikul-islam.webp`,
-  jobTitle: "Full-Stack Web Developer",
+  jobTitle: "Software Engineer & Full-Stack Developer",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Dhaka",

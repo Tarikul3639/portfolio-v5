@@ -33,14 +33,14 @@ export async function generateMetadata({
     openGraph: {
       type: "profile",
       locale: locale === "bn" ? "bn_BD" : "en_US",
-      title: `${t("metadata.title")} — Tarikul Islam`,
+      title: `${t("metadata.title")} | Tarikul Islam`,
       description: t("metadata.description"),
       url: canonical,
       siteName: "Tarikul Islam",
     },
     twitter: {
       card: "summary",
-      title: `${t("metadata.title")} — Tarikul Islam`,
+      title: `${t("metadata.title")} | Tarikul Islam`,
       description: t("metadata.description"),
     },
   }

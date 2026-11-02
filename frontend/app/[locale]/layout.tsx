@@ -47,14 +47,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
   title: {
-    default: "Tarikul Islam — Full-Stack Web Developer",
-    template: "%s — Tarikul Islam",
+    default: "Tarikul Islam | Software Engineer & Full-Stack Developer",
+    template: "%s | Tarikul Islam",
   },
 
   description:
-    "Tarikul Islam is a Bangladesh-based full-stack web developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience.",
+    "Tarikul Islam is a Bangladesh-based software engineer and full-stack developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience.",
 
-  applicationName: "Tarikul Islam Portfolio",
+  applicationName: "Tarikul Islam",
   manifest: "/manifest.json",
   icons: {
     icon: "/icon1.png",
@@ -74,7 +74,10 @@ export const metadata: Metadata = {
     "Tarikul Islam web developer",
     "Tarikul Islam developer",
     "Tarikul Islam portfolio",
-    "Full-Stack Web Developer",
+    "Software Engineer",
+    "Software Engineer Bangladesh",
+    "Software Engineer & Full-Stack Developer",
+    "Full-Stack Developer",
     "Full-Stack Developer Bangladesh",
     "Web Developer Bangladesh",
     "Software Developer Bangladesh",
@@ -110,22 +113,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Tarikul Islam",
-    title: "Tarikul Islam — Full-Stack Web Developer",
+    title: "Tarikul Islam | Software Engineer & Full-Stack Developer",
     description:
-      "Explore selected projects, technical skills, and work by Tarikul Islam, a Bangladesh-based backend-focused full-stack web developer.",
+      "Explore selected projects, technical skills, and work by Tarikul Islam, a Bangladesh-based software engineer and full-stack developer.",
     images: [
       {
         url: "/images/profile/tarikul-islam.webp",
-        alt: "Tarikul Islam — Full-Stack Web Developer",
+        alt: "Tarikul Islam | Software Engineer & Full-Stack Developer",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Tarikul Islam — Full-Stack Web Developer",
+    title: "Tarikul Islam | Software Engineer & Full-Stack Developer",
     description:
-      "Explore projects and technical work by Tarikul Islam, a full-stack web developer specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
+      "Explore projects and technical work by Tarikul Islam, a software engineer and full-stack developer specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
     images: ["/images/profile/tarikul-islam.webp"],
   },
 }
