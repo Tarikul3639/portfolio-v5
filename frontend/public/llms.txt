@@ -1,6 +1,6 @@
 # Tarikul Islam
 
-> Full-stack web developer focused on backend engineering, based in Dhaka, Bangladesh.
+> Software Engineer & Full-Stack Developer focused on backend engineering, based in Dhaka, Bangladesh.
 
 Tarikul Islam works with TypeScript, Node.js, NestJS, React, and Next.js. His public GitHub profile also lists Redux, MongoDB, PostgreSQL, and REST APIs among his interests and tools.
 

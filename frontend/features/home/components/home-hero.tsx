@@ -9,6 +9,7 @@ import { AngularLink } from "@/components/angular-link"
 import { Container } from "@/components/container"
 import { Spotlight } from "@/components/ui/spotlight"
 import { FlipWords } from "@/components/ui/flip-words"
+import { EncryptedText } from "@/components/ui/encrypted-text"
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
@@ -32,15 +33,15 @@ export function HomeHero() {
 
   const animationProps = reduceMotion
     ? {
-        initial: false as const,
-        whileInView: undefined,
-        animate: undefined,
-      }
+      initial: false as const,
+      whileInView: undefined,
+      animate: undefined,
+    }
     : {
-        initial: "hidden" as const,
-        whileInView: "visible" as const,
-        viewport: { once: true, amount: 0.2 },
-      }
+      initial: "hidden" as const,
+      whileInView: "visible" as const,
+      viewport: { once: true, amount: 0.2 },
+    }
 
   return (
     <section
@@ -87,7 +88,9 @@ export function HomeHero() {
             {...animationProps}
             className="mb-6 flex items-center gap-3 font-mono text-[.69rem] tracking-[.04em] text-muted-foreground before:h-px before:w-7.5 before:bg-primary before:content-['']"
           >
-            {t("eyebrow")}
+            <EncryptedText
+              text={t("eyebrow")}
+            />
           </motion.p>
 
           <motion.h1

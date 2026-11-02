@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Tarikul Islam is a Bangladesh-based software engineer and full-stack developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience.",
+    "Tarikul Islam is a Bangladesh-based Software Engineer & Full-Stack Developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore projects, technical skills, and experience.",
 
   applicationName: "Tarikul Islam",
   manifest: "/manifest.json",
@@ -71,7 +71,6 @@ export const metadata: Metadata = {
     "tarikul3639",
     "tarikulislam3639",
     "Tarikul Islam full-stack developer",
-    "Tarikul Islam web developer",
     "Tarikul Islam developer",
     "Tarikul Islam portfolio",
     "Software Engineer",
@@ -79,7 +78,6 @@ export const metadata: Metadata = {
     "Software Engineer & Full-Stack Developer",
     "Full-Stack Developer",
     "Full-Stack Developer Bangladesh",
-    "Web Developer Bangladesh",
     "Software Developer Bangladesh",
     "Backend Developer",
     "Backend Developer Bangladesh",
@@ -115,7 +113,7 @@ export const metadata: Metadata = {
     siteName: "Tarikul Islam",
     title: "Tarikul Islam | Software Engineer & Full-Stack Developer",
     description:
-      "Explore selected projects, technical skills, and work by Tarikul Islam, a Bangladesh-based software engineer and full-stack developer.",
+      "Explore selected projects, technical skills, and work by Tarikul Islam, a Bangladesh-based Software Engineer & Full-Stack Developer.",
     images: [
       {
         url: "/images/profile/tarikul-islam.webp",
@@ -128,7 +126,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tarikul Islam | Software Engineer & Full-Stack Developer",
     description:
-      "Explore projects and technical work by Tarikul Islam, a software engineer and full-stack developer specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
+      "Explore projects and technical work by Tarikul Islam, a Software Engineer & Full-Stack Developer specializing in TypeScript, Node.js, NestJS, React, and Next.js.",
     images: ["/images/profile/tarikul-islam.webp"],
   },
 }

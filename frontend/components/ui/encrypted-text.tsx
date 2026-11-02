@@ -128,6 +128,8 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
       aria-label={text}
       role="text"
     >
+      <span className="sr-only">{text}</span>
+
       {text.split("").map((char, index) => {
         const isRevealed = index < revealCount
         const displayChar = isRevealed

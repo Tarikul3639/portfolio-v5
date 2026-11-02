@@ -1,12 +1,12 @@
 {
   "home": {
     "hero": {
-      "eyebrow": "Full-stack developer · Dhaka, Bangladesh",
+      "eyebrow": "Software Engineer & Full-Stack Developer",
       "headlineOne": "I build the",
       "headlineAccent": ["systems", "solutions", "experiences"],
       "headlineTwo": "behind useful",
       "headlineThree": "digital products.",
-      "description": "I'm Tarikul Islam, a software engineer and full-stack developer in Dhaka, Bangladesh, working across TypeScript, Node.js, NestJS, React, and Next.js.",
+      "description": "I'm Tarikul Islam, a Software Engineer & Full-Stack Developer in Dhaka, Bangladesh, working across TypeScript, Node.js, NestJS, React, and Next.js.",
       "selectedWork": "Explore selected work",
       "services": "See how I can help",
       "portraitAlt": "Portrait of Tarikul Islam",
@@ -105,7 +105,7 @@
     },
     "metadata": {
       "title": "Tarikul Islam | Software Engineer & Full-Stack Developer",
-      "description": "Tarikul Islam is a Bangladesh-based software engineer and full-stack developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore his projects, technical skills, and experience."
+      "description": "Tarikul Islam is a Bangladesh-based Software Engineer & Full-Stack Developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore his projects, technical skills, and experience."
     }
   }
 }

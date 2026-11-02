@@ -63,10 +63,6 @@ export default async function HomeRoute({
   }
   const localizedPersonSchema = {
     ...personSchema,
-    jobTitle:
-      locale === "bn"
-        ? "সফটওয়্যার ইঞ্জিনিয়ার ও ফুল-স্ট্যাক ডেভেলপার"
-        : personSchema.jobTitle,
   }
 
   return (
