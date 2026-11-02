@@ -55,7 +55,7 @@ export function AboutHero() {
           className="max-w-222.5 font-serif text-[clamp(3rem,7vw,6.3rem)] leading-[.96] tracking-[-.075em]"
         >
           {t("prefix")}{" "}
-          <em className="inline-block min-w-[7ch] text-primary">
+          <em className="inline-block text-primary">
             <FlipWords
               words={t.raw("words") as string[]}
               duration={3800}

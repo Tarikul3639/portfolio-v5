@@ -110,7 +110,7 @@ export function HomeHero() {
             className="max-w-197.5 text-[clamp(3.4rem,7vw,6rem)] leading-[.98] font-normal tracking-[-.075em] max-md:text-[clamp(3.2rem,12vw,5.5rem)]"
           >
             {t("headlineOne")}{" "}
-            <em className="inline-block min-w-[7ch] font-serif text-primary not-italic">
+            <em className="inline-block min-w-[6ch] font-serif text-primary not-italic">
               <FlipWords
                 words={t.raw("headlineAccent") as string[]}
                 duration={3800}
