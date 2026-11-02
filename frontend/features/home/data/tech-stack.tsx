@@ -18,6 +18,9 @@ import { PythonIcon } from "@/components/stack/PythonIcon"
 import { MySQLIcon } from "@/components/stack/MySQLIcon"
 import { MongoDBIcon } from "@/components/stack/MongoDBIcon"
 import { GitHubIcon } from "@/components/icons/GitHubIcon"
+import { AwsIcon } from "@/components/stack/AwsIcon"
+import { McpIcon } from "@/components/stack/McpIcon"
+import { AzureIcon } from "@/components/stack/AzureIcon"
 
 export interface TechItem {
   label: string
@@ -117,5 +120,20 @@ export const TECH_STACK: TechItem[] = [
     label: "REST API",
     icon: <RestApiIcon className={ICON_CLASS} />,
     color: "#43a2d8",
+  },
+  {
+    label: "MCP",
+    icon: <McpIcon className={ICON_CLASS} />,
+    color: "currentColor",
+  },
+  {
+    label: "AWS",
+    icon: <AwsIcon className={ICON_CLASS} />,
+    color: "currentColor",
+  },
+  {
+    label: "Azure",
+    icon: <AzureIcon className={ICON_CLASS} />,
+    color: "#0078d4",
   },
 ]

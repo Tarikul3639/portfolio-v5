@@ -10,7 +10,7 @@ import { TECH_STACK } from "@/features/home/data/tech-stack"
 const techSections = [
   {
     key: "backend",
-    technologies: ["NestJS", "Node.js", "REST API", "Socket.IO"],
+    technologies: ["NestJS", "Node.js", "REST API", "Socket.IO", "MCP"],
   },
   {
     key: "frontend",
@@ -32,7 +32,7 @@ const techSections = [
   },
   {
     key: "tools",
-    technologies: ["Docker", "Git", "GitHub"],
+    technologies: ["Docker", "Git", "GitHub", "AWS", "Azure"],
   },
 ] as const
 
@@ -70,6 +70,9 @@ export function TechStackPage() {
     Docker: t("descriptions.docker"),
     Git: t("descriptions.git"),
     GitHub: t("descriptions.gitHub"),
+    MCP: t("descriptions.mcp"),
+    AWS: t("descriptions.aws"),
+    Azure: t("descriptions.azure"),
   }
 
   const groups = {
