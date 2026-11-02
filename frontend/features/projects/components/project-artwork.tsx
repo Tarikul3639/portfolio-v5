@@ -30,7 +30,12 @@ export function ProjectArtwork({
           src={project.image}
           alt=""
           fill
-          // sizes="(max-width: 1200px) 100vw, 50vw"
+          sizes={
+            detail
+              ? "(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 3rem), 1200px"
+              : "(max-width: 768px) calc(100vw - 2rem), (max-width: 1280px) calc((100vw - 4rem) / 2), 600px"
+          }
+          quality={90}
           className="object-cover transition-transform duration-700 group-hover/art:scale-[1.02]"
         />
       )}
