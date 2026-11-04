@@ -20,26 +20,26 @@ export type PortfolioProject = {
 
 export const projects: PortfolioProject[] = [
   {
-    slug: "tarikul-open-mcp",
+    slug: "google-calendar-mcp",
     title: "Google Calendar MCP",
     category: "Developer tool",
     year: "2026",
     summary:
-      "A remote MCP server that connects Google Calendar to compatible clients.",
+      "A hosted Google Calendar MCP server with Streamable HTTP, OAuth, and per-user access for AI clients.",
     description:
-      "Google Calendar MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
-    stack: ["Next.js", "TypeScript", "MCP", "Google Calendar"],
+      "This full-stack service connects AI clients to a user's Google Calendar through a remote Streamable HTTP MCP endpoint. Users sign in with Google, connect Calendar, then authorize each client through dynamic OAuth registration, PKCE, and a per-user consent flow. A dashboard lets users manage calendar access and revoke client grants.",
+    stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "MCP"],
     role: "Full-stack development",
     highlights: [
-      "Connect a personal Google Calendar account through one dashboard",
-      "Read, create, update, and delete calendar events",
-      "One remote endpoint for MCP-compatible clients",
-      "Works with MCP Inspector and Streamable HTTP clients",
+      "Remote Streamable HTTP MCP endpoint with OAuth discovery",
+      "Dynamic client registration and authorization code with PKCE",
+      "Separate Google sign-in, Calendar connection, and per-client consent",
+      "Tools to list, search, create, update, and delete events, plus a dashboard to manage client access",
     ],
     repos: [
       {
         label: "Source code",
-        href: "https://github.com/Tarikul3639/tarikul-open-mcp",
+        href: "https://github.com/Tarikul3639/google-calendar-mcp",
       },
     ],
     live: "https://google-calendar-mcp-client.vercel.app/",
@@ -48,7 +48,7 @@ export const projects: PortfolioProject[] = [
       background: "bg-[#161616]",
       foreground: "text-[#f4c900]",
     },
-    image: "/images/projects/tarikul-open-mcp-server.png",
+    image: "/images/projects/google-calendar-mcp.png",
   },
   {
     slug: "portfolio",
