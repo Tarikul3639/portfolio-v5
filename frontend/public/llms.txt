@@ -14,7 +14,7 @@ Tarikul Islam works with TypeScript, Node.js, NestJS, React, and Next.js. His pu
 
 ## Selected projects
 
-- [Tarikul Open MCP](https://tarikul-islam.me/projects/tarikul-open-mcp): Remote Model Context Protocol server for connecting Google Calendar to compatible clients. [Source](https://github.com/Tarikul3639/tarikul-open-mcp)
+- [Google Calendar MCP](https://tarikul-islam.me/projects/tarikul-open-mcp): Remote Model Context Protocol server for connecting Google Calendar to compatible clients. [Source](https://github.com/Tarikul3639/tarikul-open-mcp) · [Demo](https://google-calendar-mcp-client.vercel.app/)
 - [Portfolio](https://tarikul-islam.me/projects/portfolio): Personal portfolio for presenting full-stack work, experience, and technical interests. [Source](https://github.com/Tarikul3639/Portfolio)
 - [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime): Full-stack education management platform for class operations, updates, schedules, exams, and member coordination. [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app)
 - [DeenSeries](https://tarikul-islam.me/projects/deenseries): Full-stack streaming platform for Islamic movies and series, with administration for titles and episodes. [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app)

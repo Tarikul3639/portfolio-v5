@@ -14,7 +14,7 @@
       "tarikul-open-mcp": {
         "category": "Developer tool",
         "summary": "A remote MCP server that connects Google Calendar to compatible clients.",
-        "description": "Tarikul Open MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
+        "description": "Google Calendar MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
         "role": "Full-stack development",
         "highlights": [
           "Connect a personal Google Calendar account through one dashboard",

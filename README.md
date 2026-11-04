@@ -31,7 +31,7 @@ Portfolio v5 is a server-rendered Next.js App Router site with an editorial visu
 
 | Project | Description | Links |
 | --- | --- | --- |
-| [Tarikul Open MCP](https://tarikul-islam.me/projects/tarikul-open-mcp) | Remote MCP server connecting compatible clients to Google Calendar. | [Source](https://github.com/Tarikul3639/tarikul-open-mcp) · [Demo](https://tarikul-open-mcp.vercel.app) |
+| [Google Calendar MCP](https://tarikul-islam.me/projects/tarikul-open-mcp) | Remote MCP server connecting compatible clients to Google Calendar. | [Source](https://github.com/Tarikul3639/tarikul-open-mcp) · [Demo](https://google-calendar-mcp-client.vercel.app/) |
 | [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime) | Education workspace for schedules, updates, exams, and class coordination. | [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app) |
 | [DeenSeries](https://tarikul-islam.me/projects/deenseries) | Streaming platform for Islamic films and episodic stories with administration tools. | [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app) |
 | [Mosque Management System](https://tarikul-islam.me/projects/mosque-management-system) | Community administration platform for records, contributions, payments, and public information. | [Frontend](https://github.com/Tarikul3639/mosque-management-frontend) · [Backend](https://github.com/Tarikul3639/mosque-management-backend) · [Demo](https://mosque-management-systems.vercel.app/) |

@@ -81,7 +81,7 @@
         },
         "projects": {
           "question": "What kinds of projects have you built?",
-          "answer": "My portfolio includes full-stack education and streaming platforms, a mosque management system, this portfolio, and Tarikul Open MCP, a remote server that connects Google Calendar to compatible clients."
+          "answer": "My portfolio includes full-stack education and streaming platforms, a mosque management system, this portfolio, and Google Calendar MCP, a remote server that connects Google Calendar to compatible clients."
         },
         "services": {
           "question": "What can you help build?",

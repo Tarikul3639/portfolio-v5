@@ -21,13 +21,13 @@ export type PortfolioProject = {
 export const projects: PortfolioProject[] = [
   {
     slug: "tarikul-open-mcp",
-    title: "Tarikul Open MCP",
+    title: "Google Calendar MCP",
     category: "Developer tool",
     year: "2026",
     summary:
       "A remote MCP server that connects Google Calendar to compatible clients.",
     description:
-      "Tarikul Open MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
+      "Google Calendar MCP gives compatible MCP clients a single remote endpoint for working with a connected Google Calendar account, with a small dashboard for managing the connection.",
     stack: ["Next.js", "TypeScript", "MCP", "Google Calendar"],
     role: "Full-stack development",
     highlights: [
@@ -42,7 +42,7 @@ export const projects: PortfolioProject[] = [
         href: "https://github.com/Tarikul3639/tarikul-open-mcp",
       },
     ],
-    live: "https://tarikul-open-mcp.vercel.app",
+    live: "https://google-calendar-mcp-client.vercel.app/",
     monogram: "MCP",
     theme: {
       background: "bg-[#161616]",
