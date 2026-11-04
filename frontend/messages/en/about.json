@@ -6,23 +6,24 @@
       "words": [
         "systems",
         "product",
-        "backend"
+        "backend",
+        "integration"
       ],
       "suffix": "mindset."
     },
     "intro": {
       "alt": "Tarikul Islam, Software Engineer & Full-Stack Developer",
-      "caption": "DHAKA, BANGLADESH",
+      "caption": "FULL-STACK · BACKEND · CLOUD · MCP",
       "eyebrow": "A little about me",
       "p1": "I’m |||, a Software Engineer & Full-Stack Developer from Dhaka, Bangladesh. I focus on backend development with Node.js, NestJS, and TypeScript, and build product interfaces with React and Next.js.",
-      "p2": "I like working on applications where the details connect: designing a data model, shaping an API, and making the interface feel straightforward for the person using it.",
-      "p3": "My recent work includes tools for education, streaming, and community administration. Away from the code, I’m studying at Bangladesh University of Business & Technology.",
+      "p2": "I enjoy building complete applications, from designing data models and REST APIs to creating intuitive interfaces. I also work with cloud deployments and develop custom MCP (Model Context Protocol) servers to connect AI assistants with external tools and services.",
+      "p3": "My recent work includes education, streaming, and community platforms, along with custom MCP integrations such as Google Calendar and local file-system tools. Away from the code, I’m studying at Bangladesh University of Business & Technology.",
       "based": "Based in",
       "location": "Dhaka, Bangladesh",
       "focus": "Focus",
-      "focusValue": "Backend-focused full stack",
+      "focusValue": "Backend · Full-Stack · Cloud · MCP",
       "tools": "Core tools",
-      "toolsValue": "TypeScript · Node.js · NestJS",
+      "toolsValue": "TypeScript · Node.js · NestJS · MCP",
       "studying": "Currently studying",
       "school": "Bangladesh University of Business & Technology",
       "contact": "Say hello",
@@ -38,27 +39,11 @@
       "profile": "View GitHub profile",
       "calendar": {
         "months": [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec"
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
         ],
         "weekdays": [
-          "Sun",
-          "Mon",
-          "Tue",
-          "Wed",
-          "Thu",
-          "Fri",
-          "Sat"
+          "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
         ],
         "totalCount": "'{{count}}' contributions in '{{year}}'",
         "legendLess": "Less",
@@ -88,7 +73,7 @@
     },
     "metadata": {
       "title": "About",
-      "description": "Learn about Tarikul Islam, a Software Engineer & Full-Stack Developer from Dhaka, his technical expertise, and his approach to building reliable web applications."
+      "description": "Learn about Tarikul Islam, a Software Engineer & Full-Stack Developer from Dhaka, specializing in backend development, cloud deployments, and custom MCP (Model Context Protocol) integrations."
     }
   }
 }

@@ -79,13 +79,6 @@ export function AboutIntroduction() {
 
           {/* Personal details */}
           <dl className="mt-8 grid grid-cols-1 gap-x-8 gap-y-5 border-y border-border py-5 sm:grid-cols-2">
-            <motion.div {...reveal(0, 8, 0.4)} className="grid gap-1.5">
-              <dt className="font-mono text-[.6rem] tracking-[.09em] text-muted-foreground uppercase">
-                {t("based")}
-              </dt>
-              <dd className="text-sm">{t("location")}</dd>
-            </motion.div>
-
             <motion.div {...reveal(0.05, 8, 0.4)} className="grid gap-1.5">
               <dt className="font-mono text-[.6rem] tracking-[.09em] text-muted-foreground uppercase">
                 {t("focus")}

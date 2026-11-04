@@ -1,7 +1,7 @@
 {
   "contact": {
     "hero": {
-      "eyebrow": "CONTACT · DHAKA, BANGLADESH",
+      "eyebrow": "CONTACT",
       "titleStart": "Have a good problem to",
       "titleEnd": "solve?",
       "description": "I’m open to thoughtful conversations about web development, useful products, and potential collaborations. Choose whichever channel works for you.",
@@ -13,7 +13,7 @@
     },
     "metadata": {
       "title": "Contact",
-      "description": "Contact Tarikul Islam, a Software Engineer & Full-Stack Developer, to discuss web development projects and collaboration opportunities."
+      "description": "Contact Tarikul Islam, a Full-Stack Developer, to discuss web applications, backend APIs, cloud deployment, or AI and MCP integrations."
     }
   }
 }

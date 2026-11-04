@@ -1,12 +1,12 @@
 {
   "home": {
     "hero": {
-      "eyebrow": "Software Engineer & Full-Stack Developer",
+      "eyebrow": "Full-Stack Developer | Cloud & AI Integration",
       "headlineOne": "I build the",
       "headlineAccent": ["systems", "solutions", "experiences"],
       "headlineTwo": "behind useful",
       "headlineThree": "digital products.",
-      "description": "I'm Tarikul Islam, a Software Engineer & Full-Stack Developer in Dhaka, Bangladesh, working across TypeScript, Node.js, NestJS, React, and Next.js.",
+      "description": "I'm Tarikul Islam, a Full-Stack Developer building web applications, backend APIs, cloud solutions, and custom MCP integrations.",
       "selectedWork": "Explore selected work",
       "services": "See how I can help",
       "portraitAlt": "Portrait of Tarikul Islam",
@@ -27,7 +27,7 @@
       "eyebrow": "SKILLS AND TOOLS",
       "headline": "Technologies I",
       "accent": "work with.",
-      "description": "A compact overview of the tools behind my work and the topics I am currently exploring.",
+      "description": "A focused view of the frontend, backend, database, cloud, and AI integration tools I use.",
       "viewAll": "View all technologies"
     },
     "projects": {
@@ -37,9 +37,9 @@
       "viewAll": "View all projects",
       "viewProject": "View project",
       "technologies": "Technologies",
-      "tarikul-open-mcp": {
+      "google-calendar-mcp": {
         "category": "Developer tool",
-        "summary": "A remote MCP server that connects Google Calendar to compatible clients."
+        "summary": "A hosted Google Calendar MCP server with Streamable HTTP, OAuth, and per-user access for AI clients."
       },
       "portfolio": {
         "category": "Personal portfolio",
@@ -55,14 +55,14 @@
       "headlineOne": "Good software has a",
       "accent": "quiet",
       "headlineTwo": "kind of clarity.",
-      "paragraphOne": "I enjoy taking a workflow with a lot of moving parts and giving it a dependable shape: clear boundaries, useful APIs, thoughtful interfaces, and room to grow.",
-      "paragraphTwo": "My work often sits close to the backend, while keeping the whole product experience in view.",
+      "paragraphOne": "I turn goals and business requirements into complete applications, connecting responsive interfaces with backend services, APIs, authentication, and data.",
+      "paragraphTwo": "I also deploy and connect applications in the cloud, and build custom MCP servers that let AI assistants work with external tools and services.",
       "backend": "BACKEND",
-      "backendDescription": "Node.js, NestJS, REST APIs, authentication",
+      "backendDescription": "Node.js, NestJS, Express.js, REST APIs",
       "productUi": "PRODUCT UI",
       "productUiDescription": "React, Next.js, TypeScript, Tailwind CSS",
       "data": "DATA",
-      "dataDescription": "MongoDB, PostgreSQL, Prisma, Mongoose",
+      "dataDescription": "MongoDB, PostgreSQL",
       "about": "More about me",
       "services": "Services"
     },
@@ -72,20 +72,20 @@
       "description": "A little more about my work, the technologies I use, and how we can get started.",
       "items": {
         "expertise": {
-          "question": "What does backend-focused full-stack development mean?",
-          "answer": "I work closely with server-side systems, APIs, data, and authentication, while also building the React and Next.js interfaces people use to access them."
+          "question": "What can you build as a full-stack developer?",
+          "answer": "I build responsive React and Next.js interfaces, backend services and REST APIs, authentication flows, and MongoDB or PostgreSQL data integrations."
         },
         "technology": {
           "question": "Which technologies do you work with?",
-          "answer": "My work includes TypeScript, Node.js, NestJS, React, Next.js, REST APIs, MongoDB, PostgreSQL, Prisma, and Mongoose. The right tools depend on the product and its needs."
+          "answer": "My core tools include React, Next.js, TypeScript, Tailwind CSS, Node.js, NestJS, Express.js, MongoDB, and PostgreSQL. I also work with REST APIs, Vercel deployments, and MCP integrations."
         },
         "projects": {
           "question": "What kinds of projects have you built?",
-          "answer": "My portfolio includes full-stack education and streaming platforms, a mosque management system, this portfolio, and Google Calendar MCP, a remote server that connects Google Calendar to compatible clients."
+          "answer": "My work includes full-stack web platforms, Google Calendar MCP for AI-assisted calendar workflows, and a local file-system MCP integration for controlled file and folder operations."
         },
         "services": {
           "question": "What can you help build?",
-          "answer": "I work on full-stack web applications, backend services and REST APIs, and responsive frontend interfaces. The services page describes these areas and shows related projects."
+          "answer": "I help with full-stack web applications, backend and REST API development, cloud deployment and application integration, and custom AI and MCP integrations."
         },
         "collaboration": {
           "question": "How do you approach a collaboration?",
@@ -104,8 +104,8 @@
       "button": "Get in touch"
     },
     "metadata": {
-      "title": "Tarikul Islam | Software Engineer & Full-Stack Developer",
-      "description": "Tarikul Islam is a Bangladesh-based Software Engineer & Full-Stack Developer specializing in TypeScript, Node.js, NestJS, React, and Next.js. Explore his projects, technical skills, and experience."
+      "title": "Tarikul Islam | Full-Stack Developer | Cloud & AI Integration",
+      "description": "Tarikul Islam is a Full-Stack Developer building web applications, backend APIs, cloud deployments, and custom MCP integrations for AI assistants."
     }
   }
 }

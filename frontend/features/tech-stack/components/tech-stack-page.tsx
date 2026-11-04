@@ -8,32 +8,12 @@ import { EncryptedText } from "@/components/ui/encrypted-text"
 import { TECH_STACK } from "@/features/home/data/tech-stack"
 
 const techSections = [
-  {
-    key: "backend",
-    technologies: ["NestJS", "Node.js", "REST API", "Socket.IO", "MCP"],
-  },
-  {
-    key: "frontend",
-    technologies: [
-      "React",
-      "Next.js",
-      "Redux",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-  },
-  {
-    key: "databases",
-    technologies: ["MongoDB", "MySQL"],
-  },
-  {
-    key: "languages",
-    technologies: ["TypeScript", "JavaScript", "Python", "C++"],
-  },
-  {
-    key: "tools",
-    technologies: ["Docker", "Git", "GitHub", "AWS", "Azure"],
-  },
+  { key: "backend", technologies: ["Node.js", "NestJS", "Express.js", "REST API"] },
+  { key: "frontend", technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { key: "databases", technologies: ["MongoDB", "PostgreSQL"] },
+  { key: "integrations", technologies: ["MCP"] },
+  { key: "cloud", technologies: ["Vercel"] },
+  { key: "tools", technologies: ["Git", "GitHub", "Docker"] },
 ] as const
 
 export function TechStackPage() {
@@ -54,32 +34,27 @@ export function TechStackPage() {
   const descriptions: Record<string, string> = {
     NestJS: t("descriptions.nestjs"),
     "Node.js": t("descriptions.nodejs"),
+    "Express.js": t("descriptions.express"),
     "REST API": t("descriptions.restApi"),
-    "Socket.IO": t("descriptions.socketIo"),
+    MCP: t("descriptions.mcp"),
     React: t("descriptions.react"),
     "Next.js": t("descriptions.nextjs"),
-    Redux: t("descriptions.redux"),
     "Tailwind CSS": t("descriptions.tailwindCss"),
-    "Framer Motion": t("descriptions.framerMotion"),
     MongoDB: t("descriptions.mongoDb"),
-    MySQL: t("descriptions.mySql"),
+    PostgreSQL: t("descriptions.postgreSql"),
     TypeScript: t("descriptions.typeScript"),
-    JavaScript: t("descriptions.javaScript"),
-    Python: t("descriptions.python"),
-    "C++": t("descriptions.cpp"),
-    Docker: t("descriptions.docker"),
+    Vercel: t("descriptions.vercel"),
     Git: t("descriptions.git"),
     GitHub: t("descriptions.gitHub"),
-    MCP: t("descriptions.mcp"),
-    AWS: t("descriptions.aws"),
-    Azure: t("descriptions.azure"),
+    Docker: t("descriptions.docker"),
   }
 
   const groups = {
     backend: t("groups.backend"),
     frontend: t("groups.frontend"),
     databases: t("groups.databases"),
-    languages: t("groups.languages"),
+    integrations: t("groups.integrations"),
+    cloud: t("groups.cloud"),
     tools: t("groups.tools"),
   }
 

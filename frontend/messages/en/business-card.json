@@ -9,7 +9,6 @@
     "back": "Back",
     "cardSide": "Card side",
     "cardTitle": "Tarikul Islam business card",
-    "location": "Dhaka, Bangladesh",
     "printCard": "Print both sides",
     "downloadCard": "Download card",
     "downloadPng": "PNG",
@@ -19,23 +18,31 @@
     "downloadPdfAction": "Download PDF",
     "preparingDownload": "Preparing your card download.",
     "downloadError": "The card could not be downloaded. Please try again.",
-    "specialtiesLine": ["Web Development", "Web Design", "API Integration"],
+    "specialtiesLine": [
+      "Full-Stack Web Apps",
+      "Cloud Deployment",
+      "AI & MCP Integration"
+    ],
     "qrForWebsite": "Scan to visit website",
     "eyebrow": "DIGITAL BUSINESS CARD",
     "name": "Tarikul Islam",
-    "role": "Software Engineer",
+    "role": "Full-Stack Developer",
     "website": "WEBSITE",
     "email": "EMAIL",
     "phone": "PHONE",
     "socialLinks": "Social links",
     "metadata": {
       "title": "Digital Business Card",
-      "description": "Contact details and professional links for Tarikul Islam, a Software Engineer & Full-Stack Developer based in Dhaka, Bangladesh."
+      "description": "Contact details and professional links for Tarikul Islam, a Full-Stack Developer specializing in web applications, cloud deployment, and AI integrations."
     },
     "cta": {
       "eyebrow": "A quick way to connect",
       "title": "Keep my details",
-      "words": ["close.", "handy.", "within reach."],
+      "words": [
+        "close.",
+        "handy.",
+        "within reach."
+      ],
       "description": "View my contact information and professional links in one place.",
       "button": "View business card"
     }

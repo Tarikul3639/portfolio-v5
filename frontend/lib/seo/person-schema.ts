@@ -7,11 +7,6 @@ export const personSchema = {
   url: siteConfig.url,
   image: `${siteConfig.url}/images/profile/tarikul-islam.webp`,
   jobTitle: "Software Engineer & Full-Stack Developer",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dhaka",
-    addressCountry: "BD",
-  },
   sameAs: [
     "https://github.com/Tarikul3639",
     "https://www.linkedin.com/in/tarikul-islam-a439a0253",

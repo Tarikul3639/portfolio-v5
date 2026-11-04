@@ -34,6 +34,7 @@ const services = [
   { href: "/services", label: "Frontend Development" },
   { href: "/services", label: "Backend Development" },
   { href: "/services", label: "Workflow Automation" },
+  { href: "/services", label: "MCP Server Development" },
 ]
 
 const socialLinks = [
@@ -224,6 +225,7 @@ export function SiteFooter() {
                   f("frontendDevelopment"),
                   f("backendDevelopment"),
                   f("workflowAutomation"),
+                  f("mcpDevelopment"),
                 ]
                 return (
                   <motion.div

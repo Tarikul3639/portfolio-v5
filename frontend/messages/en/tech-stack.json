@@ -2,44 +2,39 @@
   "techStack": {
     "metadata": {
       "title": "Technology Stack",
-      "description": "Explore the technologies Tarikul Islam uses as a Software Engineer & Full-Stack Developer across backend systems, APIs, and web applications."
+      "description": "Technologies Tarikul Islam uses for full-stack web applications, backend APIs, databases, cloud deployment, and AI integrations."
     },
     "hero": {
       "eyebrow": "TOOLS AND TECHNOLOGIES",
       "title": "The tools behind",
       "accent": "the work.",
-      "description": "A closer look at the technologies I use to build backend systems and complete web experiences."
+      "description": "A practical overview of the frontend, backend, database, API, cloud, and AI integration tools I work with."
     },
     "count": "Technologies I work with",
     "groups": {
       "backend": "Backend & APIs",
       "frontend": "Frontend & UI",
       "databases": "Databases",
-      "languages": "Programming languages",
-      "tools": "Tools & infrastructure"
+      "integrations": "API & AI integrations",
+      "cloud": "Cloud & deployment",
+      "tools": "Tools"
     },
     "descriptions": {
-      "nestjs": "A structured framework for building server-side applications.",
-      "nodejs": "A JavaScript runtime for server-side applications.",
-      "restApi": "HTTP endpoints that connect applications and services.",
-      "socketIo": "Event-based, two-way communication for real-time features.",
+      "nestjs": "A framework for structured Node.js backend applications.",
+      "nodejs": "A JavaScript runtime for backend services and APIs.",
+      "express": "A lightweight Node.js framework for web services and APIs.",
+      "restApi": "RESTful interfaces for connecting applications and external services.",
+      "mcp": "A protocol for connecting AI assistants with external tools and data.",
       "react": "A component-based library for building user interfaces.",
       "nextjs": "A React framework for full-stack web applications.",
-      "redux": "State management for predictable application data flows.",
-      "tailwindCss": "Utility classes for building responsive interfaces.",
-      "framerMotion": "Motion tools for interactive React interfaces.",
-      "mongoDb": "A document database for flexible application data.",
-      "mySql": "A relational database for structured application data.",
-      "typeScript": "JavaScript with static types for clearer, safer code.",
-      "javaScript": "A core language for web applications and services.",
-      "python": "A general-purpose language for scripting and applications.",
-      "cpp": "A general-purpose language with control over system resources.",
-      "docker": "Containers for packaging and running applications consistently.",
+      "tailwindCss": "Utility-first CSS for responsive user interfaces.",
+      "typeScript": "Typed JavaScript for maintainable frontend and backend code.",
+      "mongoDb": "A document database for application data.",
+      "postgreSql": "A relational database for structured application data.",
+      "vercel": "Cloud hosting and deployment workflows for web applications.",
       "git": "Version control for tracking and managing code changes.",
       "gitHub": "A platform for hosting code and collaborating on projects.",
-      "mcp": "An open protocol for connecting AI applications with tools and external data.",
-      "aws": "Cloud services for deploying and operating applications and APIs.",
-      "azure": "Microsoft cloud services for hosting and managing applications and infrastructure."
+      "docker": "Basic familiarity with containers for packaging and running applications."
     }
   }
 }
