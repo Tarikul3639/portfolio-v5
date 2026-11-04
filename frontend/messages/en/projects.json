@@ -11,7 +11,7 @@
       "prefix": "Projects with a"
     },
     "items": {
-      "tarikul-open-mcp": {
+      "google-calendar-mcp": {
         "category": "Developer tool",
         "summary": "A hosted Google Calendar MCP server with Streamable HTTP, OAuth, and per-user access for AI clients.",
         "description": "This full-stack service connects AI clients to a user's Google Calendar through a remote Streamable HTTP MCP endpoint. Users sign in with Google, connect Calendar, then authorize each client through dynamic OAuth registration, PKCE, and a per-user consent flow. A dashboard lets users manage calendar access and revoke client grants.",

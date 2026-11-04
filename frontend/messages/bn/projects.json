@@ -11,7 +11,7 @@
       "prefix": "এমন কিছু প্রজেক্ট, যার আছে"
     },
     "items": {
-      "tarikul-open-mcp": {
+      "google-calendar-mcp": {
         "category": "ডেভেলপার টুল",
         "summary": "AI ক্লায়েন্টের জন্য Streamable HTTP, OAuth ও ব্যবহারকারীভিত্তিক অ্যাক্সেসসহ একটি হোস্টেড Google Calendar MCP সার্ভার।",
         "description": "এই ফুল-স্ট্যাক সার্ভিস রিমোট Streamable HTTP MCP এন্ডপয়েন্টের মাধ্যমে AI ক্লায়েন্টকে ব্যবহারকারীর Google Calendar-এর সঙ্গে যুক্ত করে। ব্যবহারকারী Google-এ সাইন ইন করে Calendar সংযুক্ত করেন, তারপর dynamic OAuth client registration, PKCE এবং ব্যবহারকারীভিত্তিক consent flow দিয়ে প্রতিটি ক্লায়েন্টকে অনুমতি দেন। ড্যাশবোর্ড থেকে Calendar সংযোগ পরিচালনা ও ক্লায়েন্টের অনুমতি বাতিল করা যায়।",
