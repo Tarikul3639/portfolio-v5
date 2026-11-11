@@ -31,7 +31,7 @@
       "viewAll": "View all technologies"
     },
     "projects": {
-      "eyebrow": "Selected work · 01—03",
+      "eyebrow": "Selected work · 01—02",
       "headline": "A few things I've made.",
       "description": "A selection of full-stack products shaped around clear workflows and the people who use them.",
       "viewAll": "View all projects",
@@ -41,9 +41,9 @@
         "category": "Developer tool",
         "summary": "A hosted Google Calendar MCP server with Streamable HTTP, OAuth, and per-user access for AI clients."
       },
-      "portfolio": {
-        "category": "Personal portfolio",
-        "summary": "A personal portfolio for presenting full-stack work, experience, and technical interests."
+      "google-drive-mcp": {
+        "category": "Developer tool",
+        "summary": "A self-hosted Google Drive MCP server with 54 tools for Drive management, Google Workspace, Office documents, and health checks."
       },
       "classflow-prime": {
         "category": "Education platform",

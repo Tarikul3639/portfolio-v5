@@ -23,6 +23,30 @@
           "ইভেন্ট দেখা, খোঁজা, তৈরি, হালনাগাদ ও মুছতে MCP tools; ক্লায়েন্ট অ্যাক্সেসের জন্য ড্যাশবোর্ড"
         ]
       },
+      "google-drive-mcp": {
+        "category": "ডেভেলপার টুল",
+        "summary": "AI ক্লায়েন্টকে নিরাপদ ও নিয়ন্ত্রিতভাবে Google Drive ব্যবহারের সুযোগ দেওয়ার self-hosted MCP সার্ভার।",
+        "description": "Google Drive MCP রিমোট Streamable HTTP এন্ডপয়েন্টের মাধ্যমে MCP-সমর্থিত AI ক্লায়েন্টকে ব্যবহারকারীর Google Drive-এর সঙ্গে যুক্ত করে। এতে রয়েছে Next.js ড্যাশবোর্ড, NestJS API এবং OAuth authorization server। ব্যবহারকারী Google অ্যাকাউন্ট সংযুক্ত করতে, ক্লায়েন্টের consent পর্যালোচনা করতে এবং প্রতিটি ক্লায়েন্টের tool access নিয়ন্ত্রণ করতে পারেন। সার্ভারটিতে মোট ৫৪টি MCP tool রয়েছে: Google Drive ব্যবস্থাপনার ৩৭টি, Google Workspace-এর ১১টি, Office document processing-এর ৫টি এবং server health check-এর ১টি।",
+        "role": "ফুল-স্ট্যাক ডেভেলপমেন্ট",
+        "highlights": [
+          "OAuth metadata ও Dynamic Client Registration-সহ রিমোট Streamable HTTP MCP এন্ডপয়েন্ট",
+          "PKCE S256 এবং প্রতিটি ক্লায়েন্টের consent-সহ Authorization Code flow",
+          "Drive management, Google Docs, Sheets, Slides, Office document processing ও server health মিলিয়ে ৫৪টি MCP tool",
+          "Redis-backed caching ও grant management-সহ ক্লায়েন্টভিত্তিক tool permission"
+        ]
+      },
+      "local-filesystem-mcp": {
+        "category": "ডেভেলপার টুল",
+        "summary": "লোকাল ফাইল, ডিরেক্টরি, সিস্টেম ইউটিলিটি, স্ক্রিনশট ও ব্রাউজার অটোমেশনের জন্য নিয়ন্ত্রিত AI access-সহ self-hosted MCP সার্ভার।",
+        "description": "Local Filesystem MCP, MCP-সমর্থিত AI ক্লায়েন্টকে লোকাল ডেভেলপমেন্ট এনভায়রনমেন্টে নিয়ন্ত্রিত অ্যাক্সেস দেয়। এতে রয়েছে ফাইল ও ডিরেক্টরি ব্যবস্থাপনা, binary ও resumable chunked upload, filesystem inspection, desktop screenshot, allowlisted command runner এবং headless Chromium browser automation। অ্যাক্সেস নির্ধারিত root-এর মধ্যে সীমাবদ্ধ থাকে; পাশাপাশি permission check, trust management, audit logging এবং স্থায়ীভাবে delete না করে Trash থেকে restore করার ব্যবস্থা রয়েছে।",
+        "role": "ব্যাকএন্ড ডেভেলপমেন্ট",
+        "highlights": [
+          "ফাইল, ডিরেক্টরি, সিস্টেম, স্ক্রিনশট ও ব্রাউজার workflow-এর জন্য ৪৮টি MCP tool",
+          "নির্ধারিত filesystem root, read-only mode, permission check ও trust management",
+          "Trash-ভিত্তিক delete ও restore, audit log এবং checksum-যাচাইকৃত resumable upload",
+          "Allowlisted command execution এবং Playwright-চালিত headless Chromium automation"
+        ]
+      },
       "portfolio": {
         "category": "ব্যক্তিগত পোর্টফোলিও",
         "summary": "ফুল-স্ট্যাক কাজ, অভিজ্ঞতা ও প্রযুক্তিগত আগ্রহ তুলে ধরার ব্যক্তিগত পোর্টফোলিও।",

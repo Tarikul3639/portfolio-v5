@@ -35,7 +35,7 @@
       "viewAll": "সব প্রযুক্তি দেখুন"
     },
     "projects": {
-      "eyebrow": "নির্বাচিত কাজ · ০১—০৩",
+      "eyebrow": "নির্বাচিত কাজ · ০১—০২",
       "headline": "আমার তৈরি কিছু কাজ।",
       "description": "পরিষ্কার কর্মপ্রবাহ এবং ব্যবহারকারীদের কথা মাথায় রেখে তৈরি কয়েকটি ফুল-স্ট্যাক পণ্য।",
       "viewAll": "সব প্রজেক্ট দেখুন",
@@ -45,9 +45,9 @@
         "category": "ডেভেলপার টুল",
         "summary": "AI ক্লায়েন্টের জন্য Streamable HTTP, OAuth ও ব্যবহারকারীভিত্তিক অ্যাক্সেসসহ একটি হোস্টেড Google Calendar MCP সার্ভার।"
       },
-      "portfolio": {
-        "category": "ব্যক্তিগত পোর্টফোলিও",
-        "summary": "ফুল-স্ট্যাক কাজ, অভিজ্ঞতা ও প্রযুক্তিগত আগ্রহ তুলে ধরার ব্যক্তিগত পোর্টফোলিও।"
+      "google-drive-mcp": {
+        "category": "ডেভেলপার টুল",
+        "summary": "Drive management, Google Workspace, Office document ও health check-এর জন্য ৫৪টি tool-সহ একটি self-hosted Google Drive MCP সার্ভার।"
       },
       "classflow-prime": {
         "category": "শিক্ষা প্ল্যাটফর্ম",

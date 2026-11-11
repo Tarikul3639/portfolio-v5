@@ -51,6 +51,66 @@ export const projects: PortfolioProject[] = [
     image: "/images/projects/google-calendar-mcp.png",
   },
   {
+    slug: "google-drive-mcp",
+    title: "Google Drive MCP",
+    category: "Developer tool",
+    year: "2026",
+    summary:
+      "A self-hosted Google Drive MCP server that gives AI clients secure, permission-controlled access to Drive.",
+    description:
+      "Google Drive MCP connects MCP-compatible AI clients to a user's Google Drive through a remote Streamable HTTP endpoint. It combines a Next.js dashboard with a NestJS API and OAuth authorization server, allowing users to connect Google, review client consent, and control each client's access to individual tools. The server exposes 54 MCP tools: 37 Google Drive management tools, 11 Google Workspace tools, 5 Office document-processing tools, and a health-check tool.",
+    stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "MCP"],
+    role: "Full-stack development",
+    highlights: [
+      "Remote Streamable HTTP MCP endpoint with OAuth metadata and Dynamic Client Registration",
+      "Authorization Code flow with PKCE S256 and per-client consent",
+      "54 MCP tools across Drive management, Google Docs, Sheets, Slides, Office document processing, and server health",
+      "Per-client tool permissions with Redis-backed caching and grant management",
+    ],
+    repos: [
+      {
+        label: "Source code",
+        href: "https://github.com/Tarikul3639/google-drive-mcp",
+      },
+    ],
+    live: "https://googledrivemcp.vercel.app",
+    monogram: "GDM",
+    theme: {
+      background: "bg-[#f1f6ff]",
+      foreground: "text-[#2878e5]",
+    },
+    image: "/images/projects/google-drive-mcp.png",
+  },
+  {
+    slug: "local-filesystem-mcp",
+    title: "Local Filesystem MCP",
+    category: "Developer tool",
+    year: "2026",
+    summary:
+      "A self-hosted MCP server that lets AI clients work with local files, directories, system utilities, screenshots, and a Chromium browser.",
+    description:
+      "Local Filesystem MCP gives MCP-compatible AI clients controlled access to local development environments. It provides file and directory management, binary and resumable chunked uploads, filesystem inspection, desktop screenshots, an allowlisted command runner, and basic headless Chromium automation. Access is restricted to configured roots, with permission checks, trust management, audit logging, and Trash-based recovery instead of permanent deletion.",
+    stack: ["Node.js", "TypeScript", "MCP", "Zod", "Playwright", "pnpm"],
+    role: "Backend development",
+    highlights: [
+      "48 MCP tools for file, directory, system, screenshot, and browser workflows",
+      "Configured filesystem roots, read-only mode, permission checks, and trust management",
+      "Trash-based delete and restore flows, audit logs, and resumable checksum-verified uploads",
+      "Allowlisted command execution and Playwright-powered headless Chromium automation",
+    ],
+    repos: [
+      {
+        label: "Source code",
+        href: "https://github.com/Tarikul3639/local-filesystem-mcp",
+      },
+    ],
+    monogram: "LFM",
+    theme: {
+      background: "bg-[#f4f0e8]",
+      foreground: "text-[#5b6b45]",
+    },
+  },
+  {
     slug: "portfolio",
     title: "Portfolio",
     category: "Personal portfolio",
@@ -212,7 +272,10 @@ export const projects: PortfolioProject[] = [
   },
 ]
 
-export const featuredProjects = projects.slice(0, 3)
+export const featuredProjects = [
+  projects.find((project) => project.slug === "google-drive-mcp"),
+  projects.find((project) => project.slug === "classflow-prime"),
+].filter((project): project is PortfolioProject => project !== undefined)
 
 export const getProject = (slug: string) =>
   projects.find((project) => project.slug === slug)
