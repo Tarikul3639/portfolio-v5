@@ -1,27 +1,50 @@
 # Tarikul Islam
 
-> Full-Stack Developer focused on web applications, cloud deployment, and AI integrations.
+> Software Engineer & Full-Stack Developer based in Dhaka, Bangladesh. Focused on backend engineering, full-stack web applications, cloud deployment, and AI integrations with the Model Context Protocol (MCP).
 
-Tarikul Islam builds responsive frontend applications, backend services, REST APIs, and database integrations with React, Next.js, TypeScript, Tailwind CSS, Node.js, NestJS, Express.js, MongoDB, and PostgreSQL. He also deploys applications to Vercel and develops custom MCP servers that connect AI assistants to services such as Google Calendar and controlled local file-system tools. Docker is part of his basic toolset.
+Tarikul Islam builds useful digital products by connecting responsive interfaces, backend services, APIs, authentication, and data systems. His core tools include TypeScript, Node.js, NestJS, React, Next.js, MongoDB, PostgreSQL, and REST APIs. He also builds custom MCP servers and integrations for AI clients.
 
-## Portfolio
+## Primary pages
 
-- Home: https://tarikul-islam.me/
-- Projects: https://tarikul-islam.me/projects
-- Services: https://tarikul-islam.me/services
-- About: https://tarikul-islam.me/about
-- Contact: https://tarikul-islam.me/contact
+- [Home](https://tarikul-islam.me/): Introduction, experience, selected work, tools, working approach, FAQs, and contact links.
+- [About](https://tarikul-islam.me/about): Background, technical focus, education, public GitHub activity, and development principles.
+- [Projects](https://tarikul-islam.me/projects): Selected full-stack applications, developer tools, and platform work.
+- [Services](https://tarikul-islam.me/services): Full-stack development, backend and API engineering, cloud deployment, and AI/MCP integrations.
+- [Technology Stack](https://tarikul-islam.me/tech-stack): Technologies used across frontend, backend, databases, integrations, cloud, and development tools.
+- [Contact](https://tarikul-islam.me/contact): Email, WhatsApp, professional profiles, and meeting scheduling.
+- [Digital Business Card](https://tarikul-islam.me/business-card): Shareable contact card with website, email, and phone details.
+- [Full website content](https://tarikul-islam.me/llms-full.txt): Extended profile, page descriptions, services, project summaries, technology details, and FAQs.
 
 ## Selected projects
 
-- [Google Calendar MCP](https://tarikul-islam.me/projects/tarikul-open-mcp): Hosted Streamable HTTP MCP server for Google Calendar with dynamic OAuth client registration, PKCE, per-user consent, calendar tools, and an access dashboard. [Source](https://github.com/Tarikul3639/tarikul-open-mcp) · [Demo](https://google-calendar-mcp-client.vercel.app/)
-- [Portfolio](https://tarikul-islam.me/projects/portfolio): Personal portfolio for presenting full-stack work, experience, and technical interests. [Source](https://github.com/Tarikul3639/Portfolio)
-- [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime): Full-stack education management platform for class operations, updates, schedules, exams, and member coordination. [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app)
-- [DeenSeries](https://tarikul-islam.me/projects/deenseries): Full-stack streaming platform for Islamic movies and series, with administration for titles and episodes. [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app)
+- [Google Calendar MCP](https://tarikul-islam.me/projects/google-calendar-mcp): Remote Streamable HTTP MCP server for Google Calendar, with OAuth, dynamic client registration, PKCE, per-client consent, calendar tools, and access management. [Source](https://github.com/Tarikul3639/google-calendar-mcp) · [Demo](https://google-calendar-mcp-client.vercel.app/)
+- [Google Drive MCP](https://tarikul-islam.me/projects/google-drive-mcp): Self-hosted Google Drive MCP server with permission-controlled access and 54 tools for Drive, Google Workspace, Office documents, and health checks. [Source](https://github.com/Tarikul3639/google-drive-mcp) · [Demo](https://googledrivemcp.vercel.app/)
+- [Local Filesystem MCP](https://tarikul-islam.me/projects/local-filesystem-mcp): Self-hosted MCP server for controlled local file and directory operations, uploads, filesystem inspection, screenshots, command execution, and Chromium automation. [Source](https://github.com/Tarikul3639/local-filesystem-mcp)
+- [Portfolio](https://tarikul-islam.me/projects/portfolio): Responsive personal portfolio presenting selected work, experience, and technical interests. [Source](https://github.com/Tarikul3639/Portfolio)
+- [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime): Education workspace for class updates, schedules, exams, groups, and member coordination. [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app/)
+- [DeenSeries](https://tarikul-islam.me/projects/deenseries): Streaming platform for Islamic movies and series, with administration tools for titles and episodes. [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app/)
 - [Mosque Management System](https://tarikul-islam.me/projects/mosque-management-system): Community administration platform for family records, contributions, payments, donations, expenses, committee work, and public information. [Frontend](https://github.com/Tarikul3639/mosque-management-frontend) · [Backend](https://github.com/Tarikul3639/mosque-management-backend) · [Demo](https://mosque-management-systems.vercel.app/)
-- [Bishuddho Academy](https://tarikul-islam.me/projects/bishuddho-academy): Full-stack EdTech platform for courses, student enrollment, and learning workflows. [Client](https://github.com/Tarikul3639/bishuddho-academy-client) · [Server](https://github.com/Tarikul3639/bishuddho-academy-server) · [Demo](https://bishuddho-academy.vercel.app/)
+- [Bishuddho Academy](https://tarikul-islam.me/projects/bishuddho-academy): EdTech platform connecting course discovery and enrollment with student and administration workflows. [Client](https://github.com/Tarikul3639/bishuddho-academy-client) · [Server](https://github.com/Tarikul3639/bishuddho-academy-server) · [Demo](https://bishuddho-academy.vercel.app/)
 
-## Public profiles
+## Services
 
-- [GitHub](https://github.com/Tarikul3639)
-- [LinkedIn](https://www.linkedin.com/in/tarikul-islam-a439a0253)
+- Full-stack web application development with React, Next.js, backend services, authentication, and database integration.
+- Backend and REST API development with Node.js, NestJS, Express.js, MongoDB, and PostgreSQL.
+- Cloud deployment and application integration, including Vercel deployments and environment configuration.
+- AI integration and custom MCP server development for external APIs, Google Calendar, local file-system tools, and AI-assisted workflows.
+
+## Technology focus
+
+TypeScript, JavaScript, Node.js, NestJS, Express.js, React, Next.js, Tailwind CSS, REST APIs, MongoDB, PostgreSQL, Vercel, Model Context Protocol (MCP), Git, GitHub, and Docker.
+
+## Public profiles and contact
+
+- Website: https://tarikul-islam.me/
+- Email: tarikulislam3639@gmail.com
+- Phone / WhatsApp: +880 1909-290959
+- GitHub: https://github.com/Tarikul3639
+- LinkedIn: https://www.linkedin.com/in/tarikul-islam-a439a0253/
+
+## Languages
+
+The portfolio is available in English and Bengali. English is the default language; Bengali pages use the `/bn` URL prefix.

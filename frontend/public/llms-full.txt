@@ -1,0 +1,444 @@
+# Tarikul Islam — Full Website Content
+
+> Canonical website: https://tarikul-islam.me/
+
+This document provides an expanded, text-oriented description of Tarikul Islam's portfolio website, professional profile, services, technology stack, selected projects, and public contact information. It is intended to make the site's published information easier for search engines, assistants, and other automated readers to understand.
+
+## 1. Professional profile
+
+**Name:** Tarikul Islam  
+**Professional title:** Software Engineer & Full-Stack Developer  
+**Location:** Dhaka, Bangladesh  
+**Primary focus:** Backend engineering, full-stack web application development, cloud deployment, and AI integrations.  
+**Experience stated on the portfolio:** More than two years of hands-on development experience.  
+**Education:** Studying at Bangladesh University of Business & Technology (BUBT).
+
+Tarikul is a Bangladesh-based developer who focuses on building practical web products and the systems behind them. His work spans backend services and APIs, data modeling, authentication, responsive product interfaces, cloud deployment, and integrations with external services. Backend development with Node.js, NestJS, and TypeScript is a central focus; React and Next.js are used to build product interfaces and full-stack applications.
+
+He also develops custom Model Context Protocol (MCP) servers that connect AI assistants and MCP-compatible clients with external tools, APIs, and controlled local resources.
+
+### Professional focus areas
+
+- Backend application development and service architecture.
+- Full-stack web applications and responsive interfaces.
+- REST API design, validation, authentication, and integrations.
+- MongoDB and PostgreSQL data workflows.
+- Cloud deployment and application configuration.
+- AI tool integrations and custom MCP servers.
+
+## 2. Website overview
+
+The portfolio presents selected work, development experience, technical interests, services, and contact channels in a responsive editorial interface.
+
+### Main sections
+
+- **Home:** Professional introduction, experience highlight, selected technologies, featured projects, working approach, FAQs, and a business-card call to action.
+- **About:** Biography, technical focus, education, public GitHub contribution calendar, and development principles.
+- **Projects:** A collection of project summaries and detailed project case-study pages, including roles, technology stacks, highlights, repositories, and available demos.
+- **Services:** Four service areas and a four-step collaboration process.
+- **Technology Stack:** A categorized view of the tools and technologies used across projects.
+- **Contact:** Email, WhatsApp, GitHub, LinkedIn, Facebook contact option, and a Cal.com meeting-scheduling link.
+- **Digital Business Card:** A two-sided, shareable contact card with website, email, phone, QR code, and export/print options.
+
+### Routes
+
+English is the default locale and uses unprefixed URLs:
+
+- Home: https://tarikul-islam.me/
+- Projects index: https://tarikul-islam.me/projects
+- Services: https://tarikul-islam.me/services
+- Technology stack: https://tarikul-islam.me/tech-stack
+- About: https://tarikul-islam.me/about
+- Contact: https://tarikul-islam.me/contact
+- Digital business card: https://tarikul-islam.me/business-card
+
+Bengali versions use the `/bn` prefix:
+
+- Home: https://tarikul-islam.me/bn
+- Projects: https://tarikul-islam.me/bn/projects
+- Services: https://tarikul-islam.me/bn/services
+- Technology stack: https://tarikul-islam.me/bn/tech-stack
+- About: https://tarikul-islam.me/bn/about
+- Contact: https://tarikul-islam.me/bn/contact
+- Digital business card: https://tarikul-islam.me/bn/business-card
+
+Every project detail page is also available in both locales. The English project URLs are listed in the project catalogue below; add `/bn` before the route for the Bengali version.
+
+## 3. Home page
+
+**URL:** https://tarikul-islam.me/
+
+The home page introduces Tarikul as a Full-Stack Developer working across cloud and AI integration. Its central message is that he builds the systems behind useful digital products.
+
+The page includes:
+
+1. **Hero introduction:** A short professional introduction and portrait, with links to selected projects and services.
+2. **Experience highlight:** More than two years of hands-on experience across backend systems, product interfaces, and the work that connects them.
+3. **Technology overview:** A concise collection of the frontend, backend, database, API, cloud, and AI integration technologies used in his work.
+4. **Featured projects:** A selection of projects with summaries and technology information.
+5. **Working approach:** Turning goals and business requirements into complete applications by connecting responsive interfaces, backend services, APIs, authentication, and data. The work also includes cloud deployment and custom MCP integrations.
+6. **Frequently asked questions:** Answers about development expertise, technologies, project types, services, collaboration, and contact.
+7. **Business-card and contact calls to action.**
+
+### Working approach
+
+The portfolio emphasizes clarity, useful workflows, and complete systems. A project starts with understanding the requirements and the people using the product. Interfaces, backend services, authentication, and data workflows are built as connected parts. Deployments and integrations are considered as part of the product rather than isolated afterthoughts.
+
+The home page groups practical strengths into three areas:
+
+- **Backend:** Node.js, NestJS, Express.js, and REST APIs.
+- **Product UI:** React, Next.js, TypeScript, and Tailwind CSS.
+- **Data:** MongoDB and PostgreSQL.
+
+## 4. About page
+
+**URL:** https://tarikul-islam.me/about
+
+Tarikul Islam is a Software Engineer & Full-Stack Developer from Dhaka, Bangladesh. He focuses on backend development with Node.js, NestJS, and TypeScript, and builds product interfaces with React and Next.js.
+
+He enjoys building complete applications, from designing data models and REST APIs to creating intuitive interfaces. His work also includes cloud deployments and custom MCP (Model Context Protocol) servers that connect AI assistants with external tools and services.
+
+Recent work includes education, streaming, and community platforms, alongside MCP integrations such as Google Calendar and local file-system tools. He is studying at Bangladesh University of Business & Technology.
+
+### Development principles
+
+**01 — Structure: Make complexity legible.**  
+Good boundaries and a clear data model make a product easier to build on and easier to trust.
+
+**02 — Usefulness: Start with the workflow.**  
+Features should help people complete real tasks, with fewer confusing steps and fewer loose ends.
+
+**03 — Craft: Care about the details.**  
+Thoughtful copy, steady interactions, and responsive layouts make technical work feel complete.
+
+### GitHub activity
+
+The About page displays a live contribution calendar based on public GitHub activity for the account [Tarikul3639](https://github.com/Tarikul3639). Contribution counts and dates reflect public activity only.
+
+## 5. Services
+
+**URL:** https://tarikul-islam.me/services
+
+The services page describes four connected areas of development. Project scope and technology choices depend on the requirements.
+
+### 5.1 Full-stack web application development
+
+Build responsive web applications that connect user-friendly interfaces with backend services and useful business workflows.
+
+Scope includes:
+- Responsive React and Next.js interfaces.
+- Backend services, APIs, and business logic.
+- Authentication, role-based access, and database integration.
+
+### 5.2 Backend and API development
+
+Design and build maintainable backend applications and REST APIs that connect products to data and external services.
+
+Scope includes:
+- Node.js, NestJS, and Express.js services.
+- REST API design, validation, and error handling.
+- MongoDB and PostgreSQL data workflows.
+
+### 5.3 Cloud deployment and application integration
+
+Deploy web applications and backend services, configure their environments, and connect the parts into a reliable system.
+
+Scope includes:
+- Vercel deployment and environment configuration.
+- Frontend, backend API, and database integration.
+- Deployment troubleshooting and application maintenance.
+
+### 5.4 AI integration and MCP development
+
+Build custom MCP servers and integrations that let AI assistants work with external tools, APIs, and business systems.
+
+Scope includes:
+- Custom Model Context Protocol servers.
+- Google Calendar and third-party API integrations.
+- Controlled local file-system tools and AI-assisted workflows.
+
+### Collaboration process
+
+1. **Understand the workflow:** Start with the people, tasks, and constraints the product needs to support.
+2. **Agree on the shape:** Clarify the first useful scope, the main interfaces, and the system boundaries.
+3. **Build in slices:** Work through connected pieces so interface and backend decisions stay aligned.
+4. **Review and refine:** Walk through the result, gather feedback, and identify the next useful improvement.
+
+## 6. Technology stack
+
+**URL:** https://tarikul-islam.me/tech-stack
+
+The portfolio groups the technologies into six areas.
+
+### Backend and APIs
+- **Node.js:** JavaScript runtime for backend services and APIs.
+- **NestJS:** Framework for structured Node.js backend applications.
+- **Express.js:** Lightweight Node.js framework for web services and APIs.
+- **REST APIs:** Interfaces for connecting applications and external services.
+
+### Frontend and user interfaces
+- **React:** Component-based library for user interfaces.
+- **Next.js:** React framework for full-stack web applications.
+- **TypeScript:** Typed JavaScript for maintainable frontend and backend code.
+- **Tailwind CSS:** Utility-first CSS for responsive user interfaces.
+
+### Databases
+- **MongoDB:** Document database for application data.
+- **PostgreSQL:** Relational database for structured application data.
+
+### API and AI integrations
+- **Model Context Protocol (MCP):** Protocol for connecting AI assistants with external tools and data.
+
+### Cloud and deployment
+- **Vercel:** Cloud hosting and deployment workflows for web applications.
+
+### Development tools
+- **Git:** Version control for tracking and managing code changes.
+- **GitHub:** Code hosting and collaboration.
+- **Docker:** Basic familiarity with containers for packaging and running applications.
+
+Project-specific stacks may additionally include Prisma, Redis, Redux Toolkit, RTK Query, Zod, Playwright, and pnpm where listed in the project descriptions.
+
+## 7. Selected projects
+
+The Projects page contains eight project records. Each detail page provides an overview, role, stack, key highlights, source repositories, and a live website link where one is available.
+
+### 7.1 Google Calendar MCP
+
+**Project page:** https://tarikul-islam.me/projects/google-calendar-mcp  
+**Category:** Developer tool  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, PostgreSQL, Prisma, MCP  
+**Source code:** https://github.com/Tarikul3639/google-calendar-mcp  
+**Demo:** https://google-calendar-mcp-client.vercel.app/
+
+A hosted Google Calendar MCP server that connects MCP-compatible AI clients to a user's Google Calendar through a remote Streamable HTTP endpoint.
+
+Users sign in with Google, connect Calendar, and authorize each client through dynamic OAuth client registration, the authorization-code flow with PKCE, and per-user consent. A dashboard lets users manage calendar access and revoke individual client grants.
+
+Key capabilities:
+- Remote Streamable HTTP MCP endpoint with OAuth discovery.
+- Dynamic client registration and authorization code with PKCE.
+- Separate Google sign-in, Calendar connection, and per-client consent.
+- Tools to list, search, create, update, and delete calendar events.
+- Dashboard for managing client access.
+
+### 7.2 Google Drive MCP
+
+**Project page:** https://tarikul-islam.me/projects/google-drive-mcp  
+**Category:** Developer tool  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, PostgreSQL, Prisma, Redis, MCP  
+**Source code:** https://github.com/Tarikul3639/google-drive-mcp  
+**Demo:** https://googledrivemcp.vercel.app/
+
+A self-hosted Google Drive MCP server that connects MCP-compatible AI clients to a user's Drive through a remote Streamable HTTP endpoint.
+
+It combines a Next.js dashboard with a NestJS API and OAuth authorization server. Users can connect Google, review client consent, and control each client's access to individual tools.
+
+The server exposes 54 MCP tools:
+- 37 Google Drive management tools.
+- 11 Google Workspace tools.
+- 5 Office document-processing tools.
+- 1 health-check tool.
+
+Key capabilities:
+- Remote Streamable HTTP MCP endpoint with OAuth metadata and Dynamic Client Registration.
+- Authorization Code flow with PKCE S256 and per-client consent.
+- Tools across Drive management, Google Docs, Sheets, Slides, Office document processing, and server health.
+- Per-client tool permissions with Redis-backed caching and grant management.
+
+### 7.3 Local Filesystem MCP
+
+**Project page:** https://tarikul-islam.me/projects/local-filesystem-mcp  
+**Category:** Developer tool  
+**Year shown on portfolio:** 2026  
+**Role:** Backend development  
+**Stack:** Node.js, TypeScript, MCP, Zod, Playwright, pnpm  
+**Source code:** https://github.com/Tarikul3639/local-filesystem-mcp  
+**Live demo:** No public demo is listed on the portfolio.
+
+A self-hosted MCP server that gives MCP-compatible AI clients controlled access to local development environments.
+
+It provides file and directory management, binary and resumable chunked uploads, filesystem inspection, desktop screenshots, an allowlisted command runner, and basic headless Chromium automation. Access is restricted to configured filesystem roots, with permission checks, trust management, audit logging, and Trash-based recovery instead of permanent deletion.
+
+Key capabilities:
+- 48 MCP tools for file, directory, system, screenshot, and browser workflows.
+- Configured filesystem roots, read-only mode, permission checks, and trust management.
+- Trash-based delete and restore flows, audit logs, and resumable checksum-verified uploads.
+- Allowlisted command execution and Playwright-powered headless Chromium automation.
+
+### 7.4 Portfolio
+
+**Project page:** https://tarikul-islam.me/projects/portfolio  
+**Category:** Personal portfolio  
+**Year shown on portfolio:** 2026  
+**Role:** Design and full-stack development  
+**Stack:** Next.js, TypeScript, Tailwind CSS, Motion  
+**Source code:** https://github.com/Tarikul3639/Portfolio
+
+A personal portfolio that brings together selected projects, development experience, technical interests, and contact details in a responsive editorial interface.
+
+Key capabilities:
+- Responsive portfolio experience across desktop and mobile.
+- Project pages with repository and live demo links.
+- Dark and light theme support.
+- Subtle motion and an editorial visual system.
+- English and Bengali localized routes.
+
+### 7.5 ClassFlow Prime
+
+**Project page:** https://tarikul-islam.me/projects/classflow-prime  
+**Category:** Education platform  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, MongoDB, Redux Toolkit  
+**Source code:** https://github.com/Tarikul3639/classflow-prime  
+**Demo:** https://classflow-prime.vercel.app/
+
+An education workspace that brings academic schedules, class updates, exams, member coordination, and group work into one organized space for students and class representatives.
+
+Key capabilities:
+- Class updates, pinned materials, and read status.
+- Routine, exam, and viva schedules in one class workspace.
+- Role-based member management and class groups.
+- JWT authentication, email verification, and browser push notifications.
+
+### 7.6 DeenSeries
+
+**Project page:** https://tarikul-islam.me/projects/deenseries  
+**Category:** Streaming platform  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, MongoDB, RTK Query  
+**Source code:** https://github.com/Tarikul3639/DeenSeries  
+**Demo:** https://deenseries.vercel.app/
+
+A full-stack streaming platform for browsing Islamic movies and series. Its public catalogue is paired with an administration area for managing titles, episodes, and published content.
+
+Key capabilities:
+- Browse movies, series, and episode-based content.
+- Admin tools to create, edit, and publish media.
+- JWT authentication with HTTP-only cookies.
+- Cloudinary media handling and route-level SEO metadata.
+
+### 7.7 Mosque Management System
+
+**Project page:** https://tarikul-islam.me/projects/mosque-management-system  
+**Category:** Community platform  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, Prisma, PostgreSQL  
+**Frontend repository:** https://github.com/Tarikul3639/mosque-management-frontend  
+**Backend repository:** https://github.com/Tarikul3639/mosque-management-backend  
+**Demo:** https://mosque-management-systems.vercel.app/
+
+A full-stack platform that brings family registration, monthly contributions, payments, donations, expenses, committee work, and development projects into one administrative system, alongside a public information site.
+
+Key capabilities:
+- Family and monthly contribution records.
+- Payment, donation, and expense tracking.
+- Committee and development project management.
+- Public pages for prayer times, mosque information, and updates.
+
+### 7.8 Bishuddho Academy
+
+**Project page:** https://tarikul-islam.me/projects/bishuddho-academy  
+**Category:** Education platform  
+**Year shown on portfolio:** 2026  
+**Role:** Full-stack development  
+**Stack:** Next.js, NestJS, TypeScript, MongoDB, RTK Query  
+**Client repository:** https://github.com/Tarikul3639/bishuddho-academy-client  
+**Server repository:** https://github.com/Tarikul3639/bishuddho-academy-server  
+**Demo:** https://bishuddho-academy.vercel.app/
+
+An EdTech platform connecting course discovery and enrollment with student and administration workflows. The client and server are maintained as related repositories for one application.
+
+Key capabilities:
+- Course management and student enrollment.
+- Admin and student dashboards.
+- Role-based authentication and REST API integration.
+- Teacher profiles, assessments, and course progress features.
+
+## 8. Frequently asked questions
+
+### What can you build as a full-stack developer?
+
+Responsive React and Next.js interfaces, backend services and REST APIs, authentication flows, and MongoDB or PostgreSQL data integrations.
+
+### Which technologies do you work with?
+
+Core tools include React, Next.js, TypeScript, Tailwind CSS, Node.js, NestJS, Express.js, MongoDB, and PostgreSQL. Work also includes REST APIs, Vercel deployments, and MCP integrations.
+
+### What kinds of projects have you built?
+
+Work includes full-stack web platforms, Google Calendar MCP for AI-assisted calendar workflows, Google Drive MCP for permission-controlled Drive and Workspace tools, and Local Filesystem MCP for controlled file and folder operations.
+
+### What services can you help with?
+
+Full-stack web applications, backend and REST API development, cloud deployment and application integration, and custom AI and MCP integrations.
+
+### How do you approach a collaboration?
+
+Start by understanding the users, workflow, and constraints, then agree on a useful first scope. Build connected pieces, review the result, and refine it based on feedback.
+
+### How can someone discuss a project?
+
+Use the Contact page to reach Tarikul through the listed contact options or schedule a conversation. Sharing the problem, intended users, and constraints is a useful place to start.
+
+## 9. Contact and public profiles
+
+- **Website:** https://tarikul-islam.me/
+- **Email:** tarikulislam3639@gmail.com
+- **Phone:** +880 1909-290959
+- **WhatsApp:** https://wa.me/8801909290959
+- **GitHub:** https://github.com/Tarikul3639
+- **LinkedIn:** https://www.linkedin.com/in/tarikul-islam-a439a0253/
+- **Contact page:** https://tarikul-islam.me/contact
+- **Digital business card:** https://tarikul-islam.me/business-card
+
+The Contact page also provides a Cal.com meeting-scheduling action and a Facebook contact option.
+
+## 10. Implementation and SEO information
+
+The portfolio is built with:
+- Next.js 16 App Router.
+- React 19.
+- TypeScript 5.
+- Tailwind CSS 4.
+- next-intl for English and Bengali localization.
+- Motion for React for interface animation.
+- next-themes for dark and light themes.
+- Lucide React icons and reusable inline SVG technology icons.
+- pnpm, ESLint, Prettier, and TypeScript tooling.
+
+Content is maintained as typed local data and locale-specific JSON translation files. The portfolio itself is a static-content website and does not use a separate application API or Redux store for its content. Project descriptions, route metadata, and links are maintained together to keep project pages consistent. The About page loads the public GitHub contribution calendar.
+
+### Design and accessibility
+
+The visual direction is restrained and editorial, with warm paper tones in light mode, deep charcoal in dark mode, muted green accents, hairline separators, serif display headings, and monospace labels. Layouts are responsive across desktop and mobile. Local Noto Sans, Noto Sans Bengali, and Noto Mono font files are used; Georgia is used as the system display-serif stack. Motion is designed to respect reduced-motion preferences.
+
+### Search and structured data
+
+- Canonical metadata is configured for the public domain.
+- English and Bengali pages declare language alternates.
+- Open Graph and Twitter metadata are configured for page sharing.
+- A sitemap is generated at https://tarikul-islam.me/sitemap.xml, including localized index pages and project details.
+- Robots rules are available at https://tarikul-islam.me/robots.txt and allow public crawling.
+- Person and WebSite JSON-LD structured data are published on the home page.
+- Project detail pages publish SoftwareApplication JSON-LD data.
+- This file is the expanded AI-readable content resource. The concise index is available at https://tarikul-islam.me/llms.txt.
+
+## 11. Primary resources
+
+- Portfolio: https://tarikul-islam.me/
+- Concise AI-readable index: https://tarikul-islam.me/llms.txt
+- Projects: https://tarikul-islam.me/projects
+- Services: https://tarikul-islam.me/services
+- Technology stack: https://tarikul-islam.me/tech-stack
+- About: https://tarikul-islam.me/about
+- Contact: https://tarikul-islam.me/contact
+- GitHub: https://github.com/Tarikul3639
+- LinkedIn: https://www.linkedin.com/in/tarikul-islam-a439a0253/
