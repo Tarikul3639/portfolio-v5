@@ -32,11 +32,18 @@ export async function generateMetadata({
       description: t("description"),
       url: canonical,
       siteName: "Tarikul Islam",
+      images: [
+        {
+          url: "/images/profile/tarikul-islam.webp",
+          alt: "Portrait of Tarikul Islam, Software Engineer and Full-Stack Developer",
+        },
+      ],
     },
     twitter: {
       card: "summary",
       title: `${t("title")} | Tarikul Islam`,
       description: t("description"),
+      images: ["/images/profile/tarikul-islam.webp"],
     },
   }
 }

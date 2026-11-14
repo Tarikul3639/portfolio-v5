@@ -24,7 +24,7 @@ Portfolio v5 is a server-rendered Next.js App Router site with an editorial visu
 - Services page describing full-stack applications, backend APIs, frontend interfaces, and a practical delivery process.
 - Contact page with public Email, GitHub, LinkedIn, and Facebook links plus a configurable Cal.com scheduling CTA.
 - Dark and light themes with a responsive mobile navigation drawer, keyboard-friendly controls, and reduced-motion support.
-- SEO foundations including route metadata, canonical URLs, Open Graph and Twitter cards, JSON-LD person/project data, `robots.txt`, `sitemap.xml`, and `public/llms.txt`.
+- Search and AI discoverability with localized metadata, canonical and language alternates, Open Graph and Twitter cards, Person/WebSite/ProfilePage/FAQPage/SoftwareApplication/BreadcrumbList JSON-LD, `robots.txt`, `sitemap.xml`, and AI-readable `llms.txt` resources. See [SEO, AEO, and GEO implementation notes](SEO-AEO-GEO.md).
 - Locally hosted Noto Sans and Noto Mono fonts; project artwork uses responsive `next/image` sizes with quality set to 90.
 
 ## Selected work

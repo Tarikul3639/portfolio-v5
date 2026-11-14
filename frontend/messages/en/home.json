@@ -81,7 +81,7 @@
         },
         "projects": {
           "question": "What kinds of projects have you built?",
-          "answer": "My work includes full-stack web platforms, Google Calendar MCP for AI-assisted calendar workflows, and a local file-system MCP integration for controlled file and folder operations."
+          "answer": "My work includes full-stack web platforms, Google Calendar MCP and Google Drive MCP integrations for AI clients, and Projectron, a local MCP server for computer automation across files, browsers, documents, and development workflows."
         },
         "services": {
           "question": "What can you help build?",
@@ -105,7 +105,7 @@
     },
     "metadata": {
       "title": "Tarikul Islam | Full-Stack Developer | Cloud & AI Integration",
-      "description": "Tarikul Islam is a Full-Stack Developer building web applications, backend APIs, cloud deployments, and custom MCP integrations for AI assistants."
+      "description": "Tarikul Islam is a Bangladesh-based software engineer and full-stack developer who builds web applications, backend APIs, cloud integrations, and custom MCP servers for AI assistants. Explore his projects, services, and technical skills."
     }
   }
 }

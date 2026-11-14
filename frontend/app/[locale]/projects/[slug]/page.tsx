@@ -11,6 +11,7 @@ import { ProjectDetailOverview } from "@/features/projects/components/project-de
 import { projects, getProject } from "@/features/projects/data/projects"
 import { siteConfig } from "@/config/site"
 import { getTranslations } from "next-intl/server"
+import { serializeJsonLd } from "@/lib/seo/json-ld"
 
 type Props = {
   params: Promise<{ slug: string; locale: "en" | "bn" }>
@@ -36,6 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `${slug}.summary`
   ) as string
   const canonical = `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects/${project.slug}`
+  const image = project.image || "/images/profile/tarikul-islam.webp"
+  const imageAlt = `${project.title} — ${description}`
   return {
     title: project.title,
     description,
@@ -54,6 +57,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonical,
       siteName: "Tarikul Islam",
+      images: [{ url: image, alt: imageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Tarikul Islam`,
+      description,
+      images: [image],
     },
   }
 }
@@ -68,21 +78,65 @@ export default async function ProjectDetailPage({ params }: Props) {
     .filter((item) => item.slug !== project.slug)
     .slice(0, 2)
 
+  const [projectT, navigationT, t] = await Promise.all([
+    getTranslations({ locale, namespace: "projects.items" }),
+    getTranslations({ locale, namespace: "common.navigation" }),
+    getTranslations({ locale, namespace: "common.project" }),
+  ])
+  const canonical = `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects/${project.slug}`
+  const projectDescription = (projectT.raw as (key: string) => unknown)(
+    `${slug}.description`
+  ) as string
+  const projectCategory = (projectT.raw as (key: string) => unknown)(
+    `${slug}.category`
+  ) as string
+  const projectHighlights = (projectT.raw as (key: string) => unknown)(
+    `${slug}.highlights`
+  ) as string[]
   const projectSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${canonical}#software`,
     name: project.title,
-    description: project.description,
-    applicationCategory: project.category,
-    url: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects/${project.slug}`,
-    author: {
-      "@type": "Person",
-      name: "Tarikul Islam",
-      url: `${siteConfig.url}/`,
-    },
-    codeRepository: project.repos.map((repository) => repository.href),
+    description: projectDescription,
+    applicationCategory: projectCategory,
+    operatingSystem: "Web",
+    url: canonical,
+    image: project.image
+      ? new URL(project.image, siteConfig.url).toString()
+      : undefined,
+    author: { "@id": `${siteConfig.url}/#person` },
+    creator: { "@id": `${siteConfig.url}/#person` },
+    featureList: projectHighlights,
+    sameAs: [
+      ...project.repos.map((repository) => repository.href),
+      ...(project.live ? [project.live] : []),
+    ],
   }
-  const t = await getTranslations({ locale, namespace: "common.project" })
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: navigationT("home"),
+        item: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: navigationT("projects"),
+        item: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}/projects`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: project.title,
+        item: canonical,
+      },
+    ],
+  }
 
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">
@@ -91,9 +145,11 @@ export default async function ProjectDetailPage({ params }: Props) {
       <main className="flex-1">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(projectSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(projectSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbSchema) }}
         />
 
         <section>

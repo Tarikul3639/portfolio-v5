@@ -6,6 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollProgress } from "@/components/motion"
 import { ScrollDownIndicator } from "@/components/scroll-down-indicator"
 import { siteConfig } from "@/config/site"
+import { personSchema } from "@/lib/seo/person-schema"
+import { websiteSchema } from "@/lib/seo/website-schema"
+import { serializeJsonLd } from "@/lib/seo/json-ld"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { hasLocale } from "next-intl"
@@ -39,8 +42,7 @@ const fontMono = localFont({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  // Keep pinch-to-zoom available for accessibility.
 }
 
 export const metadata: Metadata = {
@@ -146,6 +148,11 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound()
   setRequestLocale(locale)
   const messages = await getMessages()
+  const localizedWebsiteSchema = {
+    ...websiteSchema,
+    url: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}`,
+    inLanguage: locale,
+  }
 
   return (
     <html
@@ -154,6 +161,16 @@ export default async function LocaleLayout({
       className={`${fontSans.variable} ${fontMono.variable} ${fontBengali.variable} antialiased`}
     >
       <body className={`font-sans ${locale === "bn" ? "font-bengali" : ""}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd(localizedWebsiteSchema),
+          }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ScrollProgress />

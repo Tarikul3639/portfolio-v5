@@ -10,8 +10,7 @@ import { HomeTechStack } from "@/features/home/components/home-tech-stack"
 import { WorkApproach } from "@/features/home/components/work-approach"
 import { HomeFaq } from "@/features/home/components/home-faq"
 import { BusinessCardCta } from "@/features/home/components/business-card-cta"
-import { personSchema } from "@/lib/seo/person-schema"
-import { websiteSchema } from "@/lib/seo/website-schema"
+import { serializeJsonLd } from "@/lib/seo/json-ld"
 
 export async function generateMetadata({
   params,
@@ -40,6 +39,12 @@ export async function generateMetadata({
       siteName: "Tarikul Islam",
       title,
       description,
+      images: [
+        {
+          url: "/images/profile/tarikul-islam.webp",
+          alt: "Portrait of Tarikul Islam, Software Engineer and Full-Stack Developer",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -56,13 +61,40 @@ export default async function HomeRoute({
   params: Promise<{ locale: "en" | "bn" }>
 }) {
   const { locale } = await params
-  const localizedWebsiteSchema = {
-    ...websiteSchema,
-    url: `${siteConfig.url}${locale === "bn" ? "/bn" : ""}`,
+  const [faqT, homeMetadataT] = await Promise.all([
+    getTranslations({ locale, namespace: "home.faq" }),
+    getTranslations({ locale, namespace: "home.metadata" }),
+  ])
+  const faqKeys = [
+    "expertise",
+    "technology",
+    "projects",
+    "services",
+    "collaboration",
+    "contact",
+  ] as const
+  const canonical = locale === "bn" ? `${siteConfig.url}/bn` : siteConfig.url
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${canonical === siteConfig.url ? `${siteConfig.url}/` : canonical}#profile`,
+    url: canonical,
+    name: homeMetadataT("title"),
+    description: homeMetadataT("description"),
     inLanguage: locale,
+    mainEntity: { "@id": `${siteConfig.url}/#person` },
   }
-  const localizedPersonSchema = {
-    ...personSchema,
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqKeys.map((key) => ({
+      "@type": "Question",
+      name: faqT(`items.${key}.question`),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faqT(`items.${key}.answer`),
+      },
+    })),
   }
 
   return (
@@ -72,22 +104,11 @@ export default async function HomeRoute({
     >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localizedWebsiteSchema).replace(
-            /</g,
-            "\\u003c"
-          ),
-        }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(profilePageSchema) }}
       />
-
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localizedPersonSchema).replace(
-            /</g,
-            "\\u003c"
-          ),
-        }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqSchema) }}
       />
 
       <SiteHeader />
