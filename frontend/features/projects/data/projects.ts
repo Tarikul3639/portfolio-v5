@@ -82,33 +82,34 @@ export const projects: PortfolioProject[] = [
     image: "/images/projects/google-drive-mcp.png",
   },
   {
-    slug: "local-filesystem-mcp",
-    title: "Local Filesystem MCP",
+    slug: "projectron",
+    title: "Projectron",
     category: "Developer tool",
     year: "2026",
     summary:
-      "A self-hosted MCP server that lets AI clients work with local files, directories, system utilities, screenshots, and a Chromium browser.",
+      "A local MCP server that gives AI assistants a structured way to work with files, terminal commands, browsers, documents, processes, and project workflows.",
     description:
-      "Local Filesystem MCP gives MCP-compatible AI clients controlled access to local development environments. It provides file and directory management, binary and resumable chunked uploads, filesystem inspection, desktop screenshots, an allowlisted command runner, and basic headless Chromium automation. Access is restricted to configured roots, with permission checks, trust management, audit logging, and Trash-based recovery instead of permanent deletion.",
-    stack: ["Node.js", "TypeScript", "MCP", "Zod", "Playwright", "pnpm"],
+      "Projectron is a NestJS and TypeScript Model Context Protocol server for AI-powered computer automation. It connects MCP-compatible assistants to local development workflows through filesystem operations, bounded terminal execution, isolated Chromium browser automation, document processing, managed processes, project workspaces, system and network inspection, and multi-step orchestration. Operations are constrained by configured workspace roots, validation, and domain-specific safety checks.",
+    stack: ["NestJS", "TypeScript", "MCP", "Playwright", "Zod", "pnpm"],
     role: "Backend development",
     highlights: [
-      "48 MCP tools for file, directory, system, screenshot, and browser workflows",
-      "Configured filesystem roots, read-only mode, permission checks, and trust management",
-      "Trash-based delete and restore flows, audit logs, and resumable checksum-verified uploads",
-      "Allowlisted command execution and Playwright-powered headless Chromium automation",
+      "Filesystem management, resumable file transfers, and workspace-scoped terminal execution",
+      "Isolated Chromium automation with page inspection, interaction, screenshots, and downloads",
+      "Document creation and conversion, managed process controls, and project workspace management",
+      "System and network diagnostics with validated multi-step task orchestration",
     ],
     repos: [
       {
         label: "Source code",
-        href: "https://github.com/Tarikul3639/local-filesystem-mcp",
+        href: "https://github.com/Tarikul3639/Projectron",
       },
     ],
-    monogram: "LFM",
+    monogram: "PR",
     theme: {
-      background: "bg-[#f4f0e8]",
-      foreground: "text-[#5b6b45]",
+      background: "bg-[#101827]",
+      foreground: "text-[#8bd5ff]",
     },
+    image: "/images/projects/projectron.png",
   },
   {
     slug: "portfolio",

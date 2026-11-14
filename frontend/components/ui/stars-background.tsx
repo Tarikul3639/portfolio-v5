@@ -4,7 +4,6 @@ import React, {
   useState,
   useEffect,
   useRef,
-  RefObject,
   useCallback,
 } from "react"
 
@@ -34,9 +33,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   className,
 }) => {
   const [stars, setStars] = useState<StarProps[]>([])
-  // @ts-expect-error
-  const canvasRef: RefObject<HTMLCanvasElement> =
-    useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   const generateStars = useCallback(
     (width: number, height: number): StarProps[] => {
@@ -67,30 +64,26 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   )
 
   useEffect(() => {
-    const updateStars = () => {
-      if (canvasRef.current) {
-        const canvas = canvasRef.current
-        const ctx = canvas.getContext("2d")
-        if (!ctx) return
+    const canvas = canvasRef.current
+    if (!canvas) return
 
-        const { width, height } = canvas.getBoundingClientRect()
-        canvas.width = width
-        canvas.height = height
-        setStars(generateStars(width, height))
-      }
+    const updateStars = () => {
+      const ctx = canvas.getContext("2d")
+      if (!ctx) return
+
+      const { width, height } = canvas.getBoundingClientRect()
+      canvas.width = width
+      canvas.height = height
+      setStars(generateStars(width, height))
     }
 
     updateStars()
 
     const resizeObserver = new ResizeObserver(updateStars)
-    if (canvasRef.current) {
-      resizeObserver.observe(canvasRef.current)
-    }
+    resizeObserver.observe(canvas)
 
     return () => {
-      if (canvasRef.current) {
-        resizeObserver.unobserve(canvasRef.current)
-      }
+      resizeObserver.unobserve(canvas)
     }
   }, [
     starDensity,

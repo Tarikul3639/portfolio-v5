@@ -19,7 +19,7 @@ Tarikul Islam builds useful digital products by connecting responsive interfaces
 
 - [Google Calendar MCP](https://tarikul-islam.me/projects/google-calendar-mcp): Remote Streamable HTTP MCP server for Google Calendar, with OAuth, dynamic client registration, PKCE, per-client consent, calendar tools, and access management. [Source](https://github.com/Tarikul3639/google-calendar-mcp) · [Demo](https://google-calendar-mcp-client.vercel.app/)
 - [Google Drive MCP](https://tarikul-islam.me/projects/google-drive-mcp): Self-hosted Google Drive MCP server with permission-controlled access and 54 tools for Drive, Google Workspace, Office documents, and health checks. [Source](https://github.com/Tarikul3639/google-drive-mcp) · [Demo](https://googledrivemcp.vercel.app/)
-- [Local Filesystem MCP](https://tarikul-islam.me/projects/local-filesystem-mcp): Self-hosted MCP server for controlled local file and directory operations, uploads, filesystem inspection, screenshots, command execution, and Chromium automation. [Source](https://github.com/Tarikul3639/local-filesystem-mcp)
+- [Projectron](https://tarikul-islam.me/projects/projectron): Local MCP server for AI-powered computer automation across filesystem, terminal, browser, documents, processes, project workspaces, system diagnostics, and orchestration. [Source](https://github.com/Tarikul3639/Projectron)
 - [Portfolio](https://tarikul-islam.me/projects/portfolio): Responsive personal portfolio presenting selected work, experience, and technical interests. [Source](https://github.com/Tarikul3639/Portfolio)
 - [ClassFlow Prime](https://tarikul-islam.me/projects/classflow-prime): Education workspace for class updates, schedules, exams, groups, and member coordination. [Source](https://github.com/Tarikul3639/classflow-prime) · [Demo](https://classflow-prime.vercel.app/)
 - [DeenSeries](https://tarikul-islam.me/projects/deenseries): Streaming platform for Islamic movies and series, with administration tools for titles and episodes. [Source](https://github.com/Tarikul3639/DeenSeries) · [Demo](https://deenseries.vercel.app/)
@@ -31,7 +31,7 @@ Tarikul Islam builds useful digital products by connecting responsive interfaces
 - Full-stack web application development with React, Next.js, backend services, authentication, and database integration.
 - Backend and REST API development with Node.js, NestJS, Express.js, MongoDB, and PostgreSQL.
 - Cloud deployment and application integration, including Vercel deployments and environment configuration.
-- AI integration and custom MCP server development for external APIs, Google Calendar, local file-system tools, and AI-assisted workflows.
+- AI integration and custom MCP server development for external APIs, Google Calendar, Projectron computer-automation tools, and AI-assisted workflows.
 
 ## Technology focus
 

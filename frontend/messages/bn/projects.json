@@ -35,16 +35,16 @@
           "Redis-backed caching ও grant management-সহ ক্লায়েন্টভিত্তিক tool permission"
         ]
       },
-      "local-filesystem-mcp": {
+      "projectron": {
         "category": "ডেভেলপার টুল",
-        "summary": "লোকাল ফাইল, ডিরেক্টরি, সিস্টেম ইউটিলিটি, স্ক্রিনশট ও ব্রাউজার অটোমেশনের জন্য নিয়ন্ত্রিত AI access-সহ self-hosted MCP সার্ভার।",
-        "description": "Local Filesystem MCP, MCP-সমর্থিত AI ক্লায়েন্টকে লোকাল ডেভেলপমেন্ট এনভায়রনমেন্টে নিয়ন্ত্রিত অ্যাক্সেস দেয়। এতে রয়েছে ফাইল ও ডিরেক্টরি ব্যবস্থাপনা, binary ও resumable chunked upload, filesystem inspection, desktop screenshot, allowlisted command runner এবং headless Chromium browser automation। অ্যাক্সেস নির্ধারিত root-এর মধ্যে সীমাবদ্ধ থাকে; পাশাপাশি permission check, trust management, audit logging এবং স্থায়ীভাবে delete না করে Trash থেকে restore করার ব্যবস্থা রয়েছে।",
+        "summary": "ফাইল, টার্মিনাল, ব্রাউজার, ডকুমেন্ট, প্রসেস ও প্রজেক্ট workflow-এ AI-চালিত computer automation-এর জন্য একটি local MCP server।",
+        "description": "Projectron হলো NestJS ও TypeScript-ভিত্তিক Model Context Protocol server, যা MCP-সমর্থিত AI assistant-কে local development workflow ব্যবহারের সুযোগ দেয়। এতে রয়েছে filesystem tools, সীমাবদ্ধ terminal execution, isolated Chromium automation, document processing, managed process, project workspace, system ও network inspection এবং multi-step orchestration। নির্ধারিত workspace root, validation ও domain-specific safety check-এর মাধ্যমে অপারেশন সীমাবদ্ধ রাখা হয়।",
         "role": "ব্যাকএন্ড ডেভেলপমেন্ট",
         "highlights": [
-          "ফাইল, ডিরেক্টরি, সিস্টেম, স্ক্রিনশট ও ব্রাউজার workflow-এর জন্য ৪৮টি MCP tool",
-          "নির্ধারিত filesystem root, read-only mode, permission check ও trust management",
-          "Trash-ভিত্তিক delete ও restore, audit log এবং checksum-যাচাইকৃত resumable upload",
-          "Allowlisted command execution এবং Playwright-চালিত headless Chromium automation"
+          "Workspace-সীমাবদ্ধ filesystem operation, resumable file transfer ও terminal execution",
+          "Page inspection, interaction, screenshot ও download-এর জন্য isolated Chromium automation",
+          "Document processing, managed process ও project workspace management",
+          "Multi-step task orchestration-সহ system ও network diagnostics"
         ]
       },
       "portfolio": {

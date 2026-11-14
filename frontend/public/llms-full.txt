@@ -250,25 +250,24 @@ Key capabilities:
 - Tools across Drive management, Google Docs, Sheets, Slides, Office document processing, and server health.
 - Per-client tool permissions with Redis-backed caching and grant management.
 
-### 7.3 Local Filesystem MCP
+### 7.3 Projectron
 
-**Project page:** https://tarikul-islam.me/projects/local-filesystem-mcp  
+**Project page:** https://tarikul-islam.me/projects/projectron  
 **Category:** Developer tool  
 **Year shown on portfolio:** 2026  
 **Role:** Backend development  
-**Stack:** Node.js, TypeScript, MCP, Zod, Playwright, pnpm  
-**Source code:** https://github.com/Tarikul3639/local-filesystem-mcp  
+**Stack:** NestJS, TypeScript, MCP, Playwright, Zod, pnpm  
+**Source code:** https://github.com/Tarikul3639/Projectron  
 **Live demo:** No public demo is listed on the portfolio.
 
-A self-hosted MCP server that gives MCP-compatible AI clients controlled access to local development environments.
-
-It provides file and directory management, binary and resumable chunked uploads, filesystem inspection, desktop screenshots, an allowlisted command runner, and basic headless Chromium automation. Access is restricted to configured filesystem roots, with permission checks, trust management, audit logging, and Trash-based recovery instead of permanent deletion.
+Projectron is a local Model Context Protocol server for AI-powered computer automation. It gives MCP-compatible assistants a structured way to work with local development workflows.
 
 Key capabilities:
-- 48 MCP tools for file, directory, system, screenshot, and browser workflows.
-- Configured filesystem roots, read-only mode, permission checks, and trust management.
-- Trash-based delete and restore flows, audit logs, and resumable checksum-verified uploads.
-- Allowlisted command execution and Playwright-powered headless Chromium automation.
+- Filesystem management, resumable file transfers, and workspace-scoped terminal execution.
+- Isolated Chromium browser automation for navigation, page inspection, interaction, screenshots, PDFs, and downloads.
+- Document creation and conversion, managed process controls, and project workspace management.
+- System and network diagnostics with validated multi-step task orchestration.
+- Configured workspace boundaries, input validation, and domain-specific safety restrictions.
 
 ### 7.4 Portfolio
 
@@ -374,7 +373,7 @@ Core tools include React, Next.js, TypeScript, Tailwind CSS, Node.js, NestJS, Ex
 
 ### What kinds of projects have you built?
 
-Work includes full-stack web platforms, Google Calendar MCP for AI-assisted calendar workflows, Google Drive MCP for permission-controlled Drive and Workspace tools, and Local Filesystem MCP for controlled file and folder operations.
+Work includes full-stack web platforms, Google Calendar MCP for AI-assisted calendar workflows, Google Drive MCP for permission-controlled Drive and Workspace tools, and Projectron for AI-powered computer automation across local development workflows.
 
 ### What services can you help with?
 

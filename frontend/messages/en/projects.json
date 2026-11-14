@@ -35,16 +35,16 @@
           "Per-client tool permissions with Redis-backed caching and grant management"
         ]
       },
-      "local-filesystem-mcp": {
+      "projectron": {
         "category": "Developer tool",
-        "summary": "A self-hosted MCP server for controlled AI access to local files, directories, system utilities, screenshots, and browser automation.",
-        "description": "Local Filesystem MCP gives MCP-compatible AI clients controlled access to local development environments. It provides file and directory management, binary and resumable chunked uploads, filesystem inspection, desktop screenshots, an allowlisted command runner, and basic headless Chromium automation. Access is restricted to configured roots, with permission checks, trust management, audit logging, and Trash-based recovery instead of permanent deletion.",
+        "summary": "A local MCP server for AI-powered computer automation across files, terminal, browsers, documents, processes, and project workflows.",
+        "description": "Projectron connects MCP-compatible AI assistants to local development workflows through filesystem tools, bounded terminal execution, isolated Chromium automation, document processing, managed processes, project workspaces, system and network inspection, and multi-step orchestration. Operations are constrained by configured workspace roots, validation, and domain-specific safety checks.",
         "role": "Backend development",
         "highlights": [
-          "48 MCP tools for file, directory, system, screenshot, and browser workflows",
-          "Configured filesystem roots, read-only mode, permission checks, and trust management",
-          "Trash-based delete and restore flows, audit logs, and resumable checksum-verified uploads",
-          "Allowlisted command execution and Playwright-powered headless Chromium automation"
+          "Workspace-scoped filesystem operations, resumable transfers, and terminal execution",
+          "Isolated Chromium automation for page inspection, interaction, screenshots, and downloads",
+          "Document processing, managed processes, and project workspace management",
+          "System and network diagnostics with multi-step task orchestration"
         ]
       },
       "portfolio": {
