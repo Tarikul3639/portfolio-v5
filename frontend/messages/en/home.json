@@ -41,6 +41,10 @@
         "category": "Developer tool",
         "summary": "A hosted Google Calendar MCP server with Streamable HTTP, OAuth, and per-user access for AI clients."
       },
+      "rujuit": {
+        "category": "Software agency website",
+        "summary": "A bilingual website and brand identity for a global-facing software and digital solutions agency."
+      },
       "google-drive-mcp": {
         "category": "Developer tool",
         "summary": "A self-hosted Google Drive MCP server with 54 tools for Drive management, Google Workspace, Office documents, and health checks."

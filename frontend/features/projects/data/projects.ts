@@ -20,6 +20,44 @@ export type PortfolioProject = {
 
 export const projects: PortfolioProject[] = [
   {
+    slug: "rujuit",
+    title: "RujuIT",
+    category: "Software agency website",
+    year: "2026",
+    summary:
+      "A bilingual website and brand identity for a global-facing software and digital solutions agency.",
+    description:
+      "RujuIT is a global-facing digital and software agency built to turn ambitious ideas into dependable digital products. Its bilingual website introduces the company, presents services across web development, cloud engineering, API integration, MCP development, AI automation, and custom software, and gives prospective clients a clear path to start a conversation. I founded the agency and built its brand identity and digital presence.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "Resend",
+    ],
+    role: "Founder & full-stack development",
+    highlights: [
+      "Distinctive black-and-yellow brand identity and responsive website",
+      "Bilingual English and Bengali experience",
+      "Dedicated service pages for web, cloud, API, MCP, AI automation, and custom software",
+      "Contact workflow and discovery-call entry points",
+    ],
+    repos: [
+      {
+        label: "Source code",
+        href: "https://github.com/Tarikul3639/rujuit",
+      },
+    ],
+    live: "https://rujuit.vercel.app/",
+    monogram: "RJ",
+    theme: {
+      background: "bg-[#090909]",
+      foreground: "text-[#facc15]",
+    },
+    image: "/images/projects/rujuit.png",
+  },
+  {
     slug: "google-calendar-mcp",
     title: "Google Calendar MCP",
     category: "Developer tool",
@@ -59,7 +97,15 @@ export const projects: PortfolioProject[] = [
       "A self-hosted Google Drive MCP server that gives AI clients secure, permission-controlled access to Drive.",
     description:
       "Google Drive MCP connects MCP-compatible AI clients to a user's Google Drive through a remote Streamable HTTP endpoint. It combines a Next.js dashboard with a NestJS API and OAuth authorization server, allowing users to connect Google, review client consent, and control each client's access to individual tools. The server exposes 54 MCP tools: 37 Google Drive management tools, 11 Google Workspace tools, 5 Office document-processing tools, and a health-check tool.",
-    stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "MCP"],
+    stack: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "MCP",
+    ],
     role: "Full-stack development",
     highlights: [
       "Remote Streamable HTTP MCP endpoint with OAuth metadata and Dynamic Client Registration",
@@ -274,7 +320,7 @@ export const projects: PortfolioProject[] = [
 ]
 
 export const featuredProjects = [
-  projects.find((project) => project.slug === "google-drive-mcp"),
+  projects.find((project) => project.slug === "rujuit"),
   projects.find((project) => project.slug === "classflow-prime"),
 ].filter((project): project is PortfolioProject => project !== undefined)
 

@@ -2,11 +2,7 @@
   "projects": {
     "hero": {
       "eyebrow": "SELECTED WORK · 2026",
-      "words": [
-        "purpose.",
-        "workflow.",
-        "direction."
-      ],
+      "words": ["purpose.", "workflow.", "direction."],
       "description": "A collection of products I’ve worked on, from class coordination and online learning to media and community platforms.",
       "prefix": "Projects with a"
     },
@@ -45,6 +41,18 @@
           "Isolated Chromium automation for page inspection, interaction, screenshots, and downloads",
           "Document processing, managed processes, and project workspace management",
           "System and network diagnostics with multi-step task orchestration"
+        ]
+      },
+      "rujuit": {
+        "category": "Software agency website",
+        "summary": "A bilingual website and brand identity for a global-facing software and digital solutions agency.",
+        "description": "RujuIT is a global-facing digital and software agency built to turn ambitious ideas into dependable digital products. Its bilingual website introduces the company, presents services across web development, cloud engineering, API integration, MCP development, AI automation, and custom software, and gives prospective clients a clear path to start a conversation. I founded the agency and built its brand identity and digital presence.",
+        "role": "Founder & full-stack development",
+        "highlights": [
+          "Distinctive black-and-yellow brand identity and responsive website",
+          "Bilingual English and Bengali experience",
+          "Dedicated service pages for web, cloud, API, MCP, AI automation, and custom software",
+          "Contact workflow and discovery-call entry points"
         ]
       },
       "portfolio": {
